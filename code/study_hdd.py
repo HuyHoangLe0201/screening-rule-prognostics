@@ -45,7 +45,7 @@ import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ZIP = (sys.argv[1] if len(sys.argv) > 1
-       else os.path.join(os.environ.get("P3_DATA", os.path.join(HERE, "..", "data")), "bb_Q4_2023.zip"))
+       else os.path.join(HERE, "..", "..", "data", "bb_Q4_2023.zip"))
 OUT = os.path.join(HERE, "..", "results", "bearings")
 
 #  counters that rise as a drive degrades; all are cumulative and start at zero

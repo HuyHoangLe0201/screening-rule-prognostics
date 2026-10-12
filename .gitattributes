@@ -1,3 +1,5 @@
-#  The pre-registration protocol is hash-checked by study_p3_prereg.py:
-#  never convert its line endings.
+#  Hash-checked files (the two protocols, and study_hdd.py, whose digest the
+#  second protocol records): never convert their line endings.
 code/PREREG_p3_new_archives.md -text
+code/PREREG_p3_decline.md -text
+code/study_hdd.py -text

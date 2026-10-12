@@ -30,7 +30,8 @@ health indicators. Download them from their publishers.
 | XJTU-SY | bearings, onset, path model | `XJTU_DIR`, or the first argument of `extract_xjtu.py` |
 | NASA C-MAPSS (`train_FD00x.txt`) | the rule on turbofan engines, the band study | `$P3_DATA/CMAPSSData/` |
 | NASA Li-ion cells B0005, B0006, B0007, B0018 (`.mat`) | the rule on cells | `$P3_DATA/` |
-| Backblaze drive stats, Q4 2023 (`.zip`) | the rule on disk drives | `$P3_DATA/bb_Q4_2023.zip` |
+| Backblaze drive stats, Q4 2023 (`.zip`) | the rule on disk drives | the argument of `study_hdd.py` |
+| Backblaze drive stats, Q1 and Q2 2024 | pre-registered test of a decline | `$P3_DATA/bb_Q1_2024.zip`, `$P3_DATA/bb_Q2_2024.zip` |
 | XJTU battery dataset | pre-registered test | `$P3_DATA/NASABattery/Battery Dataset/` |
 | N-CMAPSS DS01-005 and DS02-006 (`.h5`) | pre-registered test | `$P3_DATA/ncmapss/` |
 
@@ -87,7 +88,8 @@ python study_applicability.py
 python study_bearings.py both
 python study_seedscatter.py; python study_onset_sensitivity.py
 # other archives and the band study
-python study_thirdset.py; python study_battery.py; python study_hdd.py
+python study_thirdset.py; python study_battery.py
+python study_hdd.py /path/to/bb_Q4_2023.zip
 python study_band.py
 python study_bandtest.py 20 20260805 bandtest
 python study_bandtest.py 20 20260806 bandtest_rep
@@ -107,7 +109,7 @@ All studies are seeded. `study_bearings.py` seeds every prediction from a hash
 of the bearing, the index and the law, so a rerun reproduces
 `results_both.json`; `study_p3_review.py sens` reproduces its BS row exactly.
 
-## The pre-registered test
+## The pre-registered tests
 
 `code/PREREG_p3_new_archives.md` fixed the archives, the indicator for each,
 the detector, the rule and four predictions before any onset on those archives
@@ -119,6 +121,21 @@ was computed. It was frozen on 12 October 2026 with SHA-256 digest
 python study_p3_prereg.py battery Batch-1     # one process per battery batch
 python study_p3_prereg.py ncmapss
 python study_p3_prereg.py summary             # merges, tests P1-P4
+```
+
+Both of its archives passed, so a second protocol tested a decline.
+`code/PREREG_p3_decline.md` was frozen on 13 October 2026, before either data
+file was downloaded, with SHA-256 digest
+`0e6a6801c6667061fd8edb9486f25c71952fad297237264ab2126f3e88acf890`. It predicts
+a decline, and three properties of the onsets, on two unseen quarters of
+Backblaze drives, analysed by `study_hdd.py` unchanged (its digest is recorded
+in the protocol; `.gitattributes` keeps all three files byte-exact). All eight
+predictions held (`results/bearings/p3_decline.json`).
+
+```bash
+python study_p3_decline.py run Q1_2024        # reads $P3_DATA/bb_Q1_2024.zip
+python study_p3_decline.py run Q2_2024
+python study_p3_decline.py summary            # tests P1-P4 per quarter
 ```
 
 ## Requirements

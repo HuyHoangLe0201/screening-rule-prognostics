@@ -1,0 +1,64 @@
+{
+ "protocol_sha256": "0e6a6801c6667061fd8edb9486f25c71952fad297237264ab2126f3e88acf890",
+ "protocol_frozen_at": "2026-10-13T01:08:01+07:00",
+ "study_hdd_sha256": "b4c4e520467882a241d5dbc7c16e232a13ba5b7e3c62d1836467c97c127af74f",
+ "cohorts": {
+  "Q1_2024": {
+   "n_failed": 978,
+   "n_usable": 144,
+   "n_detected": 50,
+   "tested": true,
+   "rate": 0.3472222222222222,
+   "censored_median_pct": null,
+   "censored_median_ci": [
+    null,
+    null
+   ],
+   "median_detected_pct": 97.55385106126393,
+   "share_detected_before_70": 0.02,
+   "lead_hours_median": 826.0000000000007,
+   "verdict": "declines",
+   "P1": true,
+   "P2": true,
+   "P3": true,
+   "P4": true,
+   "rate_ci": [
+    0.2743467579534698,
+    0.4280371312955655
+   ],
+   "median_detected_ci": [
+    97.12895831667008,
+    98.17855558621496
+   ]
+  },
+  "Q2_2024": {
+   "n_failed": 1230,
+   "n_usable": 189,
+   "n_detected": 72,
+   "tested": true,
+   "rate": 0.38095238095238093,
+   "censored_median_pct": null,
+   "censored_median_ci": [
+    null,
+    null
+   ],
+   "median_detected_pct": 97.67632573166793,
+   "share_detected_before_70": 0.0,
+   "lead_hours_median": 740.4999999999995,
+   "verdict": "declines",
+   "P1": true,
+   "P2": true,
+   "P3": true,
+   "P4": true,
+   "rate_ci": [
+    0.31474264725734163,
+    0.45190504219153443
+   ],
+   "median_detected_ci": [
+    96.73410968707306,
+    97.94003204394598
+   ]
+  }
+ },
+ "decline_confirmed": true
+}

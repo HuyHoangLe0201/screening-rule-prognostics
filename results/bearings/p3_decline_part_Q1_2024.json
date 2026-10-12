@@ -1,0 +1,1016 @@
+{
+ "n_failed": 978,
+ "n_usable": 144,
+ "n_detected": 50,
+ "median_onset_pct": 97.55385106126393,
+ "drives": [
+  {
+   "serial": "ZL23XBEM",
+   "n": 78,
+   "life_hours": 24261.0,
+   "onset_frac": 0.9887885907423437,
+   "deg_phase_frac": 0.01121140925765629
+  },
+  {
+   "serial": "8DJ0PV7H",
+   "n": 81,
+   "life_hours": 28875.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "8180A13NFVKG",
+   "n": 68,
+   "life_hours": 15781.0,
+   "onset_frac": 0.907547050250301,
+   "deg_phase_frac": 0.09245294974969898
+  },
+  {
+   "serial": "60U0A001F97G",
+   "n": 88,
+   "life_hours": 22928.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "6190A04AF97G",
+   "n": 89,
+   "life_hours": 23330.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "5PHLAGSD",
+   "n": 62,
+   "life_hours": 24738.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZHZ62PWS",
+   "n": 74,
+   "life_hours": 35550.0,
+   "onset_frac": 0.9754992967651196,
+   "deg_phase_frac": 0.024500703234880405
+  },
+  {
+   "serial": "61A0A04YF97G",
+   "n": 85,
+   "life_hours": 23235.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "13R0A0LKFVKG",
+   "n": 83,
+   "life_hours": 2262.0,
+   "onset_frac": 0.6830238726790451,
+   "deg_phase_frac": 0.3169761273209549
+  },
+  {
+   "serial": "X8V0A00WF97G",
+   "n": 85,
+   "life_hours": 38371.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "Z305K1XL",
+   "n": 81,
+   "life_hours": 70363.0,
+   "onset_frac": 0.9929934766851897,
+   "deg_phase_frac": 0.007006523314810331
+  },
+  {
+   "serial": "Z1S0A00UFVKG",
+   "n": 67,
+   "life_hours": 5404.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZA1815EA",
+   "n": 86,
+   "life_hours": 58097.0,
+   "onset_frac": 0.9839234383875243,
+   "deg_phase_frac": 0.016076561612475726
+  },
+  {
+   "serial": "10B0A089F97G",
+   "n": 82,
+   "life_hours": 35976.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "13R0A0KJFVKG",
+   "n": 70,
+   "life_hours": 2920.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZLW18EVZ",
+   "n": 88,
+   "life_hours": 30842.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "5PHRR5ED",
+   "n": 61,
+   "life_hours": 26357.0,
+   "onset_frac": 0.9590241681526729,
+   "deg_phase_frac": 0.040975831847327115
+  },
+  {
+   "serial": "ZLW0G8W1",
+   "n": 78,
+   "life_hours": 33191.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "5PHRJ1GD",
+   "n": 71,
+   "life_hours": 26176.0,
+   "onset_frac": 0.9442237163814181,
+   "deg_phase_frac": 0.05577628361858189
+  },
+  {
+   "serial": "Z30539E7",
+   "n": 72,
+   "life_hours": 70125.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZL005C24",
+   "n": 70,
+   "life_hours": 27837.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "PL2331LAHAWWPJ",
+   "n": 68,
+   "life_hours": 61190.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "5641SFRQS",
+   "n": 85,
+   "life_hours": 68158.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZHZ3DTCJ",
+   "n": 79,
+   "life_hours": 28402.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZHZ4VV6Y",
+   "n": 87,
+   "life_hours": 37070.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "69J0A061F97G",
+   "n": 85,
+   "life_hours": 36336.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZL2L8BNL",
+   "n": 68,
+   "life_hours": 18055.0,
+   "onset_frac": 0.985322625311548,
+   "deg_phase_frac": 0.014677374688451983
+  },
+  {
+   "serial": "ZL2CH93Q",
+   "n": 70,
+   "life_hours": 24288.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "8230A1X8FVKG",
+   "n": 77,
+   "life_hours": 10088.0,
+   "onset_frac": 0.8824345757335448,
+   "deg_phase_frac": 0.11756542426645522
+  },
+  {
+   "serial": "X8B0A01BF97G",
+   "n": 66,
+   "life_hours": 37991.0,
+   "onset_frac": 0.9836803453449501,
+   "deg_phase_frac": 0.01631965465504992
+  },
+  {
+   "serial": "ZL0056AY",
+   "n": 64,
+   "life_hours": 33861.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZL2L803G",
+   "n": 87,
+   "life_hours": 20884.0,
+   "onset_frac": 0.9887473664049032,
+   "deg_phase_frac": 0.011252633595096762
+  },
+  {
+   "serial": "2TGKH4AE",
+   "n": 67,
+   "life_hours": 2219.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZL22ZSEC",
+   "n": 74,
+   "life_hours": 27503.0,
+   "onset_frac": 0.9749118278006036,
+   "deg_phase_frac": 0.025088172199396408
+  },
+  {
+   "serial": "69Q0A004F97G",
+   "n": 66,
+   "life_hours": 35885.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "11K0A03ZF97G",
+   "n": 87,
+   "life_hours": 25948.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "13R0A0DVFVKG",
+   "n": 90,
+   "life_hours": 3392.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "51R0A49DFVGG",
+   "n": 69,
+   "life_hours": 22461.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "X0GDK4AC",
+   "n": 77,
+   "life_hours": 29938.0,
+   "onset_frac": 0.9560090854432494,
+   "deg_phase_frac": 0.04399091455675064
+  },
+  {
+   "serial": "ZL217BYC",
+   "n": 83,
+   "life_hours": 24384.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "Z1T0A06AFVKG",
+   "n": 60,
+   "life_hours": 5500.0,
+   "onset_frac": 0.8578181818181818,
+   "deg_phase_frac": 0.1421818181818182
+  },
+  {
+   "serial": "7060A04CFV8G",
+   "n": 79,
+   "life_hours": 29745.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZL22Z8PN",
+   "n": 78,
+   "life_hours": 27524.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "PL1331LAHGUT8H",
+   "n": 67,
+   "life_hours": 61172.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "51R0A250FVGG",
+   "n": 85,
+   "life_hours": 22704.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZL22ZHME",
+   "n": 89,
+   "life_hours": 25192.0,
+   "onset_frac": 0.9470069863448713,
+   "deg_phase_frac": 0.05299301365512865
+  },
+  {
+   "serial": "2BJD0NND",
+   "n": 78,
+   "life_hours": 18591.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZJV3CW35",
+   "n": 61,
+   "life_hours": 39001.0,
+   "onset_frac": 0.987205456270352,
+   "deg_phase_frac": 0.012794543729647945
+  },
+  {
+   "serial": "ZHZ50QZN",
+   "n": 88,
+   "life_hours": 37094.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "40X0A02FF97G",
+   "n": 85,
+   "life_hours": 32153.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "Z305D21B",
+   "n": 89,
+   "life_hours": 71282.0,
+   "onset_frac": 0.9933082685670996,
+   "deg_phase_frac": 0.006691731432900361
+  },
+  {
+   "serial": "Z79KT7B7T",
+   "n": 82,
+   "life_hours": 54034.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "S2ZYJ9GGB01182",
+   "n": 62,
+   "life_hours": 60407.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZA132N4F",
+   "n": 70,
+   "life_hours": 59471.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "8DHUET9H",
+   "n": 62,
+   "life_hours": 22048.0,
+   "onset_frac": 0.9687046444121916,
+   "deg_phase_frac": 0.03129535558780838
+  },
+  {
+   "serial": "ZL005CN2",
+   "n": 80,
+   "life_hours": 31081.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "9890B00ZV97G",
+   "n": 71,
+   "life_hours": 38107.0,
+   "onset_frac": 0.9771695489017765,
+   "deg_phase_frac": 0.02283045109822346
+  },
+  {
+   "serial": "X0GEGU0C",
+   "n": 75,
+   "life_hours": 29624.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "43P0A035FVKG",
+   "n": 90,
+   "life_hours": 4576.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "53X0A00GF9RG",
+   "n": 76,
+   "life_hours": 2002.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "5QJB8X3B",
+   "n": 61,
+   "life_hours": 13290.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "20H0A010F97G",
+   "n": 81,
+   "life_hours": 33387.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZA11X9VP",
+   "n": 74,
+   "life_hours": 66975.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "5120A0MRF97G",
+   "n": 68,
+   "life_hours": 22215.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "51S0A35LFVGG",
+   "n": 78,
+   "life_hours": 22624.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZLW0G570",
+   "n": 81,
+   "life_hours": 33759.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "188DT94TT",
+   "n": 75,
+   "life_hours": 51266.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "10N0A010F97G",
+   "n": 68,
+   "life_hours": 35247.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "8CGKLABG",
+   "n": 73,
+   "life_hours": 41462.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "78B0A039F97G",
+   "n": 74,
+   "life_hours": 47870.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZL005CRT",
+   "n": 76,
+   "life_hours": 32984.0,
+   "onset_frac": 0.96983385884065,
+   "deg_phase_frac": 0.030166141159350013
+  },
+  {
+   "serial": "ZHZ2Y5GV",
+   "n": 67,
+   "life_hours": 28235.0,
+   "onset_frac": 0.9814768903842749,
+   "deg_phase_frac": 0.01852310961572512
+  },
+  {
+   "serial": "51S0A3TYFVGG",
+   "n": 88,
+   "life_hours": 22767.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "43R0A09VFVKG",
+   "n": 84,
+   "life_hours": 3664.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZJV3AVA4",
+   "n": 77,
+   "life_hours": 39366.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "20W0A0C2F97G",
+   "n": 73,
+   "life_hours": 28507.0,
+   "onset_frac": 0.9826358438278318,
+   "deg_phase_frac": 0.017364156172168244
+  },
+  {
+   "serial": "ZLW18NYL",
+   "n": 87,
+   "life_hours": 27070.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "PL2331LAH3XHWJ",
+   "n": 81,
+   "life_hours": 69841.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "8HH58M4H",
+   "n": 65,
+   "life_hours": 31002.0,
+   "onset_frac": 0.9818398812979807,
+   "deg_phase_frac": 0.01816011870201928
+  },
+  {
+   "serial": "ZLW0GJC7",
+   "n": 71,
+   "life_hours": 33077.0,
+   "onset_frac": 0.9731535508056958,
+   "deg_phase_frac": 0.026846449194304234
+  },
+  {
+   "serial": "Z830A021F97G",
+   "n": 68,
+   "life_hours": 38049.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "40L0A07LF97G",
+   "n": 73,
+   "life_hours": 31966.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZL004L59",
+   "n": 73,
+   "life_hours": 30051.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "Z305NZ4J",
+   "n": 70,
+   "life_hours": 70560.0,
+   "onset_frac": 0.9869614512471655,
+   "deg_phase_frac": 0.0130385487528345
+  },
+  {
+   "serial": "88P0A034F97G",
+   "n": 85,
+   "life_hours": 48099.0,
+   "onset_frac": 0.9634088026778104,
+   "deg_phase_frac": 0.03659119732218963
+  },
+  {
+   "serial": "ZHZ67V0K",
+   "n": 67,
+   "life_hours": 34072.0,
+   "onset_frac": 0.9917234092509979,
+   "deg_phase_frac": 0.00827659074900211
+  },
+  {
+   "serial": "ZHZ3R0E0",
+   "n": 85,
+   "life_hours": 39089.0,
+   "onset_frac": 0.9653355163856839,
+   "deg_phase_frac": 0.034664483614316066
+  },
+  {
+   "serial": "ZL0051J0",
+   "n": 87,
+   "life_hours": 34428.0,
+   "onset_frac": 0.9646218194492855,
+   "deg_phase_frac": 0.03537818055071451
+  },
+  {
+   "serial": "8HH1WN9H",
+   "n": 63,
+   "life_hours": 26605.0,
+   "onset_frac": 0.9559857169704943,
+   "deg_phase_frac": 0.04401428302950572
+  },
+  {
+   "serial": "3370A02SFVKG",
+   "n": 67,
+   "life_hours": 4752.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "X2E0A06XFVKG",
+   "n": 61,
+   "life_hours": 1894.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "AAH3RAUH",
+   "n": 63,
+   "life_hours": 30960.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZL005CHL",
+   "n": 79,
+   "life_hours": 31049.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZL2CHB14",
+   "n": 87,
+   "life_hours": 23854.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "2AGN6TPY",
+   "n": 69,
+   "life_hours": 40145.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "2AGNEDPY",
+   "n": 61,
+   "life_hours": 40005.0,
+   "onset_frac": 0.9827021622297213,
+   "deg_phase_frac": 0.017297837770278712
+  },
+  {
+   "serial": "ZA142REL",
+   "n": 64,
+   "life_hours": 64403.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "88S0A01XF97G",
+   "n": 70,
+   "life_hours": 35994.0,
+   "onset_frac": 0.990748458076346,
+   "deg_phase_frac": 0.009251541923653961
+  },
+  {
+   "serial": "ZHZ3QCJK",
+   "n": 60,
+   "life_hours": 38105.0,
+   "onset_frac": 0.9824170056423042,
+   "deg_phase_frac": 0.017582994357695836
+  },
+  {
+   "serial": "ZL2LTQEL",
+   "n": 78,
+   "life_hours": 20668.0,
+   "onset_frac": 0.9478904586800851,
+   "deg_phase_frac": 0.052109541319914854
+  },
+  {
+   "serial": "8230A13GFVKG",
+   "n": 75,
+   "life_hours": 9287.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "5010A007F97G",
+   "n": 74,
+   "life_hours": 31922.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "Z1C0A002FVKG",
+   "n": 69,
+   "life_hours": 4611.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "5PJS06NE",
+   "n": 73,
+   "life_hours": 3683.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZJV3AA41",
+   "n": 87,
+   "life_hours": 39595.0,
+   "onset_frac": 0.9755777244601591,
+   "deg_phase_frac": 0.024422275539840888
+  },
+  {
+   "serial": "2AGMLZVY",
+   "n": 64,
+   "life_hours": 42128.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "X2E0A060FVKG",
+   "n": 87,
+   "life_hours": 2377.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZHZ0N19K",
+   "n": 82,
+   "life_hours": 38642.0,
+   "onset_frac": 0.9721028932249883,
+   "deg_phase_frac": 0.02789710677501167
+  },
+  {
+   "serial": "2PH1P1HT",
+   "n": 86,
+   "life_hours": 9830.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "3GK5N5SF",
+   "n": 60,
+   "life_hours": 4071.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "X880A02KF97G",
+   "n": 64,
+   "life_hours": 37927.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "10L0A005F97G",
+   "n": 63,
+   "life_hours": 21512.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "51R0A1JQFVGG",
+   "n": 73,
+   "life_hours": 22508.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZL00524W",
+   "n": 76,
+   "life_hours": 34181.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "Z305DHNB",
+   "n": 81,
+   "life_hours": 71353.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZHZ62EZP",
+   "n": 85,
+   "life_hours": 35816.0,
+   "onset_frac": 0.9508320303774849,
+   "deg_phase_frac": 0.04916796962251513
+  },
+  {
+   "serial": "11J0A0VNF97G",
+   "n": 62,
+   "life_hours": 25393.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZL23X4BN",
+   "n": 77,
+   "life_hours": 24968.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "X870A0JTF97G",
+   "n": 88,
+   "life_hours": 38512.0,
+   "onset_frac": 0.9639592854175322,
+   "deg_phase_frac": 0.036040714582467825
+  },
+  {
+   "serial": "2AGHTGGY",
+   "n": 86,
+   "life_hours": 42452.0,
+   "onset_frac": 0.9581174031847733,
+   "deg_phase_frac": 0.04188259681522666
+  },
+  {
+   "serial": "Z3050N8W",
+   "n": 64,
+   "life_hours": 70634.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZHZ62E4H",
+   "n": 71,
+   "life_hours": 34795.0,
+   "onset_frac": 0.9834171576375916,
+   "deg_phase_frac": 0.016582842362408368
+  },
+  {
+   "serial": "33Q0A1BJFVKG",
+   "n": 63,
+   "life_hours": 4276.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZHZ4WF3E",
+   "n": 84,
+   "life_hours": 37326.0,
+   "onset_frac": 0.9807640786583078,
+   "deg_phase_frac": 0.019235921341692164
+  },
+  {
+   "serial": "AAG2NE2H",
+   "n": 85,
+   "life_hours": 43944.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "X880A0G4F97G",
+   "n": 60,
+   "life_hours": 37833.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZHZ50X8C",
+   "n": 76,
+   "life_hours": 37062.0,
+   "onset_frac": 0.9890184015973233,
+   "deg_phase_frac": 0.010981598402676651
+  },
+  {
+   "serial": "Z79KT7AVT",
+   "n": 73,
+   "life_hours": 53838.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "96HCTBI0T",
+   "n": 78,
+   "life_hours": 61997.0,
+   "onset_frac": 0.9740471313128054,
+   "deg_phase_frac": 0.025952868687194597
+  },
+  {
+   "serial": "ZLW0DMMR",
+   "n": 60,
+   "life_hours": 32765.0,
+   "onset_frac": 0.9727453074927515,
+   "deg_phase_frac": 0.027254692507248546
+  },
+  {
+   "serial": "71C0A04FFV8G",
+   "n": 79,
+   "life_hours": 20813.0,
+   "onset_frac": 0.9780425695478787,
+   "deg_phase_frac": 0.021957430452121285
+  },
+  {
+   "serial": "ZHZ5GZLL",
+   "n": 60,
+   "life_hours": 35110.0,
+   "onset_frac": 0.9878097408145827,
+   "deg_phase_frac": 0.012190259185417274
+  },
+  {
+   "serial": "ZHZ62GR5",
+   "n": 71,
+   "life_hours": 34795.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "5PHLA9RD",
+   "n": 73,
+   "life_hours": 26155.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "6280A0PNFVKG",
+   "n": 68,
+   "life_hours": 12156.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZHZ65LYL",
+   "n": 69,
+   "life_hours": 34349.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "PL2331LAHDEBEJ",
+   "n": 73,
+   "life_hours": 69238.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZL005DHM",
+   "n": 68,
+   "life_hours": 31097.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZHZ69ZS8",
+   "n": 75,
+   "life_hours": 34277.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "ZLW0GHRC",
+   "n": 78,
+   "life_hours": 32551.0,
+   "onset_frac": 0.9770513962704679,
+   "deg_phase_frac": 0.022948603729532113
+  },
+  {
+   "serial": "71C0A04PFV8G",
+   "n": 78,
+   "life_hours": 20792.0,
+   "onset_frac": 0.9734513274336283,
+   "deg_phase_frac": 0.026548672566371723
+  },
+  {
+   "serial": "ZLW0G68T",
+   "n": 75,
+   "life_hours": 33485.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  },
+  {
+   "serial": "Z305DGPP",
+   "n": 72,
+   "life_hours": 70886.0,
+   "onset_frac": 0.9817312304263183,
+   "deg_phase_frac": 0.01826876957368173
+  },
+  {
+   "serial": "Z302SZ32",
+   "n": 78,
+   "life_hours": 75112.0,
+   "onset_frac": null,
+   "deg_phase_frac": null
+  }
+ ]
+}
