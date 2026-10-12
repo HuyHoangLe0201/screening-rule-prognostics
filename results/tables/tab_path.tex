@@ -1,0 +1,47 @@
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{The first-passage path model on real bearings, with ablations,
+sensitivity runs, two predictors that need no threshold and an exact-posterior
+reference.}
+\label{tab:path}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}l rrrr rrrr@{}}
+\toprule
+& \multicolumn{4}{c}{PRONOSTIA} & \multicolumn{4}{c}{XJTU-SY}\\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+& MAE & MedAPE & PHM & cov & MAE & MedAPE & PHM & cov\\
+\midrule
+\multicolumn{9}{@{}l@{}}{\itshape increment law ($n=77$ / $n=89$ prediction points, $N_p=1200$)}\\[1pt]
+BS & 5090 & 100 & 0.050 & 0.00 & 13355 & 90 & 0.079 & 0.03\\
+BS-$t$ & 5070 & 99 & 0.052 & 0.03 & 11879 & 93 & 0.072 & 0.06\\
+Wiener & 4979 & 98 & 0.065 & 0.05 & 11875 & 93 & 0.062 & 0.04\\
+gamma & 4860 & 100 & 0.078 & 0.01 & 15337 & 99 & 0.060 & 0.02\\
+IG process & 5139 & 100 & 0.056 & 0.01 & 13290 & 100 & 0.104 & 0.03\\
+\midrule
+\multicolumn{9}{@{}l@{}}{\itshape ablation and scaling, BS only (every second point, $N_p=600$; row 1 is BS above)}\\[1pt]
+informed prior, coupling & 5146 & 100 & 0.044 & 0.02 & 16217 & 92 & 0.059 & 0.00\\
+informed prior, no coupling & 4896 & 100 & 0.097 & 0.02 & 20230 & 100 & 0.048 & 0.05\\
+diffuse prior, coupling & 32988 & 100 & 0.067 & 0.07 & 129414 & 239 & 0.030 & 0.00\\
+diffuse prior, no coupling & 52318 & 294 & 0.060 & 0.02 & 145829 & 721 & 0.037 & 0.00\\
+naive interval scaling & 5109 & 99 & 0.046 & 0.00 & 12991 & 91 & 0.105 & 0.07\\
+\midrule
+\multicolumn{9}{@{}l@{}}{\itshape sensitivity runs (BS, every point, main-study seeds)}\\[1pt]
+unsmoothed indicator & 5143 & 100 & 0.042 & 0.03 & 14108 & 92 & 0.093 & 0.07\\
+$N_p=4800$ & 5000 & 100 & 0.059 & 0.00 & 13771 & 88 & 0.103 & 0.06\\
+noise prior s.d.\ $0.5$ & 5130 & 100 & 0.052 & 0.00 & 13879 & 94 & 0.086 & 0.08\\
+noise prior s.d.\ $1.5$ & 5159 & 100 & 0.036 & 0.00 & 14492 & 100 & 0.054 & 0.01\\
+floor $c=0.01$ & 5075 & 100 & 0.048 & 0.00 & 12781 & 93 & 0.094 & 0.04\\
+floor $c=0.20$ & 5092 & 100 & 0.046 & 0.00 & 15559 & 95 & 0.095 & 0.07\\
+autoregressive noise & 5081 & 100 & 0.053 & 0.03 & 12989 & 90 & 0.095 & 0.10\\
+\midrule
+\multicolumn{9}{@{}l@{}}{\itshape no threshold (same points and training records)}\\[1pt]
+gradient boosting, $\log\RUL$ & 4829 & 85 & 0.107 & 0.60 & 18048 & 82 & 0.122 & 0.73\\
+life table & 3627 & 75 & 0.158 & 0.44 & 26789 & 97 & 0.123 & 0.15\\
+\midrule
+\multicolumn{9}{@{}l@{}}{\itshape unsmoothed indicator, one point per record near $70\,\%$ of life ($n=11$ / $n=15$)}\\[1pt]
+Liu--West filter & 4660 & 100 & 0.034 & 0.00 & 12218 & 100 & 0.087 & 0.00\\
+exact posterior & 119845 & 3229 & 0.078 & 0.09 & 293705 & 129 & 0.129 & 0.47\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

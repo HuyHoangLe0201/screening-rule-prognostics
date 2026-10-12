@@ -1,0 +1,44 @@
+%  Compile with pdflatex to see every figure of the paper.  The axis and title
+%  styles and the two macros are those of the manuscript; cross-references to
+%  the paper's theorems print as ??.
+\documentclass{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{xcolor,tikz,pgfplots,subcaption,cleveref}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing,backgrounds}
+\pgfplotsset{compat=1.18}
+\pgfplotsset{p2axis/.style={scale only axis, axis lines*=left,
+    axis line style={black!55,line width=0.4pt},
+    tick style={black!55,line width=0.4pt}, tick align=outside,
+    major tick length=1.6pt, minor tick length=1pt,
+    tick label style={font=\scriptsize,text=black!75},
+    label style={font=\scriptsize,text=black!80},
+    xlabel style={yshift=1.5pt}, ylabel style={yshift=-1.5pt},
+    grid=major, grid style={black!9,line width=0.3pt},
+    enlargelimits=false, scaled ticks=false,
+    /pgf/number format/1000 sep={}}}
+\tikzset{p2ttl/.style={font=\footnotesize,anchor=south west,inner sep=0pt}}
+\newcommand{\RUL}{\mathrm{RUL}}
+\newcommand{\E}{\mathbb{E}}
+\begin{document}
+\input{fig_diagnoses}
+\clearpage
+\input{fig_decomp}
+\clearpage
+\input{fig_ssm}
+\clearpage
+\input{fig_grid}
+\clearpage
+\input{fig_ppc}
+\clearpage
+\input{fig_filter}
+\clearpage
+\input{fig_guided}
+\clearpage
+\input{fig_robustprior}
+\clearpage
+\input{fig_onsetrule}
+\clearpage
+\input{fig_onset}
+\clearpage
+\end{document}

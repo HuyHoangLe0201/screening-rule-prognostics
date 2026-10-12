@@ -1,0 +1,56 @@
+{
+ "FD001": {
+  "n_units": 100,
+  "median_healthy_mad": 0.2724277499999418,
+  "n_detected": 100,
+  "median_onset_pct": 56.72779905741973,
+  "median_deg_phase_pct": 43.27220094258027,
+  "q1_onset_pct": 51.74447174447175,
+  "q3_onset_pct": 61.917462099943855
+ },
+ "FD002": {
+  "n_units": 260,
+  "median_healthy_mad": 38.98867350000033,
+  "n_detected": 9,
+  "median_onset_pct": 84.98293515358361,
+  "median_deg_phase_pct": 15.017064846416389,
+  "q1_onset_pct": 77.74542739828294,
+  "q3_onset_pct": 88.63085166384658
+ },
+ "FD003": {
+  "n_units": 100,
+  "median_healthy_mad": 0.29281350000000755,
+  "n_detected": 100,
+  "median_onset_pct": 56.29501584557764,
+  "median_deg_phase_pct": 43.70498415442236,
+  "q1_onset_pct": 51.83491418247516,
+  "q3_onset_pct": 60.3448275862069
+ },
+ "FD004": {
+  "n_units": 249,
+  "median_healthy_mad": 37.506073499999474,
+  "n_detected": 9,
+  "median_onset_pct": 87.77777777777777,
+  "median_deg_phase_pct": 12.222222222222229,
+  "q1_onset_pct": 74.11993965300478,
+  "q3_onset_pct": 94.19320843091334
+ },
+ "FD002+regime": {
+  "n_units": 260,
+  "median_healthy_mad": 0.5460897405635624,
+  "n_detected": 253,
+  "median_onset_pct": 68.04123711340206,
+  "median_deg_phase_pct": 31.95876288659794,
+  "q1_onset_pct": 62.01431394746436,
+  "q3_onset_pct": 74.80964467005076
+ },
+ "FD004+regime": {
+  "n_units": 249,
+  "median_healthy_mad": 0.4574728260868964,
+  "n_detected": 249,
+  "median_onset_pct": 64.94845360824742,
+  "median_deg_phase_pct": 35.05154639175258,
+  "q1_onset_pct": 59.93513875478868,
+  "q3_onset_pct": 71.0331443746489
+ }
+}

@@ -1,0 +1,105 @@
+{
+ "alpha": 0.4,
+ "beta": 1.0,
+ "T": 20.0,
+ "D": 12.0,
+ "n": 40000,
+ "rows": [
+  {
+   "schedule": "coarse",
+   "model": "consistent",
+   "steps": 1.0,
+   "mean_ratio": 0.9997835784926841,
+   "var_ratio": 0.9965202543454137,
+   "tau_mean": 11.204712373085671,
+   "tau_sd": 1.0149215993959397,
+   "uncrossed": 0.0,
+   "tau_mean_rel": 1.0009931567644732,
+   "tau_sd_rel": 0.7571442433239225
+  },
+  {
+   "schedule": "coarse",
+   "model": "interval",
+   "steps": 1.0,
+   "mean_ratio": 1.00077829889272,
+   "var_ratio": 20.546226452233462,
+   "tau_mean": 11.727155723674445,
+   "tau_sd": 3.6987275557882353,
+   "uncrossed": 0.1012,
+   "tau_mean_rel": 1.0455719688367684,
+   "tau_sd_rel": 2.759297149804878
+  },
+  {
+   "schedule": "equal",
+   "model": "consistent",
+   "steps": 16.0,
+   "mean_ratio": 1.000225271419765,
+   "var_ratio": 1.0082313714362972,
+   "tau_mean": 11.193595378117118,
+   "tau_sd": 1.3404600356470446,
+   "uncrossed": 0.0,
+   "tau_mean_rel": 1.0,
+   "tau_sd_rel": 1.0
+  },
+  {
+   "schedule": "equal",
+   "model": "interval",
+   "steps": 16.0,
+   "mean_ratio": 0.9992829564044828,
+   "var_ratio": 1.2467631126448389,
+   "tau_mean": 11.216019626770668,
+   "tau_sd": 1.4859151853589974,
+   "uncrossed": 0.0,
+   "tau_mean_rel": 1.0,
+   "tau_sd_rel": 1.1085113661309127
+  },
+  {
+   "schedule": "unequal",
+   "model": "consistent",
+   "steps": 13.0,
+   "mean_ratio": 0.9990732156221691,
+   "var_ratio": 1.0021049044925083,
+   "tau_mean": 11.219634057641736,
+   "tau_sd": 1.3149457473673238,
+   "uncrossed": 0.0,
+   "tau_mean_rel": 1.0023262123245513,
+   "tau_sd_rel": 0.9809660209172854
+  },
+  {
+   "schedule": "unequal",
+   "model": "interval",
+   "steps": 13.0,
+   "mean_ratio": 0.9991194645315656,
+   "var_ratio": 2.971395690244947,
+   "tau_mean": 11.4027372344965,
+   "tau_sd": 2.2049278561861176,
+   "uncrossed": 0.0,
+   "tau_mean_rel": 1.016647403797348,
+   "tau_sd_rel": 1.644903837153035
+  },
+  {
+   "schedule": "random",
+   "model": "consistent",
+   "steps": 13.7246,
+   "mean_ratio": 1.0005448823085819,
+   "var_ratio": 1.0039383509395159,
+   "tau_mean": 11.185668710469898,
+   "tau_sd": 1.3138139378569493,
+   "uncrossed": 0.0,
+   "tau_mean_rel": 0.9992918568717682,
+   "tau_sd_rel": 0.9801216768262448
+  },
+  {
+   "schedule": "random",
+   "model": "interval",
+   "steps": 13.7246,
+   "mean_ratio": 1.0003720661156967,
+   "var_ratio": 2.6448127406997655,
+   "tau_mean": 11.33797740199321,
+   "tau_sd": 2.092600657189868,
+   "uncrossed": 7.5e-05,
+   "tau_mean_rel": 1.010873534398197,
+   "tau_sd_rel": 1.5611063377803445
+  }
+ ]
+}

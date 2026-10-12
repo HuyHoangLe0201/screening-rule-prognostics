@@ -1,0 +1,117 @@
+{
+ "n_seeds": 12,
+ "K": 400,
+ "alpha": 0.4,
+ "beta": 0.05,
+ "rows": [
+  {
+   "regime": "flat",
+   "sigma": 0.01,
+   "bootstrap_mae": 0.36543052401857984,
+   "bootstrap_drift": 0.36563848861506504,
+   "bootstrap_ess": 0.9241225179009723,
+   "bootstrap_mae_sd": 0.2536546948907765,
+   "guided_mae": 0.38912496295754456,
+   "guided_drift": 0.3893329275540296,
+   "guided_ess": 0.8130037467615355,
+   "guided_mae_sd": 0.245821808854726
+  },
+  {
+   "regime": "flat",
+   "sigma": 0.04,
+   "bootstrap_mae": 0.47749224225360565,
+   "bootstrap_drift": 0.4783181997687905,
+   "bootstrap_ess": 0.7902020232524761,
+   "bootstrap_mae_sd": 0.37207649559700584,
+   "guided_mae": 0.5612243980601813,
+   "guided_drift": 0.5620500099726816,
+   "guided_ess": 0.7630927463363539,
+   "guided_mae_sd": 0.16166138857355403
+  },
+  {
+   "regime": "flat",
+   "sigma": 0.1,
+   "bootstrap_mae": 0.7086350732042684,
+   "bootstrap_drift": 0.710597037861076,
+   "bootstrap_ess": 0.7235525080568733,
+   "bootstrap_mae_sd": 0.3045067400997013,
+   "guided_mae": 0.7654663538462723,
+   "guided_drift": 0.7674287743970741,
+   "guided_ess": 0.7836292617106962,
+   "guided_mae_sd": 0.3430775551640727
+  },
+  {
+   "regime": "flat then cliff",
+   "sigma": 0.01,
+   "bootstrap_mae": 0.2708876022138758,
+   "bootstrap_drift": 0.2477304022352422,
+   "bootstrap_ess": 0.925223705925058,
+   "bootstrap_mae_sd": 0.2123010977877974,
+   "guided_mae": 0.2942934721582185,
+   "guided_drift": 0.23858143393803857,
+   "guided_ess": 0.9619189361358164,
+   "guided_mae_sd": 0.18706528486721832
+  },
+  {
+   "regime": "flat then cliff",
+   "sigma": 0.04,
+   "bootstrap_mae": 0.3718391617589834,
+   "bootstrap_drift": 0.33294068630904655,
+   "bootstrap_ess": 0.7792786025284038,
+   "bootstrap_mae_sd": 0.34367135259718967,
+   "guided_mae": 0.414109592160027,
+   "guided_drift": 0.39796058194220674,
+   "guided_ess": 0.8182920153505543,
+   "guided_mae_sd": 0.12126064222043204
+  },
+  {
+   "regime": "flat then cliff",
+   "sigma": 0.1,
+   "bootstrap_mae": 0.5520812977142223,
+   "bootstrap_drift": 0.533968544034272,
+   "bootstrap_ess": 0.7857997466752181,
+   "bootstrap_mae_sd": 0.2601792421147411,
+   "guided_mae": 0.6272383369745499,
+   "guided_drift": 0.6056602221581407,
+   "guided_ess": 0.8338632878873674,
+   "guided_mae_sd": 0.33073341669412487
+  },
+  {
+   "regime": "steady growth",
+   "sigma": 0.01,
+   "bootstrap_mae": 0.004586475393739241,
+   "bootstrap_drift": 0.004571775354916786,
+   "bootstrap_ess": 0.7953540444943346,
+   "bootstrap_mae_sd": 0.0007754783342806456,
+   "guided_mae": 0.004829478988062154,
+   "guided_drift": 0.004856154450030329,
+   "guided_ess": 0.7390302162690133,
+   "guided_mae_sd": 0.001547745239178012
+  },
+  {
+   "regime": "steady growth",
+   "sigma": 0.04,
+   "bootstrap_mae": 0.014914004123774985,
+   "bootstrap_drift": 0.012323684283861028,
+   "bootstrap_ess": 0.7541930447482302,
+   "bootstrap_mae_sd": 0.00897302986405866,
+   "guided_mae": 0.03819717238726921,
+   "guided_drift": 0.03607665741811347,
+   "guided_ess": 0.7106097134181227,
+   "guided_mae_sd": 0.05530202851186982
+  },
+  {
+   "regime": "steady growth",
+   "sigma": 0.1,
+   "bootstrap_mae": 0.12271812331686593,
+   "bootstrap_drift": 0.10758545140475684,
+   "bootstrap_ess": 0.767840006200748,
+   "bootstrap_mae_sd": 0.24254060737413963,
+   "guided_mae": 0.1484007231072255,
+   "guided_drift": 0.14156593148848942,
+   "guided_ess": 0.8044298475292253,
+   "guided_mae_sd": 0.22830068463709835
+  }
+ ],
+ "guided_wins": 0
+}

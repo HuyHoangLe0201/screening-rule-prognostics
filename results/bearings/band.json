@@ -1,0 +1,1032 @@
+{
+ "n_records": 740,
+ "band": [
+  0.7,
+  0.9
+ ],
+ "in_band": [
+  {
+   "archive": "pronostia",
+   "unit": "Bearing1_4",
+   "onset_frac": 0.7682072829131653,
+   "deg_phase_frac": 0.23179271708683474
+  },
+  {
+   "archive": "pronostia",
+   "unit": "Bearing3_3",
+   "onset_frac": 0.7603686635944701,
+   "deg_phase_frac": 0.23963133640552994
+  },
+  {
+   "archive": "xjtu",
+   "unit": "Bearing1_4",
+   "onset_frac": 0.7377049180327869,
+   "deg_phase_frac": 0.26229508196721313
+  },
+  {
+   "archive": "cmapss:FD001",
+   "unit": "8",
+   "onset_frac": 0.72,
+   "deg_phase_frac": 0.28
+  },
+  {
+   "archive": "cmapss:FD001",
+   "unit": "16",
+   "onset_frac": 0.7751196172248804,
+   "deg_phase_frac": 0.22488038277511957
+  },
+  {
+   "archive": "cmapss:FD001",
+   "unit": "22",
+   "onset_frac": 0.7178217821782178,
+   "deg_phase_frac": 0.2821782178217822
+  },
+  {
+   "archive": "cmapss:FD001",
+   "unit": "91",
+   "onset_frac": 0.725925925925926,
+   "deg_phase_frac": 0.274074074074074
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "1",
+   "onset_frac": 0.7986577181208053,
+   "deg_phase_frac": 0.20134228187919467
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "8",
+   "onset_frac": 0.8079470198675497,
+   "deg_phase_frac": 0.1920529801324503
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "9",
+   "onset_frac": 0.7386934673366834,
+   "deg_phase_frac": 0.2613065326633166
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "10",
+   "onset_frac": 0.717391304347826,
+   "deg_phase_frac": 0.28260869565217395
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "12",
+   "onset_frac": 0.7791164658634538,
+   "deg_phase_frac": 0.22088353413654616
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "20",
+   "onset_frac": 0.8831168831168831,
+   "deg_phase_frac": 0.11688311688311692
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "22",
+   "onset_frac": 0.7447916666666666,
+   "deg_phase_frac": 0.25520833333333337
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "26",
+   "onset_frac": 0.8983957219251337,
+   "deg_phase_frac": 0.10160427807486627
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "28",
+   "onset_frac": 0.795,
+   "deg_phase_frac": 0.20499999999999996
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "29",
+   "onset_frac": 0.7284768211920529,
+   "deg_phase_frac": 0.2715231788079471
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "34",
+   "onset_frac": 0.7073170731707317,
+   "deg_phase_frac": 0.29268292682926833
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "36",
+   "onset_frac": 0.8620689655172413,
+   "deg_phase_frac": 0.13793103448275867
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "39",
+   "onset_frac": 0.7663551401869159,
+   "deg_phase_frac": 0.23364485981308414
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "40",
+   "onset_frac": 0.7253886010362695,
+   "deg_phase_frac": 0.27461139896373055
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "42",
+   "onset_frac": 0.7737556561085973,
+   "deg_phase_frac": 0.2262443438914027
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "44",
+   "onset_frac": 0.751219512195122,
+   "deg_phase_frac": 0.24878048780487805
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "53",
+   "onset_frac": 0.722972972972973,
+   "deg_phase_frac": 0.277027027027027
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "54",
+   "onset_frac": 0.7386934673366834,
+   "deg_phase_frac": 0.2613065326633166
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "55",
+   "onset_frac": 0.710691823899371,
+   "deg_phase_frac": 0.289308176100629
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "56",
+   "onset_frac": 0.8159509202453987,
+   "deg_phase_frac": 0.18404907975460127
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "57",
+   "onset_frac": 0.8428571428571429,
+   "deg_phase_frac": 0.15714285714285714
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "58",
+   "onset_frac": 0.7962962962962963,
+   "deg_phase_frac": 0.20370370370370372
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "59",
+   "onset_frac": 0.7835051546391752,
+   "deg_phase_frac": 0.21649484536082475
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "63",
+   "onset_frac": 0.7380952380952381,
+   "deg_phase_frac": 0.26190476190476186
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "64",
+   "onset_frac": 0.7127659574468085,
+   "deg_phase_frac": 0.2872340425531915
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "66",
+   "onset_frac": 0.8,
+   "deg_phase_frac": 0.19999999999999996
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "69",
+   "onset_frac": 0.7279411764705882,
+   "deg_phase_frac": 0.2720588235294118
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "70",
+   "onset_frac": 0.7435897435897436,
+   "deg_phase_frac": 0.2564102564102564
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "71",
+   "onset_frac": 0.7835051546391752,
+   "deg_phase_frac": 0.21649484536082475
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "77",
+   "onset_frac": 0.7027027027027027,
+   "deg_phase_frac": 0.29729729729729726
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "80",
+   "onset_frac": 0.7285067873303167,
+   "deg_phase_frac": 0.2714932126696833
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "82",
+   "onset_frac": 0.725,
+   "deg_phase_frac": 0.275
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "85",
+   "onset_frac": 0.8213256484149856,
+   "deg_phase_frac": 0.17867435158501443
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "90",
+   "onset_frac": 0.7712765957446809,
+   "deg_phase_frac": 0.22872340425531912
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "91",
+   "onset_frac": 0.7510204081632653,
+   "deg_phase_frac": 0.24897959183673468
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "93",
+   "onset_frac": 0.783068783068783,
+   "deg_phase_frac": 0.21693121693121697
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "94",
+   "onset_frac": 0.7647058823529411,
+   "deg_phase_frac": 0.23529411764705888
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "97",
+   "onset_frac": 0.8482758620689655,
+   "deg_phase_frac": 0.15172413793103445
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "99",
+   "onset_frac": 0.7079207920792079,
+   "deg_phase_frac": 0.2920792079207921
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "103",
+   "onset_frac": 0.7107142857142857,
+   "deg_phase_frac": 0.28928571428571426
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "112",
+   "onset_frac": 0.7724867724867724,
+   "deg_phase_frac": 0.22751322751322756
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "113",
+   "onset_frac": 0.7327586206896551,
+   "deg_phase_frac": 0.26724137931034486
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "117",
+   "onset_frac": 0.711864406779661,
+   "deg_phase_frac": 0.288135593220339
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "118",
+   "onset_frac": 0.7063953488372093,
+   "deg_phase_frac": 0.29360465116279066
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "120",
+   "onset_frac": 0.7596899224806202,
+   "deg_phase_frac": 0.24031007751937983
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "121",
+   "onset_frac": 0.7523809523809524,
+   "deg_phase_frac": 0.24761904761904763
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "122",
+   "onset_frac": 0.7567567567567568,
+   "deg_phase_frac": 0.2432432432432432
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "124",
+   "onset_frac": 0.7602996254681648,
+   "deg_phase_frac": 0.23970037453183524
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "127",
+   "onset_frac": 0.78515625,
+   "deg_phase_frac": 0.21484375
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "129",
+   "onset_frac": 0.7079207920792079,
+   "deg_phase_frac": 0.2920792079207921
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "130",
+   "onset_frac": 0.8901098901098901,
+   "deg_phase_frac": 0.10989010989010994
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "133",
+   "onset_frac": 0.8616352201257862,
+   "deg_phase_frac": 0.1383647798742138
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "136",
+   "onset_frac": 0.75,
+   "deg_phase_frac": 0.25
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "137",
+   "onset_frac": 0.7432432432432432,
+   "deg_phase_frac": 0.2567567567567568
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "138",
+   "onset_frac": 0.785,
+   "deg_phase_frac": 0.21499999999999997
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "140",
+   "onset_frac": 0.8878504672897196,
+   "deg_phase_frac": 0.11214953271028039
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "141",
+   "onset_frac": 0.8098159509202454,
+   "deg_phase_frac": 0.1901840490797546
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "145",
+   "onset_frac": 0.7051792828685259,
+   "deg_phase_frac": 0.29482071713147406
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "154",
+   "onset_frac": 0.8497409326424871,
+   "deg_phase_frac": 0.15025906735751293
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "156",
+   "onset_frac": 0.7525083612040134,
+   "deg_phase_frac": 0.24749163879598657
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "164",
+   "onset_frac": 0.8032128514056225,
+   "deg_phase_frac": 0.19678714859437751
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "165",
+   "onset_frac": 0.7636363636363637,
+   "deg_phase_frac": 0.23636363636363633
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "166",
+   "onset_frac": 0.7254901960784313,
+   "deg_phase_frac": 0.27450980392156865
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "176",
+   "onset_frac": 0.8841463414634146,
+   "deg_phase_frac": 0.11585365853658536
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "177",
+   "onset_frac": 0.7624309392265194,
+   "deg_phase_frac": 0.2375690607734806
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "178",
+   "onset_frac": 0.831081081081081,
+   "deg_phase_frac": 0.16891891891891897
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "181",
+   "onset_frac": 0.7450980392156863,
+   "deg_phase_frac": 0.2549019607843137
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "182",
+   "onset_frac": 0.78,
+   "deg_phase_frac": 0.21999999999999997
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "186",
+   "onset_frac": 0.7061855670103093,
+   "deg_phase_frac": 0.2938144329896907
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "188",
+   "onset_frac": 0.75,
+   "deg_phase_frac": 0.25
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "190",
+   "onset_frac": 0.8132295719844358,
+   "deg_phase_frac": 0.1867704280155642
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "191",
+   "onset_frac": 0.730593607305936,
+   "deg_phase_frac": 0.26940639269406397
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "193",
+   "onset_frac": 0.7151162790697675,
+   "deg_phase_frac": 0.2848837209302325
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "194",
+   "onset_frac": 0.8581081081081081,
+   "deg_phase_frac": 0.14189189189189189
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "195",
+   "onset_frac": 0.7105263157894737,
+   "deg_phase_frac": 0.2894736842105263
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "196",
+   "onset_frac": 0.7531380753138075,
+   "deg_phase_frac": 0.2468619246861925
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "198",
+   "onset_frac": 0.8292682926829268,
+   "deg_phase_frac": 0.1707317073170732
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "203",
+   "onset_frac": 0.8252788104089219,
+   "deg_phase_frac": 0.17472118959107807
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "205",
+   "onset_frac": 0.8636363636363636,
+   "deg_phase_frac": 0.13636363636363635
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "209",
+   "onset_frac": 0.7661691542288557,
+   "deg_phase_frac": 0.23383084577114432
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "210",
+   "onset_frac": 0.8152173913043478,
+   "deg_phase_frac": 0.18478260869565222
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "212",
+   "onset_frac": 0.7919463087248322,
+   "deg_phase_frac": 0.20805369127516782
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "230",
+   "onset_frac": 0.7580645161290323,
+   "deg_phase_frac": 0.24193548387096775
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "231",
+   "onset_frac": 0.7152777777777778,
+   "deg_phase_frac": 0.2847222222222222
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "235",
+   "onset_frac": 0.8524590163934426,
+   "deg_phase_frac": 0.14754098360655743
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "237",
+   "onset_frac": 0.7799043062200957,
+   "deg_phase_frac": 0.22009569377990434
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "238",
+   "onset_frac": 0.7564102564102564,
+   "deg_phase_frac": 0.2435897435897436
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "244",
+   "onset_frac": 0.8828125,
+   "deg_phase_frac": 0.1171875
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "247",
+   "onset_frac": 0.7461928934010152,
+   "deg_phase_frac": 0.25380710659898476
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "253",
+   "onset_frac": 0.7449664429530202,
+   "deg_phase_frac": 0.25503355704697983
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "254",
+   "onset_frac": 0.75,
+   "deg_phase_frac": 0.25
+  },
+  {
+   "archive": "cmapss:FD002+regime",
+   "unit": "255",
+   "onset_frac": 0.7529411764705882,
+   "deg_phase_frac": 0.24705882352941178
+  },
+  {
+   "archive": "cmapss:FD003",
+   "unit": "10",
+   "onset_frac": 0.760914760914761,
+   "deg_phase_frac": 0.23908523908523904
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "1",
+   "onset_frac": 0.7102803738317757,
+   "deg_phase_frac": 0.28971962616822433
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "7",
+   "onset_frac": 0.8416289592760181,
+   "deg_phase_frac": 0.1583710407239819
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "11",
+   "onset_frac": 0.813953488372093,
+   "deg_phase_frac": 0.18604651162790697
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "19",
+   "onset_frac": 0.7476190476190476,
+   "deg_phase_frac": 0.2523809523809524
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "20",
+   "onset_frac": 0.763265306122449,
+   "deg_phase_frac": 0.23673469387755097
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "23",
+   "onset_frac": 0.7178571428571429,
+   "deg_phase_frac": 0.28214285714285714
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "24",
+   "onset_frac": 0.7473118279569892,
+   "deg_phase_frac": 0.25268817204301075
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "25",
+   "onset_frac": 0.74,
+   "deg_phase_frac": 0.26
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "27",
+   "onset_frac": 0.7484662576687117,
+   "deg_phase_frac": 0.25153374233128833
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "29",
+   "onset_frac": 0.7813765182186235,
+   "deg_phase_frac": 0.21862348178137647
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "36",
+   "onset_frac": 0.8531468531468531,
+   "deg_phase_frac": 0.14685314685314688
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "38",
+   "onset_frac": 0.8587570621468926,
+   "deg_phase_frac": 0.14124293785310738
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "45",
+   "onset_frac": 0.7457627118644068,
+   "deg_phase_frac": 0.2542372881355932
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "48",
+   "onset_frac": 0.7577639751552795,
+   "deg_phase_frac": 0.2422360248447205
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "56",
+   "onset_frac": 0.7521613832853026,
+   "deg_phase_frac": 0.24783861671469742
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "57",
+   "onset_frac": 0.7253886010362695,
+   "deg_phase_frac": 0.27461139896373055
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "59",
+   "onset_frac": 0.8135593220338984,
+   "deg_phase_frac": 0.18644067796610164
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "67",
+   "onset_frac": 0.7724550898203593,
+   "deg_phase_frac": 0.22754491017964074
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "69",
+   "onset_frac": 0.7035398230088495,
+   "deg_phase_frac": 0.29646017699115046
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "70",
+   "onset_frac": 0.7405405405405405,
+   "deg_phase_frac": 0.2594594594594595
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "71",
+   "onset_frac": 0.8173076923076923,
+   "deg_phase_frac": 0.1826923076923077
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "73",
+   "onset_frac": 0.7790055248618785,
+   "deg_phase_frac": 0.22099447513812154
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "76",
+   "onset_frac": 0.8618421052631579,
+   "deg_phase_frac": 0.13815789473684215
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "77",
+   "onset_frac": 0.7567567567567568,
+   "deg_phase_frac": 0.2432432432432432
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "82",
+   "onset_frac": 0.7157360406091371,
+   "deg_phase_frac": 0.2842639593908629
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "84",
+   "onset_frac": 0.8742138364779874,
+   "deg_phase_frac": 0.12578616352201255
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "85",
+   "onset_frac": 0.7111913357400722,
+   "deg_phase_frac": 0.2888086642599278
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "92",
+   "onset_frac": 0.7696335078534031,
+   "deg_phase_frac": 0.23036649214659688
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "99",
+   "onset_frac": 0.7664670658682635,
+   "deg_phase_frac": 0.23353293413173648
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "101",
+   "onset_frac": 0.85,
+   "deg_phase_frac": 0.15000000000000002
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "105",
+   "onset_frac": 0.8764705882352941,
+   "deg_phase_frac": 0.12352941176470589
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "107",
+   "onset_frac": 0.7103825136612022,
+   "deg_phase_frac": 0.2896174863387978
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "110",
+   "onset_frac": 0.7473118279569892,
+   "deg_phase_frac": 0.25268817204301075
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "112",
+   "onset_frac": 0.7411764705882353,
+   "deg_phase_frac": 0.2588235294117647
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "113",
+   "onset_frac": 0.842391304347826,
+   "deg_phase_frac": 0.15760869565217395
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "115",
+   "onset_frac": 0.7633587786259542,
+   "deg_phase_frac": 0.23664122137404575
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "118",
+   "onset_frac": 0.7090239410681399,
+   "deg_phase_frac": 0.29097605893186007
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "124",
+   "onset_frac": 0.7176470588235294,
+   "deg_phase_frac": 0.2823529411764706
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "128",
+   "onset_frac": 0.7096774193548387,
+   "deg_phase_frac": 0.29032258064516125
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "130",
+   "onset_frac": 0.7530120481927711,
+   "deg_phase_frac": 0.24698795180722888
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "135",
+   "onset_frac": 0.7516778523489933,
+   "deg_phase_frac": 0.24832214765100669
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "138",
+   "onset_frac": 0.7640449438202247,
+   "deg_phase_frac": 0.2359550561797753
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "141",
+   "onset_frac": 0.7989949748743719,
+   "deg_phase_frac": 0.20100502512562812
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "143",
+   "onset_frac": 0.7880434782608695,
+   "deg_phase_frac": 0.2119565217391305
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "147",
+   "onset_frac": 0.7094017094017094,
+   "deg_phase_frac": 0.29059829059829057
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "150",
+   "onset_frac": 0.7919463087248322,
+   "deg_phase_frac": 0.20805369127516782
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "156",
+   "onset_frac": 0.8345323741007195,
+   "deg_phase_frac": 0.16546762589928055
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "157",
+   "onset_frac": 0.7181208053691275,
+   "deg_phase_frac": 0.2818791946308725
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "160",
+   "onset_frac": 0.7219251336898396,
+   "deg_phase_frac": 0.27807486631016043
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "164",
+   "onset_frac": 0.7,
+   "deg_phase_frac": 0.30000000000000004
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "165",
+   "onset_frac": 0.7215686274509804,
+   "deg_phase_frac": 0.2784313725490196
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "170",
+   "onset_frac": 0.8074534161490683,
+   "deg_phase_frac": 0.1925465838509317
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "179",
+   "onset_frac": 0.7793103448275862,
+   "deg_phase_frac": 0.2206896551724138
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "181",
+   "onset_frac": 0.746268656716418,
+   "deg_phase_frac": 0.25373134328358204
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "182",
+   "onset_frac": 0.7024390243902439,
+   "deg_phase_frac": 0.29756097560975614
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "186",
+   "onset_frac": 0.7423312883435583,
+   "deg_phase_frac": 0.2576687116564417
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "188",
+   "onset_frac": 0.7519685039370079,
+   "deg_phase_frac": 0.24803149606299213
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "189",
+   "onset_frac": 0.7866108786610879,
+   "deg_phase_frac": 0.21338912133891208
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "192",
+   "onset_frac": 0.7894736842105263,
+   "deg_phase_frac": 0.21052631578947367
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "195",
+   "onset_frac": 0.7232704402515723,
+   "deg_phase_frac": 0.2767295597484277
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "197",
+   "onset_frac": 0.7764705882352941,
+   "deg_phase_frac": 0.22352941176470587
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "217",
+   "onset_frac": 0.785,
+   "deg_phase_frac": 0.21499999999999997
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "222",
+   "onset_frac": 0.8118811881188119,
+   "deg_phase_frac": 0.18811881188118806
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "226",
+   "onset_frac": 0.7216494845360825,
+   "deg_phase_frac": 0.27835051546391754
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "231",
+   "onset_frac": 0.7783505154639175,
+   "deg_phase_frac": 0.22164948453608246
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "234",
+   "onset_frac": 0.7632850241545893,
+   "deg_phase_frac": 0.23671497584541068
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "240",
+   "onset_frac": 0.7449664429530202,
+   "deg_phase_frac": 0.25503355704697983
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "241",
+   "onset_frac": 0.7831325301204819,
+   "deg_phase_frac": 0.2168674698795181
+  },
+  {
+   "archive": "cmapss:FD004+regime",
+   "unit": "246",
+   "onset_frac": 0.7888198757763976,
+   "deg_phase_frac": 0.21118012422360244
+  }
+ ],
+ "by_archive_median": {
+  "pronostia": 0.9661869660395145,
+  "xjtu": 0.40707964601769914,
+  "battery": 0.24404761904761907,
+  "cmapss:FD001": 0.5672779905741974,
+  "cmapss:FD002+regime": 0.6790404288805824,
+  "cmapss:FD003": 0.5629501584557765,
+  "cmapss:FD004+regime": 0.6494845360824743
+ }
+}

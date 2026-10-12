@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "screening-rule-prognostics: code and results for a screening rule for degradation-threshold prognostics"
+version: 1.0.0
+license: MIT
+authors:
+  - family-names: Le
+    given-names: Huy Hoang
+    affiliation: "R&D Department, PowerMore Ltd., Da Nang, Vietnam"
+  - family-names: Nguyen
+    given-names: Kim-Anh
+    affiliation: "Faculty of Electrical Engineering, The University of Danang - University of Science and Technology, Da Nang, Vietnam"
+preferred-citation:
+  type: article
+  title: "A Screening Rule for Degradation-Threshold Prognostics"
+  authors:
+    - family-names: Le
+      given-names: Huy Hoang
+    - family-names: Nguyen
+      given-names: Kim-Anh
+  status: submitted
+  year: 2026

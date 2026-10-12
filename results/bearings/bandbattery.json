@@ -1,0 +1,326 @@
+{
+ "config": {
+  "per_bin": 6,
+  "sampling_seed": 20260807
+ },
+ "per_bin": {
+  "0.00-0.40": {
+   "units": 6,
+   "predictions": 18,
+   "median_abs_pct_err": 100.0,
+   "coverage": 0.0
+  },
+  "0.40-0.55": {
+   "units": 2,
+   "predictions": 6,
+   "median_abs_pct_err": 307.6938725805915,
+   "coverage": 0.0
+  },
+  "0.80-1.01": {
+   "units": 1,
+   "predictions": 3,
+   "median_abs_pct_err": 455.48862643737175,
+   "coverage": 0.0
+  }
+ },
+ "rows": [
+  {
+   "unit": "B0007",
+   "onset_frac": 0.19642857142857142,
+   "bin": "0.00-0.40",
+   "k": 84,
+   "at_life": 0.5,
+   "true": 83.0,
+   "pred": 19.342106421047507,
+   "abs_pct_err": 76.69625732403915,
+   "covered": false
+  },
+  {
+   "unit": "B0007",
+   "onset_frac": 0.19642857142857142,
+   "bin": "0.00-0.40",
+   "k": 117,
+   "at_life": 0.7,
+   "true": 50.0,
+   "pred": 5.215186209071684,
+   "abs_pct_err": 89.56962758185664,
+   "covered": false
+  },
+  {
+   "unit": "B0007",
+   "onset_frac": 0.19642857142857142,
+   "bin": "0.00-0.40",
+   "k": 142,
+   "at_life": 0.85,
+   "true": 25.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0006",
+   "onset_frac": 0.2976190476190476,
+   "bin": "0.00-0.40",
+   "k": 84,
+   "at_life": 0.5,
+   "true": 83.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0006",
+   "onset_frac": 0.2976190476190476,
+   "bin": "0.00-0.40",
+   "k": 117,
+   "at_life": 0.7,
+   "true": 50.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0006",
+   "onset_frac": 0.2976190476190476,
+   "bin": "0.00-0.40",
+   "k": 142,
+   "at_life": 0.85,
+   "true": 25.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0047",
+   "onset_frac": 0.2916666666666667,
+   "bin": "0.00-0.40",
+   "k": 36,
+   "at_life": 0.5,
+   "true": 35.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0047",
+   "onset_frac": 0.2916666666666667,
+   "bin": "0.00-0.40",
+   "k": 50,
+   "at_life": 0.7,
+   "true": 21.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0047",
+   "onset_frac": 0.2916666666666667,
+   "bin": "0.00-0.40",
+   "k": 61,
+   "at_life": 0.85,
+   "true": 10.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0044",
+   "onset_frac": 0.22321428571428573,
+   "bin": "0.00-0.40",
+   "k": 56,
+   "at_life": 0.5,
+   "true": 55.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0044",
+   "onset_frac": 0.22321428571428573,
+   "bin": "0.00-0.40",
+   "k": 78,
+   "at_life": 0.7,
+   "true": 33.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0044",
+   "onset_frac": 0.22321428571428573,
+   "bin": "0.00-0.40",
+   "k": 95,
+   "at_life": 0.85,
+   "true": 16.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0036",
+   "onset_frac": 0.2639593908629442,
+   "bin": "0.00-0.40",
+   "k": 98,
+   "at_life": 0.5,
+   "true": 98.0,
+   "pred": 392.85099806918595,
+   "abs_pct_err": 300.86836537672036,
+   "covered": false
+  },
+  {
+   "unit": "B0036",
+   "onset_frac": 0.2639593908629442,
+   "bin": "0.00-0.40",
+   "k": 137,
+   "at_life": 0.7,
+   "true": 59.0,
+   "pred": 549.418699845423,
+   "abs_pct_err": 831.2181353312254,
+   "covered": false
+  },
+  {
+   "unit": "B0036",
+   "onset_frac": 0.2639593908629442,
+   "bin": "0.00-0.40",
+   "k": 167,
+   "at_life": 0.85,
+   "true": 29.0,
+   "pred": 1276.1384987876188,
+   "abs_pct_err": 4300.477582026271,
+   "covered": false
+  },
+  {
+   "unit": "B0018",
+   "onset_frac": 0.11363636363636363,
+   "bin": "0.00-0.40",
+   "k": 66,
+   "at_life": 0.5,
+   "true": 65.0,
+   "pred": 10.638007162035333,
+   "abs_pct_err": 83.63383513533024,
+   "covered": false
+  },
+  {
+   "unit": "B0018",
+   "onset_frac": 0.11363636363636363,
+   "bin": "0.00-0.40",
+   "k": 92,
+   "at_life": 0.7,
+   "true": 39.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0018",
+   "onset_frac": 0.11363636363636363,
+   "bin": "0.00-0.40",
+   "k": 112,
+   "at_life": 0.85,
+   "true": 19.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0045",
+   "onset_frac": 0.5,
+   "bin": "0.40-0.55",
+   "k": 36,
+   "at_life": 0.5,
+   "true": 35.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0045",
+   "onset_frac": 0.5,
+   "bin": "0.40-0.55",
+   "k": 50,
+   "at_life": 0.7,
+   "true": 21.0,
+   "pred": 0.3505190809675781,
+   "abs_pct_err": 98.330861519202,
+   "covered": false
+  },
+  {
+   "unit": "B0045",
+   "onset_frac": 0.5,
+   "bin": "0.40-0.55",
+   "k": 61,
+   "at_life": 0.85,
+   "true": 10.0,
+   "pred": 0.0,
+   "abs_pct_err": 100.0,
+   "covered": false
+  },
+  {
+   "unit": "B0054",
+   "onset_frac": 0.5436893203883495,
+   "bin": "0.40-0.55",
+   "k": 51,
+   "at_life": 0.5,
+   "true": 51.0,
+   "pred": 313.84775003220335,
+   "abs_pct_err": 515.387745161183,
+   "covered": false
+  },
+  {
+   "unit": "B0054",
+   "onset_frac": 0.5436893203883495,
+   "bin": "0.40-0.55",
+   "k": 72,
+   "at_life": 0.7,
+   "true": 30.0,
+   "pred": 584.4438199873678,
+   "abs_pct_err": 1848.1460666245591,
+   "covered": false
+  },
+  {
+   "unit": "B0054",
+   "onset_frac": 0.5436893203883495,
+   "bin": "0.40-0.55",
+   "k": 87,
+   "at_life": 0.85,
+   "true": 15.0,
+   "pred": 598.263024777194,
+   "abs_pct_err": 3888.420165181293,
+   "covered": false
+  },
+  {
+   "unit": "B0034",
+   "onset_frac": 0.8274111675126904,
+   "bin": "0.80-1.01",
+   "k": 98,
+   "at_life": 0.5,
+   "true": 98.0,
+   "pred": 223.3336150927086,
+   "abs_pct_err": 127.89144397215163,
+   "covered": false
+  },
+  {
+   "unit": "B0034",
+   "onset_frac": 0.8274111675126904,
+   "bin": "0.80-1.01",
+   "k": 137,
+   "at_life": 0.7,
+   "true": 59.0,
+   "pred": 327.73828959804933,
+   "abs_pct_err": 455.48862643737175,
+   "covered": false
+  },
+  {
+   "unit": "B0034",
+   "onset_frac": 0.8274111675126904,
+   "bin": "0.80-1.01",
+   "k": 167,
+   "at_life": 0.85,
+   "true": 29.0,
+   "pred": 638.322291297284,
+   "abs_pct_err": 2101.1113493009793,
+   "covered": false
+  }
+ ],
+ "n_cells": 14
+}

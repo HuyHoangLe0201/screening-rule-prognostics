@@ -1,0 +1,141 @@
+{
+ "thinnings": [
+  1,
+  2,
+  4,
+  8,
+  16
+ ],
+ "by_dataset": {
+  "pronostia": {
+   "n_records": 14,
+   "median_exponent": 0.3598533878235872,
+   "min_exponent": 0.03493594374820265,
+   "max_exponent": 0.9611764458734889,
+   "n_below_half": 9
+  },
+  "xjtu": {
+   "n_records": 5,
+   "median_exponent": 0.8934920241798391,
+   "min_exponent": 0.3049826318683127,
+   "max_exponent": 1.2321085903871023,
+   "n_below_half": 1
+  }
+ },
+ "records": [
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing1_1",
+   "n": 2803,
+   "exponent": 0.16945007180840915
+  },
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing1_2",
+   "n": 871,
+   "exponent": 0.09126131096974263
+  },
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing1_3",
+   "n": 2375,
+   "exponent": 0.03493594374820265
+  },
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing1_4",
+   "n": 1428,
+   "exponent": 0.9486379357042548
+  },
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing1_5",
+   "n": 2463,
+   "exponent": 0.43817677789581416
+  },
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing1_6",
+   "n": 2448,
+   "exponent": 0.3689989813678404
+  },
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing1_7",
+   "n": 2259,
+   "exponent": 0.6321700355827333
+  },
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing2_1",
+   "n": 911,
+   "exponent": 0.13633723326405983
+  },
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing2_2",
+   "n": 797,
+   "exponent": 0.785435617671514
+  },
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing2_3",
+   "n": 1955,
+   "exponent": 0.30181678254505573
+  },
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing2_4",
+   "n": 751,
+   "exponent": 0.6218604131726613
+  },
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing2_5",
+   "n": 2311,
+   "exponent": 0.3507077942793341
+  },
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing2_6",
+   "n": 701,
+   "exponent": 0.9611764458734889
+  },
+  {
+   "dataset": "pronostia",
+   "bearing": "Bearing3_2",
+   "n": 1637,
+   "exponent": 0.33303783137176
+  },
+  {
+   "dataset": "xjtu",
+   "bearing": "Bearing2_1",
+   "n": 491,
+   "exponent": 1.2321085903871023
+  },
+  {
+   "dataset": "xjtu",
+   "bearing": "Bearing2_3",
+   "n": 533,
+   "exponent": 0.9499452247878006
+  },
+  {
+   "dataset": "xjtu",
+   "bearing": "Bearing3_1",
+   "n": 2538,
+   "exponent": 0.7432063901725399
+  },
+  {
+   "dataset": "xjtu",
+   "bearing": "Bearing3_2",
+   "n": 2496,
+   "exponent": 0.3049826318683127
+  },
+  {
+   "dataset": "xjtu",
+   "bearing": "Bearing3_4",
+   "n": 1515,
+   "exponent": 0.8934920241798391
+  }
+ ]
+}

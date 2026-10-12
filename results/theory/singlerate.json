@@ -1,0 +1,97 @@
+{
+ "config": {
+  "alpha": 0.35,
+  "beta": 0.001,
+  "gamma": 1.5,
+  "x_ref": 0.1,
+  "threshold": 1.0,
+  "reps": 20
+ },
+ "fit_increments": 1334,
+ "by_size": {
+  "1": {
+   "records": 1,
+   "increments": 134,
+   "mean_2dLL": 51.995548226927966,
+   "median_2dLL": 49.607264858922235,
+   "frac_consistent_better": 1.0,
+   "frac_clearly_separated": 1.0
+  },
+  "2": {
+   "records": 2,
+   "increments": 268,
+   "mean_2dLL": 108.62404214806267,
+   "median_2dLL": 109.70834099967033,
+   "frac_consistent_better": 1.0,
+   "frac_clearly_separated": 1.0
+  },
+  "3": {
+   "records": 3,
+   "increments": 394,
+   "mean_2dLL": 160.8081162408668,
+   "median_2dLL": 162.8798291973494,
+   "frac_consistent_better": 1.0,
+   "frac_clearly_separated": 1.0
+  },
+  "5": {
+   "records": 5,
+   "increments": 678,
+   "mean_2dLL": 287.8876798707021,
+   "median_2dLL": 285.61635443431123,
+   "frac_consistent_better": 1.0,
+   "frac_clearly_separated": 1.0
+  },
+  "10": {
+   "records": 10,
+   "increments": 1339,
+   "mean_2dLL": 534.3370299906782,
+   "median_2dLL": 546.0745505593322,
+   "frac_consistent_better": 1.0,
+   "frac_clearly_separated": 1.0
+  }
+ },
+ "fitted": {
+  "consistent": [
+   0.3459340230410448,
+   0.0010058914386118249,
+   1.495963005315302
+  ],
+  "naive": [
+   0.20423257787443616,
+   0.0010345341357274394,
+   1.5084623423149017
+  ]
+ },
+ "step_sd_bias": {
+  "q5": {
+   "x": 0.006857202670398383,
+   "sd_true": 0.00039501090835851536,
+   "sd_naive": 0.00023952772380620257,
+   "rel_err": -0.3936174451445652
+  },
+  "q25": {
+   "x": 0.04758932460808727,
+   "sd_true": 0.0005032658334408255,
+   "sd_naive": 0.00038986958634371435,
+   "rel_err": -0.22532077395721795
+  },
+  "q50": {
+   "x": 0.1383167412121381,
+   "sd_true": 0.0007208952301364617,
+   "sd_naive": 0.0008032112390817558,
+   "rel_err": 0.11418581439318465
+  },
+  "q75": {
+   "x": 0.34121705647121403,
+   "sd_true": 0.001144182913457282,
+   "sd_naive": 0.0020339489399510244,
+   "rel_err": 0.7776431687877692
+  },
+  "q95": {
+   "x": 0.7793596573060179,
+   "sd_true": 0.0019192481973295589,
+   "sd_naive": 0.005756334264850085,
+   "rel_err": 1.9992651668812016
+  }
+ }
+}

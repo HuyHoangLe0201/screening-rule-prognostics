@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.log
+data/
+results/features/
+results/features_xjtu/
+results/hi/*.csv
+results/bearings/p3_review_*.json
+results/bearings/p3_prereg_part_*.json
