@@ -1,0 +1,3 @@
+#  The pre-registration protocol is hash-checked by study_p3_prereg.py:
+#  never convert its line endings.
+code/PREREG_p3_new_archives.md -text
