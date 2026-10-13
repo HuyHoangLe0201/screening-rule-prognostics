@@ -1087,6 +1087,16 @@ def part_exact():
     which = [v for v in variants if v in sys.argv] or ["raw"]
     names = [n for n in ("pronostia", "xjtu") if n in sys.argv] or ["pronostia", "xjtu"]
     i, n_sh = (int(v) for v in os.environ.get("P3_EXACT_SHARD", "0/1").split("/"))
+    #  A rerun of named records whose chains did not converge: P3_EXACT_ONLY
+    #  lists them, and P3_MH_B, P3_MH_S, P3_NMH_MAX, P3_NSTEP_MAX lengthen the
+    #  chains or raise the particle cap.  Its rows are stored under a "rerun"
+    #  key and replace the first run's rows for the same points in exact_sum.
+    only = [b for b in os.environ.get("P3_EXACT_ONLY", "").split(",") if b]
+    global B_MH, S_MH, N_MH_MAX, NSTEP_MAX
+    B_MH = int(os.environ.get("P3_MH_B", B_MH))
+    S_MH = int(os.environ.get("P3_MH_S", S_MH))
+    N_MH_MAX = int(os.environ.get("P3_NMH_MAX", N_MH_MAX))
+    NSTEP_MAX = float(os.environ.get("P3_NSTEP_MAX", NSTEP_MAX))
     out = json.load(open(OUT, encoding="utf-8")).get("exact_rows", {}) if os.path.exists(OUT) else {}
     for tag in which:
         for name in names:
@@ -1094,7 +1104,7 @@ def part_exact():
             data = ds.load_dataset(name) if w is None else _hi_with_smoothing(name, w)
             rows, cache = [], {}
             for j, (b, pts) in enumerate(ds.evaluation_bearings(data, name)):
-                if j % n_sh != i:
+                if (b not in only) if only else (j % n_sh != i):
                     continue
                 rec = data[b]
                 D, med = _calibrated_D(data, f"{name}_{tag}", b, cache, name)
@@ -1115,13 +1125,14 @@ def part_exact():
                                      **({k_: r[k_] for k_ in ("acc", "rhat", "n_mh", "sd_logz", "generations", "steps",
                                                                "life_frac", "theta_exact",
                                                                "theta_main", "shift_sd", "names")}
-                                        if est == "exact" else {})})
+                                        if est == "exact" else {}),
+                                     **({"rerun": True, "iterations": B_MH + S_MH} if only else {})})
                     print(f"  {tag} {name} {b} k={k}: true={true:8.0f} "
                           f"exact={r['exact']['pred']:8.0f} [{r['exact']['lo']:.0f},"
                           f"{r['exact']['hi']:.0f}] main={r['main']['pred']:8.0f} "
                           f"acc={r['acc']:.2f} rhat={max(r['rhat']):.2f} steps={r['steps']} "
                           f"N={r['n_mh']} sd={r['sd_logz']:.1f}", flush=True)
-                out[f"{tag}/{name}/{i}of{n_sh}"] = rows
+                out[f"{tag}/{name}/" + (f"rerun-{'+'.join(only)}" if only else f"{i}of{n_sh}")] = rows
                 _save("exact_rows", out)
 
 
@@ -1148,9 +1159,14 @@ def part_exact_sum():
     """Pool the shards of part exact and summarise them as tab:path does."""
     res = json.load(open(OUT, encoding="utf-8"))
     pool = {}
-    for key, rows in res["exact_rows"].items():
+    #  first runs, then reruns, which replace the first run's rows point by point
+    keys = sorted(res["exact_rows"], key=lambda k_: k_.split("/")[2].startswith("rerun"))
+    for key in keys:
         tag, name, _ = key.split("/")
-        pool.setdefault((tag, name), []).extend(rows)
+        d_ = pool.setdefault((tag, name), {})
+        for r in res["exact_rows"][key]:
+            d_[(r["bearing"], r["k"], r["law"])] = r
+    pool = {k_: list(v.values()) for k_, v in pool.items()}
     out = {}
     for (tag, name), rows in sorted(pool.items()):
         s = sb.summarise(rows)
