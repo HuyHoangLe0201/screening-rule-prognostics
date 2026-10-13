@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the paper below."
 title: "screening-rule-prognostics: code and results for a screening rule for degradation-threshold prognostics"
-version: 1.2.0
+version: 1.3.0
 license: MIT
 authors:
   - family-names: Le

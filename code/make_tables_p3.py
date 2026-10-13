@@ -169,8 +169,8 @@ def t_path_compact():
     return f"""\\begin{{table}}[htbp]
 \\centering\\footnotesize
 \\caption{{The first-passage path model on real bearings, with ablations,
-sensitivity runs, two predictors that need no threshold and an exact-posterior
-reference.}}
+sensitivity runs, an uncertain failure threshold, two predictors that need no
+threshold and an exact-posterior reference.}}
 \\label{{tab:path}}
 \\begin{{tabular}}{{@{{}}l rrrr rrrr@{{}}}}
 \\toprule
