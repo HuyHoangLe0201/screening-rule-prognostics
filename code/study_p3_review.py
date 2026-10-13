@@ -1195,6 +1195,241 @@ def part_exact_sum():
 
 
 # ══════════════════════════════════════════════════════════════════════════
+# dthr   the uncertainty of the calibrated failure threshold D
+# ══════════════════════════════════════════════════════════════════════════
+K_D, B_D = 20, 2000          # threshold values in the mixture; bootstrap resamples
+
+
+def part_dthr():
+    """D is the median terminal latent state of the reference records, so it is
+    uncertain.  Per evaluation bearing its bootstrap law over the reference
+    records is summarised by K_D quantiles.  At every prediction point of the
+    main study the filter runs exactly as there (so the D-fixed prediction
+    reproduces tab:path), and the predictive law is then mixed over the K_D
+    values with equal weight.  D enters the passage; its effect through the
+    priors and the coupling reference, set from the calibrated D, is held fixed.
+    The predictions at the 2.5 % and 97.5 % points of D's law are kept as well.
+    """
+    names = [n for n in ("pronostia", "xjtu") if n in sys.argv] or ["pronostia", "xjtu"]
+    out = json.load(open(OUT, encoding="utf-8")).get("dthr", {}) if os.path.exists(OUT) else {}
+    rng = np.random.default_rng(20261017)
+    for name in names:
+        data = ds.load_dataset(name)
+        rows, spread, vcache = [], [], {}
+        for b, pts in ds.evaluation_bearings(data, name):
+            rec = data[b]
+            D_obs, ref = ds.threshold_for(data, b, name)
+            med = float(np.median([max(data[r]["n"] - ds.first_prediction_time(data[r]["hi"]), 20)
+                                   for r in ref]))
+            key = tuple(ref)
+            if key not in vcache:
+                vals = [sb.latent_terminal(data[r], "BS", True, True, med, D_obs, seed=7)
+                        for r in ref]
+                vcache[key] = np.array([v for v in vals if np.isfinite(v) and v > 0])
+            vals = vcache[key]
+            D0 = float(np.median(vals)) if vals.size else D_obs
+            Db = np.median(vals[rng.integers(0, vals.size, size=(B_D, vals.size))], axis=1)
+            Dq = np.quantile(Db, (np.arange(K_D) + 0.5) / K_D)
+            D_lo, D_hi = (float(v) for v in np.quantile(Db, [0.025, 0.975]))
+            spread.append({"bearing": b, "n_ref": int(vals.size), "D": D0,
+                           "D_ci": [D_lo, D_hi], "rel_width": (D_hi - D_lo) / D0})
+            cap = 10.0 * float(rec["t"][-1])
+            for k in pts:
+                if k < 20 or k >= rec["n"] - 1:
+                    continue
+                true = float(rec["t"][-1] - rec["t"][k])
+                if true <= 0:
+                    continue
+                pf, states = sb._filter(rec, k, D0, "BS", True, True, med,
+                                        sb.stable_seed(b, k, "BS"), sb.N_PART)
+                if not states:
+                    continue
+                st_ = states[-1]
+
+                def pred(D):
+                    p = gbs.predict_rul(st_, pf, D, rec["dt"], nd_min=10.0, n_mc=32,
+                                        n_draw=8, n_max=200)
+                    return float(p["mean"]), p["samples"], p["rho"]
+                #  first, exactly as study_bearings.predict_one
+                m0, s0, r0 = pred(D0)
+                mix = [pred(float(D)) for D in Dq]
+                ml, sl, rl = pred(D_lo)
+                mh, sh, rh = pred(D_hi)
+                ests = {"fixed": (m0, s0, r0),
+                        "mixture": (float(np.mean([m for m, _, _ in mix])),
+                                    np.concatenate([s for _, s, _ in mix]),
+                                    float(np.mean([r for _, _, r in mix]))),
+                        "D_low": (ml, sl, rl), "D_high": (mh, sh, rh)}
+                for est, (m, s, r) in ests.items():
+                    lo, hi_ = np.quantile(s, [0.025, 0.975])
+                    pr = float(np.clip(m, 0.0, cap))
+                    er = 100.0 * (true - pr) / true
+                    rows.append({"bearing": b, "k": k, "law": est, "true": true,
+                                 "pred": pr, "lo": float(np.clip(lo, 0.0, cap)),
+                                 "hi": float(np.clip(hi_, 0.0, cap)), "rho": r,
+                                 "er": er, "score": float(ds.phm_score(er))})
+            print(f"  {name} {b}: D {D0:.3f} [{D_lo:.3f}, {D_hi:.3f}] from {vals.size} records",
+                  flush=True)
+        s = sb.summarise(rows)
+        out[name] = {"summary": s, "D_spread": spread,
+                     "rel_width_median": float(np.median([x["rel_width"] for x in spread])),
+                     "rows": rows}
+        for est in ("fixed", "mixture", "D_low", "D_high"):
+            q = s[est]
+            print(f"{name:10s} {est:8s} n={q['n']:3d} MAE={q['MAE']:8.0f} "
+                  f"MedAPE={q['MedAPE_pct']:6.1f} cov={q['coverage95']:.3f}", flush=True)
+        _save("dthr", out)
+
+
+# ══════════════════════════════════════════════════════════════════════════
+# altind  the screen on other indicators of the same vibration records
+# ══════════════════════════════════════════════════════════════════════════
+ALT_IND = {
+    #  name: (channel pair, how the pair is combined)
+    "log RMS (the paper's)": (("h_rms", "v_rms"), "norm"),
+    "kurtosis": (("h_kurtosis", "v_kurtosis"), "mean"),
+    "peak to peak": (("h_p2p", "v_p2p"), "norm"),
+    "envelope RMS": (("h_hilbert_rms", "v_hilbert_rms"), "norm"),
+    "high-band energy": (("h_band_hi", "v_band_hi"), "norm"),
+}
+
+
+def part_altind():
+    """Each indicator is built as the paper builds log RMS: the two channels
+    combined, causally smoothed with the archive's window, divided by the
+    healthy-window median and logged.  The detector, its constants and the
+    three-state rule are unchanged; undetected records are censored."""
+    import glob
+    import pandas as pd
+    rng = np.random.default_rng(20261018)
+    out = {}
+    for name in ("pronostia", "xjtu"):
+        cfg = ds.DATASETS[name]
+        out[name] = {}
+        files = sorted(glob.glob(os.path.join(cfg["dir"], "*.csv")))
+        for ind, ((a, b), how) in ALT_IND.items():
+            fr = []
+            for f in files:
+                d = pd.read_csv(f)
+                x, y = d[a].to_numpy(float), d[b].to_numpy(float)
+                v = np.sqrt(x ** 2 + y ** 2) if how == "norm" else 0.5 * (x + y)
+                v = ds._smooth(np.maximum(v, 1e-12), cfg["smooth"])
+                nh = min(cfg["n_health"], max(5, int(0.05 * len(v))))
+                hi = np.log(v / np.median(v[:nh]))
+                i = ds.first_prediction_time(hi)
+                fr.append(i / len(hi) if i > 0 else np.inf)
+            x = np.array(fr)
+            med = float(np.median(x))
+            meds = np.median(x[rng.integers(0, len(x), size=(B_BOOT, len(x)))], axis=1)
+            lo, hi_ = (float(q) for q in np.quantile(meds, [0.025, 0.975], method="inverted_cdf"))
+
+            def pct(z):
+                return None if not np.isfinite(z) else 100 * z
+            det = x[np.isfinite(x)]
+            #  Algorithm 3 in order: the indicator check (step 4) before the rule
+            v = ("check the indicator" if det.size < 0.25 * len(x)
+                 else _verdict3(pct(lo), pct(hi_), 70))
+            r = {"n": len(x), "n_detected": int(det.size),
+                 "median_detected_pct": pct(float(np.median(det))) if det.size else None,
+                 "censored_median_pct": pct(med), "censored_median_ci": [pct(lo), pct(hi_)],
+                 "verdict": v}
+            out[name][ind] = r
+            print(f"  {name:10s} {ind:22s} detected {det.size:2d}/{len(x)}  censored median "
+                  f"{r['censored_median_pct']} {r['censored_median_ci']}  -> {r['verdict']}")
+    _save("altind", out)
+
+
+# ══════════════════════════════════════════════════════════════════════════
+# thr    how much the verdicts, and the step, depend on the threshold
+# ══════════════════════════════════════════════════════════════════════════
+def _verdict3(lo, hi, t):
+    lo = np.inf if lo is None else lo
+    hi = np.inf if hi is None else hi
+    return "declines" if lo >= t else ("not declined" if hi < t else "undecided")
+
+
+def part_thr():
+    """(1) The three-state verdict of every archive at thresholds 50-95 %, and
+    the range over which every verdict stays as at 70 %.  (2) Where the step in
+    the C-MAPSS band study peaks: a bootstrap over units of the cut, among those
+    study_bandsig.py scans, at which the difference in median absolute error
+    (above minus below) is largest."""
+    cens = json.load(open(OUT, encoding="utf-8"))["cens"]
+    ci = {k: cens[k]["censored_median_ci"] for k in
+          ("PRONOSTIA", "XJTU-SY", "C-MAPSS FD001", "C-MAPSS FD003",
+           "C-MAPSS FD002+regime", "C-MAPSS FD004+regime", "NASA cells",
+           "Backblaze drives")}
+    pre = json.load(open(os.path.join(BE, "p3_prereg.json"), encoding="utf-8"))
+    ci["XJTU Li-ion"] = pre["battery"]["censored_median_ci"]
+    ci["N-CMAPSS"] = pre["ncmapss"]["censored_median_ci"]
+    dec = json.load(open(os.path.join(BE, "p3_decline.json"), encoding="utf-8"))
+    for q, c in dec["cohorts"].items():
+        ci["Backblaze " + q] = c["censored_median_ci"]
+    grid = list(range(50, 100, 5))
+    out = {"grid": grid, "verdicts": {k: [_verdict3(*v, t) for t in grid] for k, v in ci.items()}}
+    at70 = {k: _verdict3(*v, 70) for k, v in ci.items()}
+    fine = np.round(np.arange(50, 99.0001, 0.1), 1)
+    keep = [float(t) for t in fine if all(_verdict3(*ci[k], t) == at70[k] for k in ci)]
+    out["stable_range"] = [min(keep), max(keep)]
+    #  per archive, the thresholds (on the fine grid) at which its verdict is
+    #  the one it has at 70 %
+    out["same_as_70"] = {k: [float(min(f)), float(max(f))] for k in ci
+                         for f in [[t for t in fine if _verdict3(*ci[k], t) == at70[k]]]}
+    print("every verdict as at 70 % for thresholds in", out["stable_range"])
+
+    rng = np.random.default_rng(20261016)
+    cuts = (0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85)
+    draws = {}
+    for stem in ("bandtest", "bandtest_rep"):
+        draws[stem] = json.load(open(os.path.join(BE, f"{stem}.json"), encoding="utf-8"))["rows"]
+    #  pooled: the union of the two draws' units, each unit once
+    seen, pooled = set(), []
+    for stem in ("bandtest", "bandtest_rep"):
+        for u in sorted({r["unit"] for r in draws[stem]}):
+            if u not in seen:
+                seen.add(u)
+                pooled += [r for r in draws[stem] if r["unit"] == u]
+    draws["pooled"] = pooled
+    band = {}
+    for name, rows in draws.items():
+        by = {}
+        for r in rows:
+            by.setdefault(r["unit"], []).append(r)
+        units = sorted(by)
+        ons = np.array([by[u][0]["onset_frac"] for u in units])
+        errs = [np.array([r["abs_pct_err"] for r in by[u]]) for u in units]
+
+        def scan(idx):
+            d = {}
+            for c in cuts:
+                b = [i for i in idx if ons[i] < c]
+                a = [i for i in idx if ons[i] >= c]
+                if len(b) >= 5 and len(a) >= 5:
+                    d[c] = (np.median(np.concatenate([errs[i] for i in a]))
+                            - np.median(np.concatenate([errs[i] for i in b])))
+            return d
+        obs = scan(range(len(units)))
+        arg, pos70 = [], []
+        for _ in range(2000):
+            d = scan(rng.integers(0, len(units), len(units)))
+            if d:
+                arg.append(max(d, key=d.get))
+                pos70.append(d.get(0.70, np.nan) > 0)
+        arg = np.array(arg)
+        band[name] = {"n_units": len(units),
+                      "argmax_observed": float(max(obs, key=obs.get)),
+                      "argmax_share": {f"{c:.2f}": float(np.mean(arg == c)) for c in cuts},
+                      "argmax_q": [float(v) for v in np.percentile(arg, [2.5, 50, 97.5])],
+                      "share_positive_at_70": float(np.nanmean(pos70)),
+                      }
+        print(f"  {name}: {len(units)} units, argmax observed {band[name]['argmax_observed']:.2f}, "
+              f"bootstrap 2.5/50/97.5 % {band[name]['argmax_q']}, "
+              f"difference > 0 at 70 % in {band[name]['share_positive_at_70']:.3f} of resamples")
+    out["band"] = band
+    _save("thr", out)
+
+
+# ══════════════════════════════════════════════════════════════════════════
 # lead   the warning a detected onset gives, in each archive's own time unit
 # ══════════════════════════════════════════════════════════════════════════
 def part_lead():
@@ -1261,7 +1496,8 @@ def part_merge():
 PARTS = {"ci": part_ci, "acf": part_acf, "ppc": part_ppc, "cal": part_cal,
          "reg": part_reg, "sens": part_sens, "cens": part_cens, "hw": part_hw,
          "boot": part_boot, "dec": part_dec, "sens2": part_sens2, "exact": part_exact,
-         "exact_sum": part_exact_sum, "lead": part_lead,
+         "exact_sum": part_exact_sum, "lead": part_lead, "thr": part_thr,
+         "dthr": part_dthr, "altind": part_altind,
          "merge": part_merge}
 
 if __name__ == "__main__":

@@ -138,6 +138,18 @@ def t_path_compact():
         for key, nm in (("gbr", "gradient boosting, $\\log\\RUL$"),
                         ("life_table", "life table")):
             body += nm + rcells(reg["pronostia"][key]) + rcells(reg["xjtu"][key]) + "\\\\\n"
+    #  the calibrated failure threshold made uncertain (dthr): every point, the
+    #  main study's filter; the D-fixed prediction is the BS row above
+    dt = rv.get("dthr", {})
+    if {"pronostia", "xjtu"} <= set(dt):
+        sp, sx = dt["pronostia"]["summary"], dt["xjtu"]["summary"]
+        assert abs(sp["fixed"]["MAE"] - d["pronostia/process"]["BS"]["MAE"]) < 1e-6
+        body += ("\\midrule\n\\multicolumn{9}{@{}l@{}}{\\itshape the failure threshold $D$, "
+                 "uncertain over its reference records (BS, every point)}\\\\[1pt]\n")
+        for key, nm in (("mixture", "mixed over the law of $D$"),
+                        ("D_low", "$D$ at its $2.5\\,\\%$ point"),
+                        ("D_high", "$D$ at its $97.5\\,\\%$ point")):
+            body += nm + rcells(sp[key]) + rcells(sx[key]) + "\\\\\n"
     #  the exact-posterior reference, last because it uses a subset of points:
     #  the main filter is shown again on exactly that subset rather than
     #  compared with row 1 (on the unsmoothed indicator, whose noise the
@@ -175,5 +187,5 @@ reference.}}
 if __name__ == "__main__":
     write("tab_applicability.tex", t_applicability())
     write("tab_path.tex", t_path_compact())
-    for name in ("table_archives", "table_band", "table_onset_sens", "table_thirdset"):
+    for name in ("table_archives", "table_altind", "table_band", "table_onset_sens", "table_thirdset"):
         runpy.run_path(os.path.join(HERE, name + ".py"), run_name="__main__")

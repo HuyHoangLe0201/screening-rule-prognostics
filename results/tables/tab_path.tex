@@ -38,6 +38,11 @@ autoregressive noise & 5081 & 100 & 0.053 & 0.03 & 12989 & 90 & 0.095 & 0.10\\
 gradient boosting, $\log\RUL$ & 4829 & 85 & 0.107 & 0.60 & 18048 & 82 & 0.122 & 0.73\\
 life table & 3627 & 75 & 0.158 & 0.44 & 26789 & 97 & 0.123 & 0.15\\
 \midrule
+\multicolumn{9}{@{}l@{}}{\itshape the failure threshold $D$, uncertain over its reference records (BS, every point)}\\[1pt]
+mixed over the law of $D$ & 5078 & 100 & 0.053 & 0.04 & 13231 & 89 & 0.085 & 0.24\\
+$D$ at its $2.5\,\%$ point & 5114 & 100 & 0.042 & 0.00 & 11702 & 100 & 0.078 & 0.02\\
+$D$ at its $97.5\,\%$ point & 4879 & 99 & 0.068 & 0.03 & 14963 & 92 & 0.096 & 0.06\\
+\midrule
 \multicolumn{9}{@{}l@{}}{\itshape unsmoothed indicator, one point per record near $70\,\%$ of life ($n=11$ / $n=15$)}\\[1pt]
 Liu--West filter & 4660 & 100 & 0.034 & 0.00 & 12218 & 100 & 0.087 & 0.00\\
 exact posterior & 119845 & 3229 & 0.078 & 0.09 & 293705 & 129 & 0.129 & 0.47\\

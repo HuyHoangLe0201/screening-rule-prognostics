@@ -52,7 +52,9 @@ python code/hi.py
   `onset_sensitivity.json`, `thirdset.json`, `battery.json`, `hdd.json`, the
   band study (`band*.json`), `p3_review.json` (predictive checks, sensitivity
   runs, the exact-posterior reference, censored medians, bootstrap intervals,
-  the no-threshold predictors) and `p3_prereg.json` (the pre-registered test).
+  the no-threshold predictors, the verdicts across thresholds, the failure
+  threshold made uncertain, the screen on other indicators), `p3_prereg.json`
+  and `p3_decline.json` (the two pre-registered tests).
 * `results/theory/`: the simulation studies on data from the model
   (`theory_results.json`, `proposal.json`) and the checks of the model itself
   (`grid_consistency.json`, `lamperti.json`, `irregular.json` and others).
@@ -96,7 +98,9 @@ python study_bandtest.py 20 20260806 bandtest_rep
 python study_bandsig.py bandtest; python study_bandsig.py bandtest_rep
 python study_bandbattery.py; python study_bandbearing.py
 # review analyses: every part, or name the ones to run
-python study_p3_review.py ci acf ppc cal reg sens cens hw boot dec sens2 lead
+python study_p3_review.py ci acf ppc cal reg sens cens hw boot dec sens2 lead altind
+python study_p3_review.py thr                  # after study_p3_decline.py summary
+python study_p3_review.py dthr                 # the uncertain threshold D (an hour or so)
 # the exact-posterior reference takes about two hours on eight processes:
 # shard it, then merge and summarise
 P3_EXACT_SHARD=0/5 P3_REVIEW_OUT=p3_review_ex0.json python study_p3_review.py exact raw pronostia
