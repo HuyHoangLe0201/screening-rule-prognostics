@@ -54,7 +54,7 @@ def t_applicability():
 {label}\\\\[2pt]
 \\begin{{tabular}}{{@{{}}l rrrrr@{{}}}}
 \\toprule
-bearing & $n$ & FPT & deg. & SNR & last 5\\%\\\\
+bearing & $n$ & onset & deg. & SNR & last 5\\%\\\\
 \\midrule
 {body}\\midrule
 \\multicolumn{{6}}{{@{{}}l@{{}}}}{{onset in {len(det)}/{len(rs)}, median at {med:.0f}\\,\\% of life}}\\\\
@@ -64,7 +64,7 @@ bearing & $n$ & FPT & deg. & SNR & last 5\\%\\\\
 """
     return f"""\\begin{{table}}[htbp]
 \\centering
-\\caption{{Applicability of a first-passage model to each benchmark record; FPT, detected
+\\caption{{Applicability of a first-passage model to each benchmark record, with the detected
 onset as a fraction of life.}}
 \\label{{tab:applicability}}
 {out}
@@ -187,5 +187,5 @@ threshold and an exact-posterior reference.}}
 if __name__ == "__main__":
     write("tab_applicability.tex", t_applicability())
     write("tab_path.tex", t_path_compact())
-    for name in ("table_archives", "table_altind", "table_ladder", "table_band", "table_onset_sens", "table_thirdset"):
+    for name in ("table_archives", "table_altind", "table_ladder", "table_rultest", "table_band", "table_onset_sens", "table_thirdset"):
         runpy.run_path(os.path.join(HERE, name + ".py"), run_name="__main__")

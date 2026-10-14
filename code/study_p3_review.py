@@ -1524,6 +1524,152 @@ def part_regime():
     _save("regime", out)
 
 
+# ══════════════════════════════════════════════════════════════════════════
+# igshort    the coupled inverse Gaussian law near the switch n_d = 10
+# ══════════════════════════════════════════════════════════════════════════
+def _beta_for_nd(alpha, gamma, x0, D, x_ref, nd):
+    """Increment scale whose second-order mean passage takes nd increments."""
+    beta = (D - x0) / nd
+    for _ in range(50):
+        dZ = float(gbs.lamperti_distance(x0, D, gbs.bs_mean(alpha, beta),
+                                         gbs.bs_var(alpha, beta), gamma, x_ref,
+                                         second_order=True))
+        beta = dZ / (nd * (1 + alpha ** 2 / 2))
+    return beta
+
+
+def part_igshort():
+    """Accuracy of the coupled law of Theorem lamperti at 10, 15 and 25 remaining
+    increments, where the filter switches from simulated paths to the closed
+    form.  The simulation is that of test_lamperti.py, with the coupling of the
+    bearing study (x_ref = D/4)."""
+    rng = np.random.default_rng(20261017)
+    D, x_ref, dt, x0, n_sim = 4.0, 1.0, 1.0, 0.0, 40_000
+    rows = []
+    for gamma in (0.0, 0.5, 1.0, 1.5, 2.0):
+        for alpha in (0.2, 0.4):
+            for nd in (10, 15, 25):
+                beta = _beta_for_nd(alpha, gamma, x0, D, x_ref, nd)
+                x = np.full(n_sim, x0)
+                tau = np.zeros(n_sim)
+                alive = np.ones(n_sim, bool)
+                for _ in range(50 * nd):
+                    if not alive.any():
+                        break
+                    s = np.power(1.0 + np.maximum(x, 0.0) / x_ref, gamma)
+                    a_s, b_s = gbs.bs_consistent_params(alpha, beta, s)
+                    dx = gbs.bs_rvs(a_s, b_s, rng=rng)
+                    xn = x + dx
+                    cross = alive & (xn >= D)
+                    frac = np.where(cross, (D - x) / np.maximum(dx, 1e-300), 1.0)
+                    tau = np.where(alive, tau + dt * np.clip(frac, 0, 1), tau)
+                    x = np.where(alive, xn, x)
+                    alive &= ~cross
+                dZ = float(gbs.lamperti_distance(x0, D, gbs.bs_mean(alpha, beta),
+                                                 gbs.bs_var(alpha, beta), gamma, x_ref,
+                                                 second_order=True))
+                dV = float(gbs.lamperti_var_distance(x0, D, gamma, x_ref))
+                sig2 = beta ** 2 * alpha ** 2 * (1 + 1.25 * alpha ** 2)
+                mu = dZ * dt / (beta * (1 + alpha ** 2 / 2))
+                lam = dZ ** 3 * dt / (sig2 * dV)
+                grid = np.linspace(0.2 * mu, 2.5 * mu, 400)
+                sup = float(np.max(np.abs(np.array([(tau <= g).mean() for g in grid])
+                                          - gbs.ig_cdf(grid, mu, lam))))
+                row = {"gamma": gamma, "alpha": alpha, "n_d": nd, "beta": beta,
+                       "beta_over_xref": beta / x_ref, "sup": sup,
+                       "mean_err_pct": float(100 * (tau.mean() / mu - 1)),
+                       "sd_err_pct": float(100 * (tau.std() / np.sqrt(mu ** 3 / lam) - 1)),
+                       "not_crossed": int(alive.sum())}
+                rows.append(row)
+                print(f"gamma {gamma:.1f} alpha {alpha:.1f} n_d {nd:2d}: sup {sup:.3f}  "
+                      f"mean {row['mean_err_pct']:+.1f} %  sd {row['sd_err_pct']:+.1f} %",
+                      flush=True)
+    _save("igshort", rows)
+
+
+# ══════════════════════════════════════════════════════════════════════════
+# calgamma    calibration and recovery on data from the COUPLED model
+# ══════════════════════════════════════════════════════════════════════════
+def part_calgamma():
+    """The bearing pipeline (onset start, informed prior, learned coupling,
+    1200 particles) on records simulated from the coupled model, gamma != 0.
+
+    The coupling is that of the bearing study: x_ref = D/4, saturating at D.
+    The increment scale gives a median life near 400 steps, inside the range of
+    the benchmark records, on a regular schedule.  Coverage and error are
+    measured at 40, 60 and 80 % of life, with the threshold D known, and the
+    posterior mean of gamma is recorded against its true value."""
+    D, x_ref, alpha, sig, life = 1.0, 0.25, 0.40, 0.02, 400
+    NSo = _thirdset_namespace()
+    out = {}
+    for gamma in (0.5, 1.0, 1.5):
+        beta = _beta_for_nd(alpha, gamma, 0.0, D, x_ref, life)
+        recs = []
+        for rep in range(30):
+            r = np.random.default_rng(31_000 + 1000 * int(10 * gamma) + rep)
+            x = [0.0]
+            while x[-1] < D and len(x) < 10 * life:
+                s = (1.0 + min(max(x[-1], 0.0), D) / x_ref) ** gamma
+                a_s, b_s = gbs.bs_consistent_params(alpha, beta, s)
+                x.append(x[-1] + float(np.ravel(gbs.bs_rvs(a_s, b_s, rng=r))[0]))
+            x = np.array(x)
+            n = len(x)
+            t_cross = (n - 2) + (D - x[-2]) / (x[-1] - x[-2])
+            y = x + sig * r.standard_normal(n)
+            recs.append({"t": np.arange(n, dtype=float), "hi": y, "condition": 0,
+                         "life": float(n - 1), "n": n, "dt": 1.0, "t_cross": t_cross})
+        on = [NSo["onset"](rec["hi"]) or rec["n"] for rec in recs]
+        rows = []
+        for i, rec in enumerate(recs):
+            med = float(np.median([max(recs[j]["n"] - on[j], 20)
+                                   for j in range(len(recs)) if j != i]))
+            for f in (0.4, 0.6, 0.8):
+                k = int(f * rec["t_cross"])
+                if k < 20:
+                    continue
+                true = rec["t_cross"] - k
+                pf, states = sb._filter(rec, k, D, "BS", True, True, med,
+                                        7000 + 100 * i + int(10 * f), 1200)
+                if not states:
+                    continue
+                st = states[-1]
+                p = gbs.predict_rul(st, pf, D, 1.0, nd_min=10.0, n_mc=32, n_draw=8,
+                                    n_max=200)
+                lo, hi = np.quantile(p["samples"], [0.025, 0.975])
+                w = np.exp(st.logw - st.logw.max())
+                w /= w.sum()
+                g = np.exp(st.logth[:, st.names.index("gamma")]) - 1.0
+                rows.append({"rec": i, "frac": f, "true": float(true),
+                             "pred": float(p["mean"]), "cov": bool(lo <= true <= hi),
+                             "ape": float(abs(p["mean"] - true) / true),
+                             "gamma_hat": float(w @ g),
+                             "onset_frac": float(on[i] / rec["t_cross"]),
+                             "onset_before": bool(on[i] <= k)})
+        out[str(gamma)] = {
+            "beta": beta, "n_records": len(recs),
+            "life_median": float(np.median([rec["t_cross"] for rec in recs])),
+            "by_frac": {str(f): {"n": len([r for r in rows if r["frac"] == f]),
+                                 "coverage": float(np.mean([r["cov"] for r in rows if r["frac"] == f])),
+                                 "medape": float(100 * np.median([r["ape"] for r in rows if r["frac"] == f]))}
+                        for f in (0.4, 0.6, 0.8)},
+            "gamma_hat_median": float(np.median([r["gamma_hat"] for r in rows if r["frac"] == 0.8])),
+            "gamma_hat_iqr": [float(v) for v in np.percentile(
+                [r["gamma_hat"] for r in rows if r["frac"] == 0.8], [25, 75])],
+            "onset_median_frac": float(np.median([on[i] / recs[i]["t_cross"]
+                                                  for i in range(len(recs))])),
+            "by_onset": {side: {"n": len(sel), "coverage": float(np.mean([r["cov"] for r in sel])),
+                                "medape": float(100 * np.median([r["ape"] for r in sel]))}
+                         for side, sel in (("before", [r for r in rows if r["onset_before"]]),
+                                           ("after", [r for r in rows if not r["onset_before"]]))
+                         if sel},
+            "rows": rows}
+        print(f"gamma {gamma}: " + "  ".join(
+            f"{f}: cov {v['coverage']:.2f} MedAPE {v['medape']:.1f}"
+            for f, v in out[str(gamma)]["by_frac"].items())
+            + f"  gamma_hat {out[str(gamma)]['gamma_hat_median']:.2f}", flush=True)
+    _save("calgamma", out)
+
+
 def part_merge():
     """Fold p3_review_*.json, written by parallel runs, into p3_review.json."""
     import glob
@@ -1547,6 +1693,7 @@ PARTS = {"ci": part_ci, "acf": part_acf, "ppc": part_ppc, "cal": part_cal,
          "boot": part_boot, "dec": part_dec, "sens2": part_sens2, "exact": part_exact,
          "exact_sum": part_exact_sum, "lead": part_lead, "thr": part_thr,
          "dthr": part_dthr, "altind": part_altind, "regime": part_regime,
+         "igshort": part_igshort, "calgamma": part_calgamma,
          "merge": part_merge}
 
 if __name__ == "__main__":
