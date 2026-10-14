@@ -50,11 +50,17 @@ rows = [
                        ex[n]['main']['n'])) for n in ("pronostia", "xjtu"))),
 ]
 for side, nm in (("before", "onset before the point"), ("after", "onset after the point")):
-    cells = []
-    for n in ("pronostia", "xjtu"):
-        b = ex[n]["by_onset"][side]
-        cells.append(count((b["covered_converged"], b["n_converged"])))
-    rows.append((f"\\quad {nm}", "raw", "exact, converged", " & ".join(cells)))
+    #  converged chains first, as the text reports them; the rest beside them
+    for conv in (True, False):
+        cells = []
+        for n in ("pronostia", "xjtu"):
+            b = ex[n]["by_onset"][side]
+            c = ((b["covered_converged"], b["n_converged"]) if conv else
+                 (b["covered"] - b["covered_converged"], b["n"] - b["n_converged"]))
+            cells.append(count(c) if c[1] else "--")
+        rows.append((f"\\quad {nm}", "raw",
+                     "exact, converged" if conv else "exact, not converged",
+                     " & ".join(cells)))
 
 body = "\n".join(f"{a} & {b} & {c} & {d}\\\\" for a, b, c, d in rows)
 n_unconv = sum(ex[n]["by_onset"][s]["n"] - ex[n]["by_onset"][s]["n_converged"]
@@ -79,10 +85,11 @@ data & indicator & inference & PRONOSTIA & XJTU-SY\\
 \begin{minipage}{0.95\linewidth}\footnotesize
 Data from the model are smoothed with each archive's window ($15$ and $9$
 acquisitions); ranges are over $40$, $60$ and $80\,\%$ of life. The benchmark
-rows use every prediction point; the last three, one point per record nearest
-$70\,\%$ of life, as counts covered out of points. The exact rows count
-converged chains only; """ + f"{n_unconv}" + r""" points whose chains did not
-converge are left out (\Cref{sec:ppc}).
+rows use every prediction point; the last five, one point per record nearest
+$70\,\%$ of life, as counts covered out of points. Converged means a
+Gelman--Rubin statistic of at most $1.1$; the text relies on those rows only,
+and the """ + f"{n_unconv}" + r""" points whose chains did not converge are
+shown for completeness (\Cref{sec:ppc}).
 \end{minipage}
 \end{table}
 """

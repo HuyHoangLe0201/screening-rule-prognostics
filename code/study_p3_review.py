@@ -1491,6 +1491,39 @@ def part_lead():
     _save("lead", out)
 
 
+# ══════════════════════════════════════════════════════════════════════════
+# regime    the screen applied to each charging regime of the XJTU cells
+# ══════════════════════════════════════════════════════════════════════════
+def part_regime():
+    """Algorithm 3 on each regime of the pre-registered battery archive alone.
+    Exploratory, not part of the protocol: it reads the stored onsets of
+    p3_prereg.json and applies the censored median, its bootstrap interval and
+    the detection-rate check exactly as the pre-registered summary does."""
+    pre = json.load(open(os.path.join(BE, "p3_prereg.json"), encoding="utf-8"))
+    recs = [r for r in pre["battery"]["records"] if "load_error" not in r]
+    rng = np.random.default_rng(20261014)
+    out = {}
+    for b in sorted({r["batch"] for r in recs}):
+        rs = [r for r in recs if r["batch"] == b]
+        x = np.array([np.inf if r["onset_frac"] is None else r["onset_frac"]
+                      for r in rs], float)
+        idx = rng.integers(0, len(x), size=(B_BOOT, len(x)))
+        lo, hi = np.quantile(np.median(x[idx], axis=1), [0.025, 0.975],
+                             method="inverted_cdf")
+
+        def pct(z):
+            return None if not np.isfinite(z) else 100 * float(z)
+        rate = float(np.isfinite(x).mean())
+        out[b] = {"regime": rs[0]["cell"].rsplit("_battery", 1)[0], "n": len(x),
+                  "n_detected": int(np.isfinite(x).sum()),
+                  "censored_median_pct": pct(np.median(x)),
+                  "ci": [pct(lo), pct(hi)],
+                  "verdict": ("check indicator" if rate < 0.25 else
+                              _verdict3(pct(lo), pct(hi), 70.0))}
+        print(b, out[b])
+    _save("regime", out)
+
+
 def part_merge():
     """Fold p3_review_*.json, written by parallel runs, into p3_review.json."""
     import glob
@@ -1513,7 +1546,7 @@ PARTS = {"ci": part_ci, "acf": part_acf, "ppc": part_ppc, "cal": part_cal,
          "reg": part_reg, "sens": part_sens, "cens": part_cens, "hw": part_hw,
          "boot": part_boot, "dec": part_dec, "sens2": part_sens2, "exact": part_exact,
          "exact_sum": part_exact_sum, "lead": part_lead, "thr": part_thr,
-         "dthr": part_dthr, "altind": part_altind,
+         "dthr": part_dthr, "altind": part_altind, "regime": part_regime,
          "merge": part_merge}
 
 if __name__ == "__main__":

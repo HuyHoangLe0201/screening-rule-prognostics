@@ -14895,5 +14895,73 @@
     }
    ]
   }
+ },
+ "regime": {
+  "Batch-1": {
+   "regime": "2C",
+   "n": 8,
+   "n_detected": 8,
+   "censored_median_pct": 59.916585348648546,
+   "ci": [
+    54.2997542997543,
+    67.86632390745501
+   ],
+   "verdict": "not declined"
+  },
+  "Batch-2": {
+   "regime": "3C",
+   "n": 15,
+   "n_detected": 15,
+   "censored_median_pct": 80.83832335329342,
+   "ci": [
+    76.1744966442953,
+    82.51748251748252
+   ],
+   "verdict": "declines"
+  },
+  "Batch-3": {
+   "regime": "R2.5",
+   "n": 8,
+   "n_detected": 8,
+   "censored_median_pct": 45.21571648690292,
+   "ci": [
+    39.02439024390244,
+    47.32142857142857
+   ],
+   "verdict": "not declined"
+  },
+  "Batch-4": {
+   "regime": "R3",
+   "n": 8,
+   "n_detected": 8,
+   "censored_median_pct": 34.25714285714286,
+   "ci": [
+    30.89430894308943,
+    37.5
+   ],
+   "verdict": "not declined"
+  },
+  "Batch-5": {
+   "regime": "RW",
+   "n": 8,
+   "n_detected": 3,
+   "censored_median_pct": null,
+   "ci": [
+    45.83333333333333,
+    null
+   ],
+   "verdict": "undecided"
+  },
+  "Batch-6": {
+   "regime": "Sim_satellite",
+   "n": 8,
+   "n_detected": 8,
+   "censored_median_pct": 22.33805402570155,
+   "ci": [
+    18.867924528301888,
+    25.477707006369428
+   ],
+   "verdict": "not declined"
+  }
  }
 }
