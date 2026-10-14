@@ -53,8 +53,9 @@ python code/hi.py
   band study (`band*.json`), `p3_review.json` (predictive checks, sensitivity
   runs, the exact-posterior reference, censored medians, bootstrap intervals,
   the no-threshold predictors, the verdicts across thresholds, the failure
-  threshold made uncertain, the screen on other indicators), `p3_prereg.json`
-  and `p3_decline.json` (the two pre-registered tests).
+  threshold made uncertain, the screen on other indicators, the screen per
+  battery regime, the coupled-model checks), `p3_prereg.json`, `p3_decline.json`
+  and `p3_rul.json` (the three pre-registered tests).
 * `results/theory/`: the simulation studies on data from the model
   (`theory_results.json`, `proposal.json`) and the checks of the model itself
   (`grid_consistency.json`, `lamperti.json`, `irregular.json` and others).
@@ -101,6 +102,7 @@ python study_bandbattery.py; python study_bandbearing.py
 python study_p3_review.py ci acf ppc cal reg sens cens hw boot dec sens2 lead altind
 python study_p3_review.py thr                  # after study_p3_decline.py summary
 python study_p3_review.py dthr                 # the uncertain threshold D (an hour or so)
+python study_p3_review.py regime igshort calgamma
 # the exact-posterior reference takes about two hours on eight processes:
 # shard it, then merge and summarise
 P3_EXACT_SHARD=0/5 P3_REVIEW_OUT=p3_review_ex0.json python study_p3_review.py exact raw pronostia
@@ -133,13 +135,26 @@ file was downloaded, with SHA-256 digest
 `0e6a6801c6667061fd8edb9486f25c71952fad297237264ab2126f3e88acf890`. It predicts
 a decline, and three properties of the onsets, on two unseen quarters of
 Backblaze drives, analysed by `study_hdd.py` unchanged (its digest is recorded
-in the protocol; `.gitattributes` keeps all three files byte-exact). All eight
+in the protocol; `.gitattributes` keeps these files byte-exact). All eight
 predictions held (`results/bearings/p3_decline.json`).
 
 ```bash
 python study_p3_decline.py run Q1_2024        # reads $P3_DATA/bb_Q1_2024.zip
 python study_p3_decline.py run Q2_2024
 python study_p3_decline.py summary            # tests P1-P4 per quarter
+```
+
+Neither protocol measured prediction error. `code/PREREG_p3_rul.md` was frozen
+on 14 October 2026, after the screen had been applied to each XJTU battery
+regime but before any remaining life was predicted on those cells, with SHA-256
+digest `5fb38dca8accc171ca474c2731251cb118bf639753f2e4281e331a6acc3aa8aa`. It
+predicts that the path model does worse on the declined 3C cohort than on the
+four regimes the screen passes, and no better than a life table on the declined
+cohort. All three predictions held (`results/bearings/p3_rul.json`).
+
+```bash
+python study_p3_rul.py Batch-2                # one process per regime
+python study_p3_rul.py summary                # tests R1-R3
 ```
 
 ## Requirements
