@@ -34,16 +34,22 @@ def count(c):
     return f"{c[0]}/{c[1]}"
 
 
-def rng_cov_coupled():
-    v = [c["coverage"] for g in R["calgamma"].values() for c in g["by_frac"].values()]
+def rng_cov_coupled(noisy):
+    """Coverage over the coupled-model runs, low noise (sigma <= 0.02) or high."""
+    v = [] if noisy else [c["coverage"] for g in R["calgamma"].values()
+                          for c in g["by_frac"].values()]
+    v += [c["coverage"] for g in R["calgrid"] if (g["sigma"] > 0.02) == noisy
+          for c in g["by_frac"].values()]
     return f"{min(v):.2f}--{max(v):.2f}"
 
 
 ex = R["exact"]["raw"]
 rows = [
     ("model", "raw", "Liu--West", r"\multicolumn{2}{c}{" + rng_cov("1") + "}"),
-    ("model, coupled", "raw", "Liu--West, full pipeline",
-     r"\multicolumn{2}{c}{" + rng_cov_coupled() + "}"),
+    ("model, coupled, low noise", "raw", "Liu--West, full pipeline",
+     r"\multicolumn{2}{c}{" + rng_cov_coupled(False) + "}"),
+    ("model, coupled, high noise", "raw", "Liu--West, full pipeline",
+     r"\multicolumn{2}{c}{" + rng_cov_coupled(True) + "}"),
     ("model", "smoothed as the archive", "Liu--West",
      f"{rng_cov(SMOOTH['pronostia'])} & {rng_cov(SMOOTH['xjtu'])}"),
     ("benchmark", "smoothed", "Liu--West",
@@ -91,9 +97,10 @@ data & indicator & inference & PRONOSTIA & XJTU-SY\\
 \vspace{4pt}
 \begin{minipage}{0.95\linewidth}\footnotesize
 Data from the model are smoothed with each archive's window ($15$ and $9$
-acquisitions); ranges are over $40$, $60$ and $80\,\%$ of life. The coupled row
-runs the bearing pipeline on data with $\gamma=0.5$, $1$ and $1.5$
-(\Cref{sec:robust}). The benchmark
+acquisitions); ranges are over $40$, $60$ and $80\,\%$ of life. The coupled rows
+run the bearing pipeline on data with $\gamma$ from $0.5$ to $2$, on regular and
+irregular schedules, with noise s.d.\ $0.01$--$0.02$ (low) or $0.05$ (high) of
+the threshold (\Cref{sec:robust}). The benchmark
 rows use every prediction point; the last five, one point per record nearest
 $70\,\%$ of life, as counts covered out of points. Converged means a
 Gelman--Rubin statistic of at most $1.1$; the text relies on those rows only,

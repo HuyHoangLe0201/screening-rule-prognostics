@@ -1670,6 +1670,108 @@ def part_calgamma():
     _save("calgamma", out)
 
 
+# ══════════════════════════════════════════════════════════════════════════
+# calgrid    the coupled-model calibration under strong coupling, two noise
+#            levels and an irregular schedule
+# ══════════════════════════════════════════════════════════════════════════
+def _calgrid_one(gamma, sig, irregular, n_rec=30):
+    D, x_ref, alpha, life = 1.0, 0.25, 0.40, 400
+    NSo = _thirdset_namespace()
+    beta = _beta_for_nd(alpha, gamma, 0.0, D, x_ref, life)
+    recs = []
+    for rep in range(n_rec):
+        r = np.random.default_rng(41_000 + 1000 * int(10 * gamma) + 100 * int(100 * sig)
+                                  + 50 * int(irregular) + rep)
+        x, t = [0.0], [0.0]
+        while x[-1] < D and len(x) < 10 * life:
+            dt = float(r.gamma(2.0, 0.5)) if irregular else 1.0
+            s = dt * (1.0 + min(max(x[-1], 0.0), D) / x_ref) ** gamma
+            a_s, b_s = gbs.bs_consistent_params(alpha, beta, s)
+            x.append(x[-1] + float(np.ravel(gbs.bs_rvs(a_s, b_s, rng=r))[0]))
+            t.append(t[-1] + dt)
+        x, t = np.array(x), np.array(t)
+        n = len(x)
+        t_cross = t[-2] + (t[-1] - t[-2]) * (D - x[-2]) / (x[-1] - x[-2])
+        y = x + sig * r.standard_normal(n)
+        recs.append({"t": t, "hi": y, "condition": 0, "life": float(t[-1]), "n": n,
+                     "dt": 1.0, "t_cross": t_cross})
+    on = [NSo["onset"](rec["hi"]) or rec["n"] for rec in recs]
+    rows = []
+    for i, rec in enumerate(recs):
+        med = float(np.median([max(recs[j]["n"] - on[j], 20)
+                               for j in range(len(recs)) if j != i]))
+        for f in (0.4, 0.6, 0.8):
+            k = int(np.searchsorted(rec["t"], f * rec["t_cross"]))
+            if k < 20 or k >= rec["n"] - 1:
+                continue
+            true = rec["t_cross"] - rec["t"][k]
+            pf, states = sb._filter(rec, k, D, "BS", True, True, med,
+                                    9000 + 100 * i + int(10 * f), 1200)
+            if not states:
+                continue
+            st = states[-1]
+            p = gbs.predict_rul(st, pf, D, 1.0, nd_min=10.0, n_mc=32, n_draw=8, n_max=200)
+            lo, hi = np.quantile(p["samples"], [0.025, 0.975])
+            rows.append({"frac": f, "cov": bool(lo <= true <= hi),
+                         "ape": float(abs(p["mean"] - true) / true)})
+    return {"gamma": gamma, "sigma": sig, "irregular": irregular,
+            "by_frac": {str(f): {"n": len([r for r in rows if r["frac"] == f]),
+                                 "coverage": float(np.mean([r["cov"] for r in rows if r["frac"] == f])),
+                                 "medape": float(100 * np.median([r["ape"] for r in rows if r["frac"] == f]))}
+                        for f in (0.4, 0.6, 0.8)}}
+
+
+def part_calgrid():
+    out = []
+    for gamma in (1.5, 2.0):
+        for sig in (0.01, 0.05):
+            for irregular in (False, True):
+                c = _calgrid_one(gamma, sig, irregular)
+                out.append(c)
+                print(f"gamma {gamma} sigma {sig} {'irregular' if irregular else 'regular  '}: "
+                      + "  ".join(f"{f}: cov {v['coverage']:.2f} MedAPE {v['medape']:.1f}"
+                                  for f, v in c["by_frac"].items()), flush=True)
+    _save("calgrid", out)
+
+
+# ══════════════════════════════════════════════════════════════════════════
+# policy    what following the screen is worth on the XJTU cells (exploratory:
+#           computed after the pre-registered test, from its stored predictions)
+# ══════════════════════════════════════════════════════════════════════════
+def part_policy():
+    T = json.load(open(os.path.join(BE, "p3_rul.json"), encoding="utf-8"))
+    dec, pas = ("Batch-2",), ("Batch-1", "Batch-3", "Batch-4", "Batch-6")
+    rows = [r for r in T["rows"] if "pred" in r and r["batch"] in dec + pas]
+    by_cell = {}
+    for r in rows:
+        by_cell.setdefault(r["cell"], []).append(r)
+    cells = sorted(by_cell)
+
+    def ape(r, k):
+        return 100.0 * abs(r[k] - r["true"]) / r["true"]
+
+    def policies(cs):
+        rs = [r for c in cs for r in by_cell[c]]
+        path = [ape(r, "pred") for r in rs]
+        lt = [ape(r, "lt_pred") for r in rs]
+        follow = [ape(r, "lt_pred" if r["batch"] in dec else "pred") for r in rs]
+        return np.median(path), np.median(follow), np.median(lt)
+
+    obs = policies(cells)
+    rng = np.random.default_rng(20261019)
+    bt = np.array([policies([cells[i] for i in rng.integers(0, len(cells), len(cells))])
+                   for _ in range(B_BOOT)])
+    out = {"medape_always_path": float(obs[0]), "medape_follow_screen": float(obs[1]),
+           "medape_always_life_table": float(obs[2]),
+           "gain_follow_vs_path": {"obs": float(obs[0] - obs[1]),
+                                   "ci": np.percentile(bt[:, 0] - bt[:, 1], [2.5, 97.5]).tolist()},
+           "gain_lt_vs_follow": {"obs": float(obs[1] - obs[2]),
+                                 "ci": np.percentile(bt[:, 1] - bt[:, 2], [2.5, 97.5]).tolist()},
+           "cells": len(cells)}
+    print(json.dumps(out, indent=1))
+    _save("policy", out)
+
+
 def part_merge():
     """Fold p3_review_*.json, written by parallel runs, into p3_review.json."""
     import glob
@@ -1694,6 +1796,7 @@ PARTS = {"ci": part_ci, "acf": part_acf, "ppc": part_ppc, "cal": part_cal,
          "exact_sum": part_exact_sum, "lead": part_lead, "thr": part_thr,
          "dthr": part_dthr, "altind": part_altind, "regime": part_regime,
          "igshort": part_igshort, "calgamma": part_calgamma,
+         "calgrid": part_calgrid, "policy": part_policy,
          "merge": part_merge}
 
 if __name__ == "__main__":

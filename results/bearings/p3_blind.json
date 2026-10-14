@@ -1,0 +1,230 @@
+{
+ "protocol_sha256": "f85f510eab49d57bb32119e3e34b5e3513aa5b6459e6752bc1a70d4c55206a3f",
+ "protocol_frozen_at": "2026-10-14T23:07:43+07:00",
+ "screen": {
+  "N-CMAPSS_DS03-012": {
+   "n": 15,
+   "rate": 1.0,
+   "censored_median_pct": 41.0958904109589,
+   "ci": [
+    39.285714285714285,
+    51.61290322580645
+   ],
+   "verdict": "not declined"
+  },
+  "N-CMAPSS_DS04": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 55.76767676767677,
+   "ci": [
+    43.83561643835616,
+    61.210358676083644
+   ],
+   "verdict": "not declined"
+  },
+  "N-CMAPSS_DS05": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 44.6606334841629,
+   "ci": [
+    41.25,
+    49.45054945054945
+   ],
+   "verdict": "not declined"
+  },
+  "N-CMAPSS_DS06": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 42.40384615384615,
+   "ci": [
+    28.752535496957403,
+    47.25274725274725
+   ],
+   "verdict": "not declined"
+  },
+  "N-CMAPSS_DS07": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 48.74451273046532,
+   "ci": [
+    33.60417379404721,
+    56.41025641025641
+   ],
+   "verdict": "not declined"
+  },
+  "N-CMAPSS_DS08a-009": {
+   "n": 15,
+   "rate": 1.0,
+   "censored_median_pct": 44.06779661016949,
+   "ci": [
+    27.450980392156865,
+    52.94117647058824
+   ],
+   "verdict": "not declined"
+  },
+  "N-CMAPSS_DS08c-008": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 41.172316384180796,
+   "ci": [
+    28.2258064516129,
+    50.943396226415096
+   ],
+   "verdict": "not declined"
+  }
+ },
+ "n_units": 80,
+ "n_predictions": 240,
+ "deviations": [
+  "N-CMAPSS_DS08d-010.h5 excluded: the archive's copy is 2885034848 bytes, 32 short of the length its HDF5 superblock records, and the file cannot be opened.  Excluded before any of its data was read; the CRC-checked re-extraction gives the same length."
+ ],
+ "B1": {
+  "holds": true
+ },
+ "B2": {
+  "rho": 0.07617473661776429,
+  "ci": [
+   -0.14810184861060866,
+   0.2945755257285469
+  ],
+  "holds": false
+ },
+ "B3": {
+  "testable": false,
+  "n_late": 1,
+  "n_early": 79
+ },
+ "B4": {
+  "testable": false,
+  "declined": [],
+  "not_declined": [
+   "N-CMAPSS_DS03-012",
+   "N-CMAPSS_DS04",
+   "N-CMAPSS_DS05",
+   "N-CMAPSS_DS06",
+   "N-CMAPSS_DS07",
+   "N-CMAPSS_DS08a-009",
+   "N-CMAPSS_DS08c-008"
+  ]
+ },
+ "pooled": {
+  "medape_path": 90.91829709292472,
+  "coverage_path": 0.125,
+  "medape_lt": 34.61538461538461,
+  "coverage_lt": 0.7583333333333333
+ },
+ "by_cohort": {
+  "N-CMAPSS_DS03-012": {
+   "n": 15,
+   "rate": 1.0,
+   "censored_median_pct": 41.0958904109589,
+   "ci": [
+    39.285714285714285,
+    51.61290322580645
+   ],
+   "verdict": "not declined",
+   "units": 15,
+   "predictions": 45,
+   "medape_path": 100.0,
+   "coverage_path": 0.044444444444444446,
+   "medape_lt": 31.818181818181817,
+   "coverage_lt": 0.7333333333333333
+  },
+  "N-CMAPSS_DS04": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 55.76767676767677,
+   "ci": [
+    43.83561643835616,
+    61.210358676083644
+   ],
+   "verdict": "not declined",
+   "units": 10,
+   "predictions": 30,
+   "medape_path": 53.73343575319822,
+   "coverage_path": 0.23333333333333334,
+   "medape_lt": 42.05665024630542,
+   "coverage_lt": 0.7
+  },
+  "N-CMAPSS_DS05": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 44.6606334841629,
+   "ci": [
+    41.25,
+    49.45054945054945
+   ],
+   "verdict": "not declined",
+   "units": 10,
+   "predictions": 30,
+   "medape_path": 192.91193430803884,
+   "coverage_path": 0.16666666666666666,
+   "medape_lt": 40.778533635676496,
+   "coverage_lt": 0.6666666666666666
+  },
+  "N-CMAPSS_DS06": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 42.40384615384615,
+   "ci": [
+    28.752535496957403,
+    47.25274725274725
+   ],
+   "verdict": "not declined",
+   "units": 10,
+   "predictions": 30,
+   "medape_path": 79.10411294239444,
+   "coverage_path": 0.06666666666666667,
+   "medape_lt": 35.489510489510494,
+   "coverage_lt": 0.8
+  },
+  "N-CMAPSS_DS07": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 48.74451273046532,
+   "ci": [
+    33.60417379404721,
+    56.41025641025641
+   ],
+   "verdict": "not declined",
+   "units": 10,
+   "predictions": 30,
+   "medape_path": 89.57812399419174,
+   "coverage_path": 0.1,
+   "medape_lt": 27.884615384615387,
+   "coverage_lt": 0.8
+  },
+  "N-CMAPSS_DS08a-009": {
+   "n": 15,
+   "rate": 1.0,
+   "censored_median_pct": 44.06779661016949,
+   "ci": [
+    27.450980392156865,
+    52.94117647058824
+   ],
+   "verdict": "not declined",
+   "units": 15,
+   "predictions": 45,
+   "medape_path": 95.60241935388443,
+   "coverage_path": 0.2,
+   "medape_lt": 40.476190476190474,
+   "coverage_lt": 0.8666666666666667
+  },
+  "N-CMAPSS_DS08c-008": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 41.172316384180796,
+   "ci": [
+    28.2258064516129,
+    50.943396226415096
+   ],
+   "verdict": "not declined",
+   "units": 10,
+   "predictions": 30,
+   "medape_path": 97.91689972163874,
+   "coverage_path": 0.06666666666666667,
+   "medape_lt": 26.932367149758456,
+   "coverage_lt": 0.7
+  }
+ }
+}

@@ -10,7 +10,8 @@ from the model and the benchmarks are added one at a time.}
 data & indicator & inference & PRONOSTIA & XJTU-SY\\
 \midrule
 model & raw & Liu--West & \multicolumn{2}{c}{0.88--0.93}\\
-model, coupled & raw & Liu--West, full pipeline & \multicolumn{2}{c}{0.47--0.90}\\
+model, coupled, low noise & raw & Liu--West, full pipeline & \multicolumn{2}{c}{0.17--0.90}\\
+model, coupled, high noise & raw & Liu--West, full pipeline & \multicolumn{2}{c}{0.00--0.57}\\
 model & smoothed as the archive & Liu--West & 0.00--0.03 & 0.13--0.25\\
 benchmark & smoothed & Liu--West & 0.00 & 0.03\\
 benchmark & raw & Liu--West & 0.03 & 0.07\\
@@ -26,9 +27,10 @@ benchmark, one point per record & raw & Liu--West & 0/11 & 0/15\\
 \vspace{4pt}
 \begin{minipage}{0.95\linewidth}\footnotesize
 Data from the model are smoothed with each archive's window ($15$ and $9$
-acquisitions); ranges are over $40$, $60$ and $80\,\%$ of life. The coupled row
-runs the bearing pipeline on data with $\gamma=0.5$, $1$ and $1.5$
-(\Cref{sec:robust}). The benchmark
+acquisitions); ranges are over $40$, $60$ and $80\,\%$ of life. The coupled rows
+run the bearing pipeline on data with $\gamma$ from $0.5$ to $2$, on regular and
+irregular schedules, with noise s.d.\ $0.01$--$0.02$ (low) or $0.05$ (high) of
+the threshold (\Cref{sec:robust}). The benchmark
 rows use every prediction point; the last five, one point per record nearest
 $70\,\%$ of life, as counts covered out of points. Converged means a
 Gelman--Rubin statistic of at most $1.1$; the text relies on those rows only,

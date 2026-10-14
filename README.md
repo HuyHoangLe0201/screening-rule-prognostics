@@ -34,6 +34,7 @@ health indicators. Download them from their publishers.
 | Backblaze drive stats, Q1 and Q2 2024 | pre-registered test of a decline | `$P3_DATA/bb_Q1_2024.zip`, `$P3_DATA/bb_Q2_2024.zip` |
 | XJTU battery dataset | pre-registered test | `$P3_DATA/NASABattery/Battery Dataset/` |
 | N-CMAPSS DS01-005 and DS02-006 (`.h5`) | pre-registered test | `$P3_DATA/ncmapss/` |
+| N-CMAPSS, the full archive (`ncmapss.zip`) | blind pre-registered test | `$P3_DATA/ncmapss/ncmapss.zip` |
 
 `P3_DATA` defaults to `data/` in this repository. The bearing features are
 extracted once:
@@ -54,8 +55,9 @@ python code/hi.py
   runs, the exact-posterior reference, censored medians, bootstrap intervals,
   the no-threshold predictors, the verdicts across thresholds, the failure
   threshold made uncertain, the screen on other indicators, the screen per
-  battery regime, the coupled-model checks), `p3_prereg.json`, `p3_decline.json`
-  and `p3_rul.json` (the three pre-registered tests).
+  battery regime, the coupled-model checks, the policy comparison),
+  `p3_prereg.json`, `p3_decline.json`, `p3_rul.json` and `p3_blind.json` with
+  `p3_blind_rows.json` (the four pre-registered tests).
 * `results/theory/`: the simulation studies on data from the model
   (`theory_results.json`, `proposal.json`) and the checks of the model itself
   (`grid_consistency.json`, `lamperti.json`, `irregular.json` and others).
@@ -102,7 +104,7 @@ python study_bandbattery.py; python study_bandbearing.py
 python study_p3_review.py ci acf ppc cal reg sens cens hw boot dec sens2 lead altind
 python study_p3_review.py thr                  # after study_p3_decline.py summary
 python study_p3_review.py dthr                 # the uncertain threshold D (an hour or so)
-python study_p3_review.py regime igshort calgamma
+python study_p3_review.py regime igshort calgamma calgrid policy
 # the exact-posterior reference takes about two hours on eight processes:
 # shard it, then merge and summarise
 P3_EXACT_SHARD=0/5 P3_REVIEW_OUT=p3_review_ex0.json python study_p3_review.py exact raw pronostia
@@ -155,6 +157,22 @@ cohort. All three predictions held (`results/bearings/p3_rul.json`).
 ```bash
 python study_p3_rul.py Batch-2                # one process per regime
 python study_p3_rul.py summary                # tests R1-R3
+```
+
+The cells' verdicts were known when that protocol was written, so a fourth was
+frozen before any of its data were read. `code/PREREG_p3_blind.md` (14 October
+2026, SHA-256 `f85f510eab49d57bb32119e3e34b5e3513aa5b6459e6752bc1a70d4c55206a3f`)
+takes every N-CMAPSS subset that no earlier analysis opened, one cohort per
+subset. B1 (no cohort declined) held; B2, the primary prediction that error
+rises with onset, failed; B3 and B4 were not testable. DS08d is truncated in
+the archive (32 bytes short of its HDF5 length) and was excluded unread, a
+reported deviation. `extract` streams the nested archive in one pass and keeps
+only per-unit indicators, which are not redistributed here.
+
+```bash
+python study_p3_blind.py extract              # reads $P3_DATA/ncmapss/ncmapss.zip
+python study_p3_blind.py rul
+python study_p3_blind.py summary              # tests B1-B4
 ```
 
 ## Requirements
