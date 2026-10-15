@@ -56,8 +56,9 @@ python code/hi.py
   the no-threshold predictors, the verdicts across thresholds, the failure
   threshold made uncertain, the screen on other indicators, the screen per
   battery regime, the coupled-model checks, the policy comparison),
-  `p3_prereg.json`, `p3_decline.json`, `p3_rul.json` and `p3_blind.json` with
-  `p3_blind_rows.json` (the four pre-registered tests).
+  `p3_prereg.json`, `p3_decline.json`, `p3_rul.json`, `p3_blind.json` with
+  `p3_blind_rows.json` and `p3_step.json` (the five pre-registered tests), and
+  `p3_gbr.json` (the gradient-boosting comparator).
 * `results/theory/`: the simulation studies on data from the model
   (`theory_results.json`, `proposal.json`) and the checks of the model itself
   (`grid_consistency.json`, `lamperti.json`, `irregular.json` and others).
@@ -174,6 +175,23 @@ python study_p3_blind.py extract              # reads $P3_DATA/ncmapss/ncmapss.z
 python study_p3_blind.py rul
 python study_p3_blind.py summary              # tests B1-B4
 ```
+
+The blind subsets had a single late-onset unit, so a fifth protocol was drawn to
+reach the threshold. `code/PREREG_p3_step.md` (15 October 2026, SHA-256
+`96b1b6d95c91f35e6cecdf5a8de4c7ba0bcf26f47e4e620f4013f79051901e2d`) takes
+C-MAPSS units whose remaining life no model had predicted, up to twenty per
+onset bin. D1 (point error higher after 70 %) and D2 (rank correlation) failed;
+D3 (coverage lower after 70 %) and D4 (the life table at least as good there)
+held. Gradient boosting on the indicator is its descriptive comparator.
+
+```bash
+python study_p3_step.py run
+python study_p3_step.py summary               # tests D1-D4
+```
+
+`study_p3_gbr.py` applies the same comparator, after the fact, to the cells of
+the third test and the subsets of the fourth (the latter needs the per-unit
+indicators that `study_p3_blind.py extract` writes).
 
 ## Requirements
 

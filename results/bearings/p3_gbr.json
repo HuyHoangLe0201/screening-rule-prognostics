@@ -1,0 +1,165 @@
+{
+ "note": "exploratory: computed after the pre-registered tests were scored",
+ "Batch-1": {
+  "units": 8,
+  "predictions": 24,
+  "medape_path": 49.7143303755561,
+  "medape_lt": 5.530204259017818,
+  "medape_gb": 7.437773598615973,
+  "coverage_path": 0.375,
+  "coverage_lt": 0.75,
+  "coverage_gb": 0.9166666666666666
+ },
+ "Batch-2": {
+  "units": 15,
+  "predictions": 45,
+  "medape_path": 100.0,
+  "medape_lt": 30.625,
+  "medape_gb": 16.553855642006074,
+  "coverage_path": 0.1111111111111111,
+  "coverage_lt": 0.7555555555555555,
+  "coverage_gb": 0.7777777777777778
+ },
+ "Batch-3": {
+  "units": 8,
+  "predictions": 24,
+  "medape_path": 49.95011298985453,
+  "medape_lt": 12.98076923076923,
+  "medape_gb": 8.271538484891929,
+  "coverage_path": 0.625,
+  "coverage_lt": 0.75,
+  "coverage_gb": 0.9166666666666666
+ },
+ "Batch-4": {
+  "units": 8,
+  "predictions": 24,
+  "medape_path": 76.62993985624142,
+  "medape_lt": 17.15686274509804,
+  "medape_gb": 15.853361214576815,
+  "coverage_path": 0.5,
+  "coverage_lt": 0.75,
+  "coverage_gb": 0.8333333333333334
+ },
+ "Batch-5": {
+  "units": 0,
+  "predictions": 0,
+  "medape_path": NaN,
+  "medape_lt": NaN,
+  "medape_gb": NaN,
+  "coverage_path": NaN,
+  "coverage_lt": NaN,
+  "coverage_gb": NaN
+ },
+ "Batch-6": {
+  "units": 8,
+  "predictions": 24,
+  "medape_path": 148.79473458189082,
+  "medape_lt": 42.85714285714286,
+  "medape_gb": 25.927587194437997,
+  "coverage_path": 0.25,
+  "coverage_lt": 0.75,
+  "coverage_gb": 0.875
+ },
+ "cells_declined": {
+  "units": 15,
+  "predictions": 45,
+  "medape_path": 100.0,
+  "medape_lt": 30.625,
+  "medape_gb": 16.553855642006074,
+  "coverage_path": 0.1111111111111111,
+  "coverage_lt": 0.7555555555555555,
+  "coverage_gb": 0.7777777777777778
+ },
+ "cells_passed": {
+  "units": 32,
+  "predictions": 96,
+  "medape_path": 67.37973888995154,
+  "medape_lt": 18.6595949855352,
+  "medape_gb": 11.905059282120199,
+  "coverage_path": 0.4375,
+  "coverage_lt": 0.75,
+  "coverage_gb": 0.8854166666666666
+ },
+ "blind": {
+  "units": 80,
+  "predictions": 240,
+  "medape_path": 90.91829709292472,
+  "medape_lt": 34.61538461538461,
+  "medape_gb": 21.479276456816056,
+  "coverage_path": 0.125,
+  "coverage_lt": 0.7583333333333333,
+  "coverage_gb": 0.9125
+ },
+ "blind_by_cohort": {
+  "N-CMAPSS_DS03-012": {
+   "units": 15,
+   "predictions": 45,
+   "medape_path": 100.0,
+   "medape_lt": 31.818181818181817,
+   "medape_gb": 21.8485499190939,
+   "coverage_path": 0.044444444444444446,
+   "coverage_lt": 0.7333333333333333,
+   "coverage_gb": 0.8444444444444444
+  },
+  "N-CMAPSS_DS04": {
+   "units": 10,
+   "predictions": 30,
+   "medape_path": 53.73343575319822,
+   "medape_lt": 42.05665024630542,
+   "medape_gb": 34.656174972182086,
+   "coverage_path": 0.23333333333333334,
+   "coverage_lt": 0.7,
+   "coverage_gb": 0.8666666666666667
+  },
+  "N-CMAPSS_DS05": {
+   "units": 10,
+   "predictions": 30,
+   "medape_path": 192.91193430803884,
+   "medape_lt": 40.778533635676496,
+   "medape_gb": 14.542170372130396,
+   "coverage_path": 0.16666666666666666,
+   "coverage_lt": 0.6666666666666666,
+   "coverage_gb": 0.9333333333333333
+  },
+  "N-CMAPSS_DS06": {
+   "units": 10,
+   "predictions": 30,
+   "medape_path": 79.10411294239444,
+   "medape_lt": 35.489510489510494,
+   "medape_gb": 16.997075817153082,
+   "coverage_path": 0.06666666666666667,
+   "coverage_lt": 0.8,
+   "coverage_gb": 0.9
+  },
+  "N-CMAPSS_DS07": {
+   "units": 10,
+   "predictions": 30,
+   "medape_path": 89.57812399419174,
+   "medape_lt": 27.884615384615387,
+   "medape_gb": 19.568354977227813,
+   "coverage_path": 0.1,
+   "coverage_lt": 0.8,
+   "coverage_gb": 0.9666666666666667
+  },
+  "N-CMAPSS_DS08a-009": {
+   "units": 15,
+   "predictions": 45,
+   "medape_path": 95.60241935388443,
+   "medape_lt": 40.476190476190474,
+   "medape_gb": 27.67603591355796,
+   "coverage_path": 0.2,
+   "coverage_lt": 0.8666666666666667,
+   "coverage_gb": 0.9333333333333333
+  },
+  "N-CMAPSS_DS08c-008": {
+   "units": 10,
+   "predictions": 30,
+   "medape_path": 97.91689972163874,
+   "medape_lt": 26.932367149758456,
+   "medape_gb": 22.78423962008325,
+   "coverage_path": 0.06666666666666667,
+   "coverage_lt": 0.7,
+   "coverage_gb": 0.9666666666666667
+  }
+ }
+}

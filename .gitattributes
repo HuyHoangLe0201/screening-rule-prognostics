@@ -1,7 +1,8 @@
-#  Hash-checked files (the four protocols, and study_hdd.py, whose digest the
+#  Hash-checked files (the five protocols, and study_hdd.py, whose digest the
 #  second protocol records): never convert their line endings.
 code/PREREG_p3_new_archives.md -text
 code/PREREG_p3_decline.md -text
 code/PREREG_p3_rul.md -text
 code/PREREG_p3_blind.md -text
+code/PREREG_p3_step.md -text
 code/study_hdd.py -text

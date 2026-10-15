@@ -5,21 +5,21 @@
 charging regime and by cohort.}
 \label{tab:rultest}
 \begin{adjustbox}{max width=\linewidth}
-\begin{tabular}{@{}llrrrrrr@{}}
+\begin{tabular}{@{}llrrrrrrrr@{}}
 \toprule
-& & & & \multicolumn{2}{c}{path model} & \multicolumn{2}{c}{life table}\\
-\cmidrule(lr){5-6}\cmidrule(lr){7-8}
-regime & verdict & cells & points & MedAPE & coverage & MedAPE & coverage\\
+& & & & \multicolumn{2}{c}{path model} & \multicolumn{2}{c}{life table} & \multicolumn{2}{c}{boosting}\\
+\cmidrule(lr){5-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}
+regime & verdict & cells & points & MedAPE & coverage & MedAPE & coverage & MedAPE & coverage\\
 \midrule
-2C charge & not declined & 8 & 24 & 49.7 & 0.38 & 5.5 & 0.75\\
-3C charge & declines & 15 & 45 & 100.0 & 0.11 & 30.6 & 0.76\\
-R2.5 & not declined & 8 & 24 & 50.0 & 0.62 & 13.0 & 0.75\\
-R3 & not declined & 8 & 24 & 76.6 & 0.50 & 17.2 & 0.75\\
-random walk & undecided & 3 & 4 & 26.1 & 1.00 & 65.6 & 0.50\\
-satellite profile & not declined & 8 & 24 & 148.8 & 0.25 & 42.9 & 0.75\\
+2C charge & not declined & 8 & 24 & 49.7 & 0.38 & 5.5 & 0.75 & 7.4 & 0.92\\
+3C charge & declines & 15 & 45 & 100.0 & 0.11 & 30.6 & 0.76 & 16.6 & 0.78\\
+R2.5 & not declined & 8 & 24 & 50.0 & 0.62 & 13.0 & 0.75 & 8.3 & 0.92\\
+R3 & not declined & 8 & 24 & 76.6 & 0.50 & 17.2 & 0.75 & 15.9 & 0.83\\
+random walk & undecided & 3 & 4 & 26.1 & 1.00 & 65.6 & 0.50 & -- & --\\
+satellite profile & not declined & 8 & 24 & 148.8 & 0.25 & 42.9 & 0.75 & 25.9 & 0.88\\
 \midrule
-declined cohort & 3C & 15 & 45 & 100.0 & 0.11 & 30.6 & 0.76\\
-passed cohort & four regimes & 32 & 96 & 67.4 & 0.44 & 18.7 & 0.75\\
+declined cohort & 3C & 15 & 45 & 100.0 & 0.11 & 30.6 & 0.76 & 16.6 & 0.78\\
+passed cohort & four regimes & 32 & 96 & 67.4 & 0.44 & 18.7 & 0.75 & 11.9 & 0.89\\
 \bottomrule
 \end{tabular}
 \end{adjustbox}
@@ -30,7 +30,8 @@ Predictions at $50$, $70$ and $85\,\%$ of each cell's life; MedAPE is the
 median absolute percentage error, coverage that of the nominal $95\,\%$
 interval. Declined minus passed, the path model's MedAPE differs by
 $+32.6$ $[+5.4,+49.0]$ and its coverage by $-0.33$ $[-0.44,-0.21]$, by a bootstrap
-clustered on the cell. Random-walk cells are undecided and enter neither cohort;
-five of them are too short to predict.
+clustered on the cell. Gradient boosting on the indicator was added after the
+test was scored. Random-walk cells are undecided and enter neither cohort; five
+of them are too short to predict, and too few remain to train boosting.
 \end{minipage}
 \end{table}
