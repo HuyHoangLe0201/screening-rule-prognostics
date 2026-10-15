@@ -35,6 +35,7 @@ health indicators. Download them from their publishers.
 | XJTU battery dataset | pre-registered test | `$P3_DATA/NASABattery/Battery Dataset/` |
 | N-CMAPSS DS01-005 and DS02-006 (`.h5`) | pre-registered test | `$P3_DATA/ncmapss/` |
 | N-CMAPSS, the full archive (`ncmapss.zip`) | blind pre-registered test | `$P3_DATA/ncmapss/ncmapss.zip` |
+| Similar System Data Set for Condition Prognosis (Kaggle, `data.csv`) | external pre-registered test on filters | `$P3_DATA/filter_similar_system/data.csv` |
 
 `P3_DATA` defaults to `data/` in this repository. The bearing features are
 extracted once:
@@ -57,8 +58,8 @@ python code/hi.py
   threshold made uncertain, the screen on other indicators, the screen per
   battery regime, the coupled-model checks, the policy comparison),
   `p3_prereg.json`, `p3_decline.json`, `p3_rul.json`, `p3_blind.json` with
-  `p3_blind_rows.json` and `p3_step.json` (the five pre-registered tests), and
-  `p3_gbr.json` (the gradient-boosting comparator).
+  `p3_blind_rows.json`, `p3_step.json` and `p3_filter.json` (the six
+  pre-registered tests), and `p3_gbr.json` (the gradient-boosting comparator).
 * `results/theory/`: the simulation studies on data from the model
   (`theory_results.json`, `proposal.json`) and the checks of the model itself
   (`grid_consistency.json`, `lamperti.json`, `irregular.json` and others).
@@ -192,6 +193,20 @@ python study_p3_step.py summary               # tests D1-D4
 `study_p3_gbr.py` applies the same comparator, after the fact, to the cells of
 the third test and the subsets of the fourth (the latter needs the per-unit
 indicators that `study_p3_blind.py extract` writes).
+
+A sixth protocol took the screen to an asset class that played no part in
+building it. `code/PREREG_p3_filter.md` (15 October 2026, SHA-256
+`4e75cf4f3d39027efee6d1b247fb11d5107a872e4f61c5d447fdf70e82635442`) was frozen
+before the filter data were downloaded: Kaggle, user `prognosticshse`,
+"Similar System Data Set for Condition Prognosis" (Braig and Zeiler, 2025,
+CC BY 4.0), file `data.csv`, placed in `$P3_DATA/filter_similar_system/`. Its
+forty runs form four orifice cohorts. V1 (no cohort declined) held; F1-F3 were
+not testable, since no cohort was declined and no run had a late onset.
+
+```bash
+python study_p3_filter.py run
+python study_p3_filter.py summary             # tests V1 and F1-F3
+```
 
 ## Requirements
 

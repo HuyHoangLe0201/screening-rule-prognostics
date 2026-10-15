@@ -1,0 +1,136 @@
+{
+ "protocol_sha256": "4e75cf4f3d39027efee6d1b247fb11d5107a872e4f61c5d447fdf70e82635442",
+ "protocol_frozen_at": "2026-10-15T12:51:29+07:00",
+ "screen": {
+  "37.5": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 22.106347126006366,
+   "ci": [
+    19.02654867256637,
+    24.28395061728395
+   ],
+   "verdict": "not declined"
+  },
+  "62.5": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 16.213517846197366,
+   "ci": [
+    11.945895046444274,
+    19.445637872237587
+   ],
+   "verdict": "not declined"
+  },
+  "87.5": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 7.478373352736681,
+   "ci": [
+    5.651334105955854,
+    10.000658575230597
+   ],
+   "verdict": "not declined"
+  },
+  "100.0": {
+   "n": 10,
+   "rate": 1.0,
+   "censored_median_pct": 13.01145368549241,
+   "ci": [
+    9.20420900440082,
+    15.660685154975528
+   ],
+   "verdict": "not declined"
+  },
+  "pooled": {
+   "n": 40,
+   "rate": 1.0,
+   "censored_median_pct": 15.275883490429438,
+   "ci": [
+    10.735253422464826,
+    16.5973222218818
+   ],
+   "verdict": "not declined"
+  }
+ },
+ "by_cohort": {
+  "37.5": {
+   "runs": 10,
+   "predictions": 30,
+   "medape_path": 49.45747687126875,
+   "coverage_path": 0.23333333333333334,
+   "medape_lt": 13.974474474474487,
+   "coverage_lt": 0.8,
+   "medape_gb": 13.027485273483595,
+   "coverage_gb": 0.8333333333333334
+  },
+  "62.5": {
+   "runs": 10,
+   "predictions": 30,
+   "medape_path": 74.71353380366014,
+   "coverage_path": 0.0,
+   "medape_lt": 12.414058076518675,
+   "coverage_lt": 0.7333333333333333,
+   "medape_gb": 6.9113308276889605,
+   "coverage_gb": 0.8
+  },
+  "87.5": {
+   "runs": 10,
+   "predictions": 30,
+   "medape_path": 90.16192407123813,
+   "coverage_path": 0.0,
+   "medape_lt": 17.572595803444713,
+   "coverage_lt": 0.8,
+   "medape_gb": 3.766109174362768,
+   "coverage_gb": 0.8666666666666667
+  },
+  "100.0": {
+   "runs": 10,
+   "predictions": 30,
+   "medape_path": 108.5683183575558,
+   "coverage_path": 0.0,
+   "medape_lt": 16.52094717668487,
+   "coverage_lt": 0.8,
+   "medape_gb": 7.966679698107664,
+   "coverage_gb": 0.8666666666666667
+  }
+ },
+ "pooled": {
+  "runs": 40,
+  "predictions": 120,
+  "medape_path": 73.27749424429473,
+  "coverage_path": 0.058333333333333334,
+  "medape_lt": 14.971823498139296,
+  "coverage_lt": 0.7833333333333333,
+  "medape_gb": 7.447832359989848,
+  "coverage_gb": 0.8416666666666667
+ },
+ "V1": {
+  "holds": true
+ },
+ "F1": {
+  "testable": false,
+  "declined": [],
+  "not_declined": [
+   37.5,
+   62.5,
+   87.5,
+   100.0
+  ]
+ },
+ "F2": {
+  "testable": false,
+  "declined": [],
+  "not_declined": [
+   37.5,
+   62.5,
+   87.5,
+   100.0
+  ]
+ },
+ "F3": {
+  "testable": false,
+  "n_late": 0,
+  "n_early": 40
+ }
+}

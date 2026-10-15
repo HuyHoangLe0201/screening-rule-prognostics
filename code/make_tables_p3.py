@@ -187,5 +187,5 @@ threshold and an exact-posterior reference.}}
 if __name__ == "__main__":
     write("tab_applicability.tex", t_applicability())
     write("tab_path.tex", t_path_compact())
-    for name in ("table_archives", "table_altind", "table_ladder", "table_rultest", "table_blind", "table_step", "table_decide", "table_band", "table_onset_sens", "table_thirdset"):
+    for name in ("table_archives", "table_altind", "table_ladder", "table_rultest", "table_blind", "table_step", "table_decide", "table_filter", "table_band", "table_onset_sens", "table_thirdset"):
         runpy.run_path(os.path.join(HERE, name + ".py"), run_name="__main__")
