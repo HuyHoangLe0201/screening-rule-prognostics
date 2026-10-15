@@ -18576,5 +18576,356 @@
    ]
   },
   "cells": 47
+ },
+ "decisions": {
+  "cohorts": [
+   {
+    "cohort": "PRONOSTIA",
+    "lo": 95.48306148055207,
+    "hi": null,
+    "path": 100.0,
+    "lt": 74.69458987783595,
+    "usable": false
+   },
+   {
+    "cohort": "XJTU-SY",
+    "lo": 25.14071294559099,
+    "hi": 73.77049180327869,
+    "path": 89.67662343648651,
+    "lt": 97.2972972972973,
+    "usable": true
+   },
+   {
+    "cohort": "XJTU cells 2C",
+    "lo": 54.2997542997543,
+    "hi": 67.86632390745501,
+    "path": 49.7143303755561,
+    "lt": 5.530204259017818,
+    "usable": false
+   },
+   {
+    "cohort": "XJTU cells 3C",
+    "lo": 76.1744966442953,
+    "hi": 82.51748251748252,
+    "path": 100.0,
+    "lt": 30.625,
+    "usable": false
+   },
+   {
+    "cohort": "XJTU cells R2.5",
+    "lo": 39.02439024390244,
+    "hi": 47.32142857142857,
+    "path": 49.95011298985453,
+    "lt": 12.98076923076923,
+    "usable": false
+   },
+   {
+    "cohort": "XJTU cells R3",
+    "lo": 30.89430894308943,
+    "hi": 37.5,
+    "path": 76.62993985624142,
+    "lt": 17.15686274509804,
+    "usable": false
+   },
+   {
+    "cohort": "XJTU cells Sim_satellite",
+    "lo": 18.867924528301888,
+    "hi": 25.477707006369428,
+    "path": 148.79473458189082,
+    "lt": 42.85714285714286,
+    "usable": false
+   },
+   {
+    "cohort": "N-CMAPSS DS03-012",
+    "lo": 39.285714285714285,
+    "hi": 51.61290322580645,
+    "path": 100.0,
+    "lt": 31.818181818181817,
+    "usable": false
+   },
+   {
+    "cohort": "N-CMAPSS DS04",
+    "lo": 43.83561643835616,
+    "hi": 61.210358676083644,
+    "path": 53.73343575319822,
+    "lt": 42.05665024630542,
+    "usable": false
+   },
+   {
+    "cohort": "N-CMAPSS DS05",
+    "lo": 41.25,
+    "hi": 49.45054945054945,
+    "path": 192.91193430803884,
+    "lt": 40.778533635676496,
+    "usable": false
+   },
+   {
+    "cohort": "N-CMAPSS DS06",
+    "lo": 28.752535496957403,
+    "hi": 47.25274725274725,
+    "path": 79.10411294239444,
+    "lt": 35.489510489510494,
+    "usable": false
+   },
+   {
+    "cohort": "N-CMAPSS DS07",
+    "lo": 33.60417379404721,
+    "hi": 56.41025641025641,
+    "path": 89.57812399419174,
+    "lt": 27.884615384615387,
+    "usable": false
+   },
+   {
+    "cohort": "N-CMAPSS DS08a-009",
+    "lo": 27.450980392156865,
+    "hi": 52.94117647058824,
+    "path": 95.60241935388443,
+    "lt": 40.476190476190474,
+    "usable": false
+   },
+   {
+    "cohort": "N-CMAPSS DS08c-008",
+    "lo": 28.2258064516129,
+    "hi": 50.943396226415096,
+    "path": 97.91689972163874,
+    "lt": 26.932367149758456,
+    "usable": false
+   }
+  ],
+  "by_threshold": {
+   "50": {
+    "false_rejection": 0,
+    "correct_rejection": 3,
+    "correct_pass": 0,
+    "false_acceptance": 5,
+    "undecided": 6
+   },
+   "55": {
+    "false_rejection": 0,
+    "correct_rejection": 2,
+    "correct_pass": 0,
+    "false_acceptance": 8,
+    "undecided": 4
+   },
+   "60": {
+    "false_rejection": 0,
+    "correct_rejection": 2,
+    "correct_pass": 0,
+    "false_acceptance": 9,
+    "undecided": 3
+   },
+   "65": {
+    "false_rejection": 0,
+    "correct_rejection": 2,
+    "correct_pass": 0,
+    "false_acceptance": 10,
+    "undecided": 2
+   },
+   "70": {
+    "false_rejection": 0,
+    "correct_rejection": 2,
+    "correct_pass": 0,
+    "false_acceptance": 11,
+    "undecided": 1
+   },
+   "75": {
+    "false_rejection": 0,
+    "correct_rejection": 2,
+    "correct_pass": 1,
+    "false_acceptance": 11,
+    "undecided": 0
+   },
+   "80": {
+    "false_rejection": 0,
+    "correct_rejection": 1,
+    "correct_pass": 1,
+    "false_acceptance": 11,
+    "undecided": 1
+   },
+   "85": {
+    "false_rejection": 0,
+    "correct_rejection": 1,
+    "correct_pass": 1,
+    "false_acceptance": 12,
+    "undecided": 0
+   },
+   "90": {
+    "false_rejection": 0,
+    "correct_rejection": 1,
+    "correct_pass": 1,
+    "false_acceptance": 12,
+    "undecided": 0
+   },
+   "95": {
+    "false_rejection": 0,
+    "correct_rejection": 1,
+    "correct_pass": 1,
+    "false_acceptance": 12,
+    "undecided": 0
+   }
+  },
+  "n_cohorts": 14,
+  "n_usable": 1
+ },
+ "subsample": {
+  "PRONOSTIA": {
+   "N": 17,
+   "5": {
+    "declines": 0.467,
+    "not declined": 0.0,
+    "undecided": 0.518,
+    "check indicator": 0.015
+   },
+   "8": {
+    "declines": 0.835,
+    "not declined": 0.0,
+    "undecided": 0.165,
+    "check indicator": 0.0
+   },
+   "10": {
+    "declines": 0.93,
+    "not declined": 0.0,
+    "undecided": 0.07,
+    "check indicator": 0.0
+   },
+   "15": {
+    "declines": 1.0,
+    "not declined": 0.0,
+    "undecided": 0.0,
+    "check indicator": 0.0
+   }
+  },
+  "XJTU-SY": {
+   "N": 15,
+   "5": {
+    "declines": 0.0,
+    "not declined": 0.088,
+    "undecided": 0.912,
+    "check indicator": 0.0
+   },
+   "8": {
+    "declines": 0.0,
+    "not declined": 0.135,
+    "undecided": 0.865,
+    "check indicator": 0.0
+   },
+   "10": {
+    "declines": 0.0,
+    "not declined": 0.134,
+    "undecided": 0.866,
+    "check indicator": 0.0
+   },
+   "15": {
+    "declines": 0.0,
+    "not declined": 0.0,
+    "undecided": 1.0,
+    "check indicator": 0.0
+   }
+  },
+  "XJTU cells 3C": {
+   "N": 15,
+   "5": {
+    "declines": 1.0,
+    "not declined": 0.0,
+    "undecided": 0.0,
+    "check indicator": 0.0
+   },
+   "8": {
+    "declines": 1.0,
+    "not declined": 0.0,
+    "undecided": 0.0,
+    "check indicator": 0.0
+   },
+   "10": {
+    "declines": 1.0,
+    "not declined": 0.0,
+    "undecided": 0.0,
+    "check indicator": 0.0
+   },
+   "15": {
+    "declines": 1.0,
+    "not declined": 0.0,
+    "undecided": 0.0,
+    "check indicator": 0.0
+   }
+  },
+  "C-MAPSS FD001": {
+   "N": 100,
+   "5": {
+    "declines": 0.0,
+    "not declined": 0.821,
+    "undecided": 0.179,
+    "check indicator": 0.0
+   },
+   "8": {
+    "declines": 0.0,
+    "not declined": 0.977,
+    "undecided": 0.023,
+    "check indicator": 0.0
+   },
+   "10": {
+    "declines": 0.0,
+    "not declined": 0.997,
+    "undecided": 0.003,
+    "check indicator": 0.0
+   },
+   "15": {
+    "declines": 0.0,
+    "not declined": 1.0,
+    "undecided": 0.0,
+    "check indicator": 0.0
+   },
+   "20": {
+    "declines": 0.0,
+    "not declined": 1.0,
+    "undecided": 0.0,
+    "check indicator": 0.0
+   },
+   "30": {
+    "declines": 0.0,
+    "not declined": 1.0,
+    "undecided": 0.0,
+    "check indicator": 0.0
+   }
+  },
+  "Backblaze drives": {
+   "N": 119,
+   "5": {
+    "declines": 0.784,
+    "not declined": 0.0,
+    "undecided": 0.0,
+    "check indicator": 0.216
+   },
+   "8": {
+    "declines": 0.948,
+    "not declined": 0.0,
+    "undecided": 0.0,
+    "check indicator": 0.052
+   },
+   "10": {
+    "declines": 0.917,
+    "not declined": 0.0,
+    "undecided": 0.0,
+    "check indicator": 0.083
+   },
+   "15": {
+    "declines": 0.964,
+    "not declined": 0.0,
+    "undecided": 0.0,
+    "check indicator": 0.036
+   },
+   "20": {
+    "declines": 0.991,
+    "not declined": 0.0,
+    "undecided": 0.0,
+    "check indicator": 0.009
+   },
+   "30": {
+    "declines": 0.997,
+    "not declined": 0.0,
+    "undecided": 0.0,
+    "check indicator": 0.003
+   }
+  }
  }
 }

@@ -1772,6 +1772,90 @@ def part_policy():
     _save("policy", out)
 
 
+# ══════════════════════════════════════════════════════════════════════════
+# decisions    the screen's verdicts against what the path model achieved, on
+#              every cohort where both it and a life table were scored
+# ══════════════════════════════════════════════════════════════════════════
+def part_decisions():
+    """A cohort counts as usable for the path model when its median absolute
+    percentage error is no worse than the life table's on the same points.
+    The verdict is read from the cohort's censored-median interval at every
+    threshold from 50 to 95 %."""
+    R = json.load(open(OUT, encoding="utf-8"))
+    P = json.load(open(os.path.join(BE, "results_both.json"), encoding="utf-8"))["tables"]
+    U = json.load(open(os.path.join(BE, "p3_rul.json"), encoding="utf-8"))
+    B = json.load(open(os.path.join(BE, "p3_blind.json"), encoding="utf-8"))
+    coh = []
+    for key, lab in (("pronostia", "PRONOSTIA"), ("xjtu", "XJTU-SY")):
+        lo, hi = R["cens"][lab]["censored_median_ci"]
+        coh.append({"cohort": lab, "lo": lo, "hi": hi,
+                    "path": P[f"{key}/process"]["BS"]["MedAPE_pct"],
+                    "lt": R["reg"][key]["life_table"]["MedAPE_pct"]})
+    for b, v in R["regime"].items():
+        if b in U["by_regime"] and v["verdict"] != "undecided" or b == "Batch-2":
+            c = U["by_regime"][b]
+            coh.append({"cohort": "XJTU cells " + v["regime"], "lo": v["ci"][0], "hi": v["ci"][1],
+                        "path": c["medape_path"], "lt": c["medape_lt"]})
+    for c, v in B["by_cohort"].items():
+        coh.append({"cohort": c.replace("N-CMAPSS_", "N-CMAPSS "), "lo": v["ci"][0],
+                    "hi": v["ci"][1], "path": v["medape_path"], "lt": v["medape_lt"]})
+    for c in coh:
+        c["usable"] = bool(c["path"] <= c["lt"])
+    out = {"cohorts": coh, "by_threshold": {}}
+    for t in range(50, 100, 5):
+        n = {"false_rejection": 0, "correct_rejection": 0, "correct_pass": 0,
+             "false_acceptance": 0, "undecided": 0}
+        for c in coh:
+            v = _verdict3(c["lo"], c["hi"], float(t))
+            if v == "undecided":
+                n["undecided"] += 1
+            elif v == "declines":
+                n["false_rejection" if c["usable"] else "correct_rejection"] += 1
+            else:
+                n["correct_pass" if c["usable"] else "false_acceptance"] += 1
+        out["by_threshold"][str(t)] = n
+    out["n_cohorts"] = len(coh)
+    out["n_usable"] = sum(c["usable"] for c in coh)
+    print(json.dumps({"n": len(coh), "usable": out["n_usable"],
+                      "70": out["by_threshold"]["70"]}, indent=1))
+    for t, n in out["by_threshold"].items():
+        print(t, n)
+    _save("decisions", out)
+
+
+# ══════════════════════════════════════════════════════════════════════════
+# subsample    how the verdict depends on the size of the cohort
+# ══════════════════════════════════════════════════════════════════════════
+def part_subsample():
+    arch = _onset_records()
+    pre = json.load(open(os.path.join(BE, "p3_prereg.json"), encoding="utf-8"))
+    arch["XJTU cells 3C"] = [r["onset_frac"] for r in pre["battery"]["records"]
+                             if r["batch"] == "Batch-2"]
+    pick = ["PRONOSTIA", "XJTU-SY", "XJTU cells 3C", "C-MAPSS FD001", "Backblaze drives"]
+    rng = np.random.default_rng(20261021)
+    out = {}
+    for a in pick:
+        x = np.array([np.inf if f is None else f for f in arch[a]], float)
+        N = len(x)
+        out[a] = {"N": N}
+        for n in (5, 8, 10, 15, 20, 30):
+            if n > N:
+                continue
+            counts = {"declines": 0, "not declined": 0, "undecided": 0, "check indicator": 0}
+            for _ in range(1000):
+                s = rng.choice(x, size=n, replace=False)
+                if np.isfinite(s).mean() < 0.25:
+                    counts["check indicator"] += 1
+                    continue
+                med = np.median(s[rng.integers(0, n, size=(1000, n))], axis=1)
+                lo, hi = np.quantile(med, [0.025, 0.975], method="inverted_cdf")
+                pct = (lambda z: None if not np.isfinite(z) else 100 * float(z))
+                counts[_verdict3(pct(lo), pct(hi), 70.0)] += 1
+            out[a][str(n)] = {k: v / 1000 for k, v in counts.items()}
+            print(a, n, out[a][str(n)], flush=True)
+    _save("subsample", out)
+
+
 def part_merge():
     """Fold p3_review_*.json, written by parallel runs, into p3_review.json."""
     import glob
@@ -1797,6 +1881,7 @@ PARTS = {"ci": part_ci, "acf": part_acf, "ppc": part_ppc, "cal": part_cal,
          "dthr": part_dthr, "altind": part_altind, "regime": part_regime,
          "igshort": part_igshort, "calgamma": part_calgamma,
          "calgrid": part_calgrid, "policy": part_policy,
+         "decisions": part_decisions, "subsample": part_subsample,
          "merge": part_merge}
 
 if __name__ == "__main__":

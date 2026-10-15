@@ -105,7 +105,7 @@ python study_bandbattery.py; python study_bandbearing.py
 python study_p3_review.py ci acf ppc cal reg sens cens hw boot dec sens2 lead altind
 python study_p3_review.py thr                  # after study_p3_decline.py summary
 python study_p3_review.py dthr                 # the uncertain threshold D (an hour or so)
-python study_p3_review.py regime igshort calgamma calgrid policy
+python study_p3_review.py regime igshort calgamma calgrid policy decisions subsample
 # the exact-posterior reference takes about two hours on eight processes:
 # shard it, then merge and summarise
 P3_EXACT_SHARD=0/5 P3_REVIEW_OUT=p3_review_ex0.json python study_p3_review.py exact raw pronostia
