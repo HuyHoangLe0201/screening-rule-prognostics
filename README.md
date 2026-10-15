@@ -36,6 +36,7 @@ health indicators. Download them from their publishers.
 | N-CMAPSS DS01-005 and DS02-006 (`.h5`) | pre-registered test | `$P3_DATA/ncmapss/` |
 | N-CMAPSS, the full archive (`ncmapss.zip`) | blind pre-registered test | `$P3_DATA/ncmapss/ncmapss.zip` |
 | Similar System Data Set for Condition Prognosis (Kaggle, `data.csv`) | external pre-registered test on filters | `$P3_DATA/filter_similar_system/data.csv` |
+| Strain-based fatigue data for Ti-6Al-4V ELI (Harvard Dataverse, the five `Peak-Valley *.xlsx`) | external pre-registered decline test | `$P3_DATA/fatigue_ti64/` |
 
 `P3_DATA` defaults to `data/` in this repository. The bearing features are
 extracted once:
@@ -58,8 +59,9 @@ python code/hi.py
   threshold made uncertain, the screen on other indicators, the screen per
   battery regime, the coupled-model checks, the policy comparison),
   `p3_prereg.json`, `p3_decline.json`, `p3_rul.json`, `p3_blind.json` with
-  `p3_blind_rows.json`, `p3_step.json` and `p3_filter.json` (the six
-  pre-registered tests), and `p3_gbr.json` (the gradient-boosting comparator).
+  `p3_blind_rows.json`, `p3_step.json`, `p3_filter.json` and `p3_fatigue.json`
+  (the seven pre-registered tests), and `p3_gbr.json` (the gradient-boosting
+  comparator).
 * `results/theory/`: the simulation studies on data from the model
   (`theory_results.json`, `proposal.json`) and the checks of the model itself
   (`grid_consistency.json`, `lamperti.json`, `irregular.json` and others).
@@ -206,6 +208,28 @@ not testable, since no cohort was declined and no run had a late onset.
 ```bash
 python study_p3_filter.py run
 python study_p3_filter.py summary             # tests V1 and F1-F3
+```
+
+The filters gave no decline to test, so a seventh protocol predicted one.
+`code/PREREG_p3_fatigue.md` (15 October 2026, SHA-256
+`c7128b1cb4d2a033371a93fc4cc2e23cb04ce59c49643134c4d52d52b145a6ed`) was frozen
+before the data were downloaded: Harvard Dataverse, doi:10.7910/DVN/EXS3F5,
+"Strain-Based Fatigue Data for Ti-6Al-4V ELI under Fully-Reversed and Mean
+Strain Loads" (Carrion and Shamsaei, 2016, CC0), the five `Peak-Valley *.xlsx`
+workbooks, placed in `$P3_DATA/fatigue_ti64/`. The indicator is the secant
+stiffness and a cohort is one strain ratio. W1, the primary prediction (at
+least one cohort declined and none passed), failed: the cohort at R = 0.5 was
+declined, the one at R = -0.5 passed. W2 and W3 held; W4 failed. Two
+deviations, both fixed before any stress was read, are documented in the
+script: the workbooks list one reversal per row, and run-outs are read from
+their tables of contents because long records stop at the row limit. A record
+that ends 8 % short of fracture is excluded; kept, it turns the R = -0.5 cohort
+undecided and W1 would hold. `cache` reads the workbooks once (slow).
+
+```bash
+python study_p3_fatigue.py cache
+python study_p3_fatigue.py run
+python study_p3_fatigue.py summary            # tests W1-W4
 ```
 
 ## Requirements
