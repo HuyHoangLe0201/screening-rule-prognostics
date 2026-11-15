@@ -249,7 +249,7 @@ had been scored; none is pre-registered.
   on simulated records, censoring conventions, threshold dependence, a
   one-sided CUSUM detector and the indicator-quality metrics of Coble and Hines.
   `study_p3_rev_cache.py` first caches every archive's indicator.
-- `table_ledger.py`: the ledger of all twenty-six pre-registered predictions.
+- `table_ledger.py`: the ledger of every pre-registered prediction, twenty-six of them testable.
 
 The median-onset bootstraps of `study_p3_review.py` (parts `ci`, `cens`,
 `altind`) now draw a million resamples. With ten thousand, XJTU-SY's upper bound

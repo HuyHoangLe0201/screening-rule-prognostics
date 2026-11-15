@@ -206,7 +206,8 @@ archive & asset class & units & $n$ & rate & detected units & all units, censore
 \vspace{4pt}
 \begin{minipage}{0.95\linewidth}\footnotesize
 Brackets are $95\,\%$ intervals: Wilson for the rate, percentile bootstrap
-($10\,000$ resamples) for the medians. The censored median counts a unit without
+for the medians ($10^6$ resamples; $10^4$ in the pre-registered rows, as their
+protocols fixed). The censored median counts a unit without
 a detected onset as right-censored at the end of its life; n.r., not reached,
 means that fewer than half the units show an onset before failure. The verdict
 reads the censored interval against the $70\,\%$ threshold: declines if it lies
