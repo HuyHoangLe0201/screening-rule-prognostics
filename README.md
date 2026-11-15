@@ -232,6 +232,38 @@ python study_p3_fatigue.py run
 python study_p3_fatigue.py summary            # tests W1-W4
 ```
 
+## Analyses added in release v1.4
+
+These answer a simulated peer review and were run after every protocol above
+had been scored; none is pre-registered.
+
+- `study_p3_rev_twophase.py`: a two-phase comparator (flat, then a Wiener
+  process from a change time with a population prior) against the life table.
+- `study_p3_rev_backtest.py`: a leave-one-record-out back-test of the path model
+  against the life table on random subsets of each cohort, compared with the
+  screen; also lead time and miss rates.
+- `study_p3_rev_pmmh.py`: the exact-posterior reference rerun from
+  over-dispersed starts, with rank-normalised R-hat and bulk/tail ESS, Fisher
+  and stratified exact tests, and sensitivity to D and the noise prior (hours).
+- `study_p3_rev_detector.py`: the onset detector's false-onset and delay rates
+  on simulated records, censoring conventions, threshold dependence, a
+  one-sided CUSUM detector and the indicator-quality metrics of Coble and Hines.
+  `study_p3_rev_cache.py` first caches every archive's indicator.
+- `table_ledger.py`: the ledger of all twenty-six pre-registered predictions.
+
+The median-onset bootstraps of `study_p3_review.py` (parts `ci`, `cens`,
+`altind`) now draw a million resamples. With ten thousand, XJTU-SY's upper bound
+fell on either side of a jump depending on the seed (73.8 or 93.5 % of life).
+
+```bash
+python study_p3_rev_twophase.py
+python study_p3_rev_backtest.py
+python study_p3_rev_cache.py core           # then hdd Q4_2023 etc., ncmapss
+python study_p3_rev_detector.py             # sim cens thr cusum hiq
+python study_p3_rev_pmmh.py run od all      # then: sum
+python table_ledger.py
+```
+
 ## Requirements
 
 Python 3.10 or later with the packages in `requirements.txt`. No GPU; every

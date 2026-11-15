@@ -105,6 +105,21 @@ BE = os.path.join(ROOT, "results", "bearings")
 #  parts run as separate processes write separate files, merged with "merge"
 OUT = os.path.join(BE, os.environ.get("P3_REVIEW_OUT", "p3_review.json"))
 B_BOOT = 10_000
+#  The bootstrap of a median onset takes few distinct values, and a percentile
+#  bound can sit on a jump: XJTU-SY's upper bound was 73.8 under one seed and
+#  93.5 under most others, the share beyond the jump being 0.0254 against 0.025.
+#  The median bootstraps therefore use a million resamples, drawn in chunks,
+#  enough to settle every bound the paper prints (study_p3_rev_detector.py seed).
+B_MED = 1_000_000
+
+
+def boot_medians(x, rng, chunk=50_000):
+    x = np.asarray(x, float)
+    out = []
+    for s in range(0, B_MED, chunk):
+        idx = rng.integers(0, len(x), size=(min(chunk, B_MED - s), len(x)))
+        out.append(np.median(x[idx], axis=1))
+    return np.concatenate(out)
 
 
 def _save(key, val):
@@ -138,8 +153,7 @@ def wilson(k, n, z=1.959964):
 
 def boot_median(x, rng):
     x = np.asarray(x, float)
-    idx = rng.integers(0, len(x), size=(B_BOOT, len(x)))
-    m = np.median(x[idx], axis=1)
+    m = boot_medians(x, rng)
     return [float(v) for v in np.percentile(m, [2.5, 97.5])]
 
 
@@ -560,8 +574,7 @@ def part_cens():
     for k, v in _onset_records().items():
         x = np.array([np.inf if f is None else f for f in v], float)
         med = _censored_median(v)
-        idx = rng.integers(0, len(x), size=(B_BOOT, len(x)))
-        meds = np.median(x[idx], axis=1)
+        meds = boot_medians(x, rng)
         lo, hi = np.quantile(meds, [0.025, 0.975], method="inverted_cdf")
         k70 = int(np.sum(x < 0.70))
         plo, phi = wilson(k70, len(x))
@@ -1336,7 +1349,7 @@ def part_altind():
                 fr.append(i / len(hi) if i > 0 else np.inf)
             x = np.array(fr)
             med = float(np.median(x))
-            meds = np.median(x[rng.integers(0, len(x), size=(B_BOOT, len(x)))], axis=1)
+            meds = boot_medians(x, rng)
             lo, hi_ = (float(q) for q in np.quantile(meds, [0.025, 0.975], method="inverted_cdf"))
 
             def pct(z):

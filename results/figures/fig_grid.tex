@@ -14,8 +14,8 @@
       ylabel={$\mathrm{Var}[X(T)]$, relative}, log basis x=10]
     \addplot[pVerm, line width=0.9pt, mark=*, mark size=1.1pt] coordinates {(1,20) (2,10) (4,5) (8,2.5) (16,1.25) (32,0.625) (64,0.3125)};
     \addplot[pBlue, line width=0.9pt, mark=square*, mark size=1.1pt] coordinates {(1,1) (2,1) (4,1) (8,1) (16,1) (32,1) (64,1)};
-    \node[tiny, text=pVerm, anchor=south west] at (axis cs:1.2,0.08) {naive: $\propto\Delta t$};
-    \node[tiny, text=pBlue, anchor=north west] at (axis cs:1.2,0.80) {\Cref{thm:consistent}: grid-free};
+    \node[tiny, text=pVerm, anchor=north east] at (axis cs:70,0.13) {naive: $\propto\Delta t$};
+    \node[tiny, text=pBlue, anchor=north west, align=left] at (axis cs:1.15,0.78) {\Cref{thm:consistent}:\\grid-free};
   \end{axis}
   \node[p2ttl] at ($(ga.north west)+(0,3.0mm)$) {\textbf{(a)}~Grid dependence};
   \begin{axis}[p2axis, name=gb, at={(56mm,0mm)}, width=30mm, height=34mm,

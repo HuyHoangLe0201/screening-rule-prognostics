@@ -47,14 +47,14 @@ def t_applicability():
             fr = (f"{100*r['frac_rise_in_last_5pct']:.0f}"
                   if r["frac_rise_in_last_5pct"] is not None else "--")
             body += (f"{r['bearing'].replace('_', chr(92)+'_')} & {r['n']} & {fp} & {dp} & "
-                     f"{r['terminal_snr_mad']:.0f} & {fr}\\\\\n")
+                     f"${r['terminal_snr_mad']:.0f}$ & {fr}\\\\\n")
         det = [r for r in rs if r["fpt_frac"] is not None]
         med = 100 * sorted(r["fpt_frac"] for r in det)[len(det) // 2] if det else float("nan")
         out += f"""\\begin{{minipage}}[t]{{0.49\\linewidth}}\\centering\\scriptsize
 {label}\\\\[2pt]
 \\begin{{tabular}}{{@{{}}l rrrrr@{{}}}}
 \\toprule
-bearing & $n$ & onset & deg. & SNR & last 5\\%\\\\
+bearing & $n$ & onset & deg. & SNR & last 5\\,\\%\\\\
 \\midrule
 {body}\\midrule
 \\multicolumn{{6}}{{@{{}}l@{{}}}}{{onset in {len(det)}/{len(rs)}, median at {med:.0f}\\,\\% of life}}\\\\
@@ -187,5 +187,5 @@ threshold and an exact-posterior reference.}}
 if __name__ == "__main__":
     write("tab_applicability.tex", t_applicability())
     write("tab_path.tex", t_path_compact())
-    for name in ("table_archives", "table_altind", "table_ladder", "table_rultest", "table_blind", "table_step", "table_decide", "table_filter", "table_fatigue", "table_band", "table_onset_sens", "table_thirdset"):
+    for name in ("table_archives", "table_altind", "table_ladder", "table_rultest", "table_blind", "table_step", "table_decide", "table_filter", "table_fatigue", "table_ledger", "table_band", "table_onset_sens", "table_thirdset"):
         runpy.run_path(os.path.join(HERE, name + ".py"), run_name="__main__")

@@ -65,7 +65,7 @@ detected onset (\% of life) & units & predictions
 The gap across the threshold is
 """ + f"{sig['observed_diff']:.0f}" + r""" points
  over """ + f"{sig['n_units_below']}" + r""" units below and """ + \
-f"{sig['n_units_above']}" + r""" above; \Cref{sec:band} gives the interval, the
+f"{sig['n_units_above']}" + r""" above; the text gives its interval, the
 permutation test, the scan over candidate thresholds and the replication.
 \end{minipage}
 \end{table}

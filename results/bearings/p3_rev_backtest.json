@@ -1,0 +1,2767 @@
+{
+ "part1": {
+  "cohorts": {
+   "PRONOSTIA": {
+    "N_records": 11,
+    "N_points": 77,
+    "medape_path": 100.0,
+    "cov_path": 0.0,
+    "medape_lt": 74.69458987783595,
+    "cov_lt": 0.44155844155844154,
+    "usable": false,
+    "screen_full_cohort": "declines",
+    "by_n": {
+     "3": {
+      "screen_declines": 0.667,
+      "screen_passes": 0.0,
+      "screen_undecided": 0.273,
+      "screen_check": 0.06,
+      "screen_agree": 0.667,
+      "bt_agree": 0.566,
+      "bt_refit_agree": 0.518,
+      "bt_choose_path": 0.434,
+      "bt_refit_choose_path": 0.482,
+      "realised_holdout": {
+       "screen": {
+        "medape": 84.68451949549254,
+        "coverage": 0.44382142857142853
+       },
+       "backtest": {
+        "medape": 97.86695306677042,
+        "coverage": 0.23392857142857146
+       },
+       "backtest_refit": {
+        "medape": 96.82838717292299,
+        "coverage": 0.21948214285714282
+       },
+       "life_table": {
+        "medape": 84.68451949549254,
+        "coverage": 0.44382142857142853
+       },
+       "path": {
+        "medape": 99.94070088332431,
+        "coverage": 0.0
+       },
+       "oracle": {
+        "medape": 82.14358380189647,
+        "coverage": 0.361375
+       }
+      },
+      "note": "realised on the 8 held-out records"
+     },
+     "5": {
+      "screen_declines": 0.481,
+      "screen_passes": 0.0,
+      "screen_undecided": 0.45,
+      "screen_check": 0.069,
+      "screen_agree": 0.481,
+      "bt_agree": 0.721,
+      "bt_refit_agree": 0.635,
+      "bt_choose_path": 0.279,
+      "bt_refit_choose_path": 0.365,
+      "realised_holdout": {
+       "screen": {
+        "medape": 94.35481025246523,
+        "coverage": 0.43876190476190474
+       },
+       "backtest": {
+        "medape": 104.24895330877594,
+        "coverage": 0.2955238095238095
+       },
+       "backtest_refit": {
+        "medape": 105.55419277889831,
+        "coverage": 0.2621428571428571
+       },
+       "life_table": {
+        "medape": 94.35481025246523,
+        "coverage": 0.43876190476190474
+       },
+       "path": {
+        "medape": 99.864354943574,
+        "coverage": 0.0
+       },
+       "oracle": {
+        "medape": 81.83457499841396,
+        "coverage": 0.32945238095238094
+       }
+      },
+      "note": "realised on the 6 held-out records"
+     },
+     "10": {
+      "screen_declines": 1.0,
+      "screen_passes": 0.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 1.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 0.561,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.439,
+      "realised_holdout": {
+       "screen": {
+        "medape": 186.11625159403576,
+        "coverage": 0.42771428571428566
+       },
+       "backtest": {
+        "medape": 186.11625159403576,
+        "coverage": 0.42771428571428566
+       },
+       "backtest_refit": {
+        "medape": 214.22992203046795,
+        "coverage": 0.2041428571428571
+       },
+       "life_table": {
+        "medape": 186.11625159403576,
+        "coverage": 0.42771428571428566
+       },
+       "path": {
+        "medape": 96.83221394769639,
+        "coverage": 0.0
+       },
+       "oracle": {
+        "medape": 60.7566832547701,
+        "coverage": 0.3904285714285714
+       }
+      },
+      "note": "realised on the 1 held-out records"
+     },
+     "all": {
+      "screen_declines": 1.0,
+      "screen_passes": 0.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 1.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 74.69458987783595,
+        "coverage": 0.44155844155844154
+       },
+       "backtest": {
+        "medape": 74.69458987783595,
+        "coverage": 0.44155844155844154
+       },
+       "backtest_refit": {
+        "medape": 74.69458987783595,
+        "coverage": 0.44155844155844154
+       },
+       "life_table": {
+        "medape": 74.69458987783595,
+        "coverage": 0.44155844155844154
+       },
+       "path": {
+        "medape": 100.0,
+        "coverage": 0.0
+       },
+       "oracle": {
+        "medape": 74.69458987783595,
+        "coverage": 0.44155844155844154
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   },
+   "XJTU-SY": {
+    "N_records": 15,
+    "N_points": 89,
+    "medape_path": 89.67662343648651,
+    "cov_path": 0.033707865168539325,
+    "medape_lt": 97.29729729729729,
+    "cov_lt": 0.14606741573033707,
+    "usable": true,
+    "screen_full_cohort": "undecided",
+    "by_n": {
+     "3": {
+      "screen_declines": 0.02,
+      "screen_passes": 0.249,
+      "screen_undecided": 0.731,
+      "screen_check": 0.0,
+      "screen_agree": 0.249,
+      "bt_agree": 0.468,
+      "bt_refit_agree": 0.846,
+      "bt_choose_path": 0.468,
+      "bt_refit_choose_path": 0.846,
+      "realised_holdout": {
+       "screen": {
+        "medape": 107.46740549517644,
+        "coverage": 0.1167273082942097
+       },
+       "backtest": {
+        "medape": 117.4109322666027,
+        "coverage": 0.08595931142410015
+       },
+       "backtest_refit": {
+        "medape": 95.07242996865196,
+        "coverage": 0.05064436619718309
+       },
+       "life_table": {
+        "medape": 110.81502122558125,
+        "coverage": 0.1458235524256651
+       },
+       "path": {
+        "medape": 90.73469859277796,
+        "coverage": 0.03356005477308294
+       },
+       "oracle": {
+        "medape": 83.53603458827457,
+        "coverage": 0.09070755086071987
+       }
+      },
+      "note": "realised on the 12 held-out records"
+     },
+     "5": {
+      "screen_declines": 0.0,
+      "screen_passes": 0.08,
+      "screen_undecided": 0.92,
+      "screen_check": 0.0,
+      "screen_agree": 0.08,
+      "bt_agree": 0.491,
+      "bt_refit_agree": 0.948,
+      "bt_choose_path": 0.491,
+      "bt_refit_choose_path": 0.948,
+      "realised_holdout": {
+       "screen": {
+        "medape": 122.969235028987,
+        "coverage": 0.13536779661016948
+       },
+       "backtest": {
+        "medape": 131.9761036645562,
+        "coverage": 0.081685593220339
+       },
+       "backtest_refit": {
+        "medape": 93.1323617621627,
+        "coverage": 0.039405084745762715
+       },
+       "life_table": {
+        "medape": 124.50246773273713,
+        "coverage": 0.1443776836158192
+       },
+       "path": {
+        "medape": 91.32212931019036,
+        "coverage": 0.033705932203389834
+       },
+       "oracle": {
+        "medape": 82.48628961481631,
+        "coverage": 0.0913180790960452
+       }
+      },
+      "note": "realised on the 10 held-out records"
+     },
+     "10": {
+      "screen_declines": 0.0,
+      "screen_passes": 0.138,
+      "screen_undecided": 0.862,
+      "screen_check": 0.0,
+      "screen_agree": 0.138,
+      "bt_agree": 0.558,
+      "bt_refit_agree": 0.986,
+      "bt_choose_path": 0.558,
+      "bt_refit_choose_path": 0.986,
+      "realised_holdout": {
+       "screen": {
+        "medape": 179.36813747887396,
+        "coverage": 0.12994827586206895
+       },
+       "backtest": {
+        "medape": 202.81029096225265,
+        "coverage": 0.0649816091954023
+       },
+       "backtest_refit": {
+        "medape": 94.38216166119682,
+        "coverage": 0.03413103448275862
+       },
+       "life_table": {
+        "medape": 187.49713103670294,
+        "coverage": 0.14544137931034481
+       },
+       "path": {
+        "medape": 92.77884947705638,
+        "coverage": 0.03308390804597701
+       },
+       "oracle": {
+        "medape": 76.44450697228925,
+        "coverage": 0.10719655172413795
+       }
+      },
+      "note": "realised on the 5 held-out records"
+     },
+     "all": {
+      "screen_declines": 0.0,
+      "screen_passes": 0.0,
+      "screen_undecided": 1.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 1.0,
+      "bt_refit_choose_path": 1.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 97.29729729729729,
+        "coverage": 0.14606741573033707
+       },
+       "backtest": {
+        "medape": 89.67662343648651,
+        "coverage": 0.033707865168539325
+       },
+       "backtest_refit": {
+        "medape": 89.67662343648651,
+        "coverage": 0.033707865168539325
+       },
+       "life_table": {
+        "medape": 97.29729729729729,
+        "coverage": 0.14606741573033707
+       },
+       "path": {
+        "medape": 89.67662343648651,
+        "coverage": 0.033707865168539325
+       },
+       "oracle": {
+        "medape": 89.67662343648651,
+        "coverage": 0.033707865168539325
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   },
+   "XJTU cells 2C": {
+    "N_records": 8,
+    "N_points": 24,
+    "medape_path": 49.7143303755561,
+    "cov_path": 0.375,
+    "medape_lt": 5.530204259017818,
+    "cov_lt": 0.75,
+    "usable": false,
+    "screen_full_cohort": "not declined",
+    "by_n": {
+     "3": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 44.28095423146116,
+        "coverage": 0.37960000000000005
+       },
+       "backtest": {
+        "medape": 5.736060767159542,
+        "coverage": 0.756
+       },
+       "backtest_refit": {
+        "medape": 5.736060767159542,
+        "coverage": 0.756
+       },
+       "life_table": {
+        "medape": 5.736060767159542,
+        "coverage": 0.756
+       },
+       "path": {
+        "medape": 44.28095423146116,
+        "coverage": 0.37960000000000005
+       },
+       "oracle": {
+        "medape": 5.736060767159542,
+        "coverage": 0.756
+       }
+      },
+      "note": "realised on the 5 held-out records"
+     },
+     "5": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 42.832235544669956,
+        "coverage": 0.3702222222222222
+       },
+       "backtest": {
+        "medape": 5.772212211230227,
+        "coverage": 0.7496666666666666
+       },
+       "backtest_refit": {
+        "medape": 5.772212211230227,
+        "coverage": 0.7496666666666666
+       },
+       "life_table": {
+        "medape": 5.772212211230227,
+        "coverage": 0.7496666666666666
+       },
+       "path": {
+        "medape": 42.832235544669956,
+        "coverage": 0.3702222222222222
+       },
+       "oracle": {
+        "medape": 5.772212211230227,
+        "coverage": 0.7496666666666666
+       }
+      },
+      "note": "realised on the 3 held-out records"
+     },
+     "all": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 49.7143303755561,
+        "coverage": 0.375
+       },
+       "backtest": {
+        "medape": 5.530204259017818,
+        "coverage": 0.75
+       },
+       "backtest_refit": {
+        "medape": 5.530204259017818,
+        "coverage": 0.75
+       },
+       "life_table": {
+        "medape": 5.530204259017818,
+        "coverage": 0.75
+       },
+       "path": {
+        "medape": 49.7143303755561,
+        "coverage": 0.375
+       },
+       "oracle": {
+        "medape": 5.530204259017818,
+        "coverage": 0.75
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   },
+   "XJTU cells 3C": {
+    "N_records": 15,
+    "N_points": 45,
+    "medape_path": 100.0,
+    "cov_path": 0.1111111111111111,
+    "medape_lt": 30.625,
+    "cov_lt": 0.7555555555555555,
+    "usable": false,
+    "screen_full_cohort": "declines",
+    "by_n": {
+     "3": {
+      "screen_declines": 1.0,
+      "screen_passes": 0.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 1.0,
+      "bt_agree": 0.757,
+      "bt_refit_agree": 0.677,
+      "bt_choose_path": 0.243,
+      "bt_refit_choose_path": 0.323,
+      "realised_holdout": {
+       "screen": {
+        "medape": 40.32589256552285,
+        "coverage": 0.7558611111111111
+       },
+       "backtest": {
+        "medape": 57.724547930297426,
+        "coverage": 0.6016666666666668
+       },
+       "backtest_refit": {
+        "medape": 63.0596869980857,
+        "coverage": 0.5475
+       },
+       "life_table": {
+        "medape": 40.32589256552285,
+        "coverage": 0.7558611111111111
+       },
+       "path": {
+        "medape": 99.99397413043873,
+        "coverage": 0.11075
+       },
+       "oracle": {
+        "medape": 40.32589256552285,
+        "coverage": 0.7558611111111111
+       }
+      },
+      "note": "realised on the 12 held-out records"
+     },
+     "5": {
+      "screen_declines": 1.0,
+      "screen_passes": 0.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 1.0,
+      "bt_agree": 0.831,
+      "bt_refit_agree": 0.904,
+      "bt_choose_path": 0.169,
+      "bt_refit_choose_path": 0.096,
+      "realised_holdout": {
+       "screen": {
+        "medape": 42.17773989094077,
+        "coverage": 0.7587
+       },
+       "backtest": {
+        "medape": 54.5072381800978,
+        "coverage": 0.6530333333333334
+       },
+       "backtest_refit": {
+        "medape": 49.20302665348778,
+        "coverage": 0.6959
+       },
+       "life_table": {
+        "medape": 42.17773989094077,
+        "coverage": 0.7587
+       },
+       "path": {
+        "medape": 99.91470081699138,
+        "coverage": 0.11216666666666669
+       },
+       "oracle": {
+        "medape": 41.83079603877304,
+        "coverage": 0.7322333333333334
+       }
+      },
+      "note": "realised on the 10 held-out records"
+     },
+     "10": {
+      "screen_declines": 1.0,
+      "screen_passes": 0.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 1.0,
+      "bt_agree": 0.962,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.038,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 55.9069067370025,
+        "coverage": 0.7612666666666666
+       },
+       "backtest": {
+        "medape": 58.59866079551379,
+        "coverage": 0.739
+       },
+       "backtest_refit": {
+        "medape": 55.9069067370025,
+        "coverage": 0.7612666666666666
+       },
+       "life_table": {
+        "medape": 55.9069067370025,
+        "coverage": 0.7612666666666666
+       },
+       "path": {
+        "medape": 96.59188567845979,
+        "coverage": 0.11246666666666666
+       },
+       "oracle": {
+        "medape": 47.18096354769867,
+        "coverage": 0.6513999999999999
+       }
+      },
+      "note": "realised on the 5 held-out records"
+     },
+     "all": {
+      "screen_declines": 1.0,
+      "screen_passes": 0.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 1.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 30.625,
+        "coverage": 0.7555555555555555
+       },
+       "backtest": {
+        "medape": 30.625,
+        "coverage": 0.7555555555555555
+       },
+       "backtest_refit": {
+        "medape": 30.625,
+        "coverage": 0.7555555555555555
+       },
+       "life_table": {
+        "medape": 30.625,
+        "coverage": 0.7555555555555555
+       },
+       "path": {
+        "medape": 100.0,
+        "coverage": 0.1111111111111111
+       },
+       "oracle": {
+        "medape": 30.625,
+        "coverage": 0.7555555555555555
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   },
+   "XJTU cells R2.5": {
+    "N_records": 8,
+    "N_points": 24,
+    "medape_path": 49.95011298985453,
+    "cov_path": 0.625,
+    "medape_lt": 12.98076923076923,
+    "cov_lt": 0.75,
+    "usable": false,
+    "screen_full_cohort": "not declined",
+    "by_n": {
+     "3": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 0.971,
+      "bt_refit_agree": 0.869,
+      "bt_choose_path": 0.029,
+      "bt_refit_choose_path": 0.131,
+      "realised_holdout": {
+       "screen": {
+        "medape": 54.350418498851724,
+        "coverage": 0.6289333333333331
+       },
+       "backtest": {
+        "medape": 15.989225738738416,
+        "coverage": 0.7390666666666666
+       },
+       "backtest_refit": {
+        "medape": 21.29547507892709,
+        "coverage": 0.7192666666666666
+       },
+       "life_table": {
+        "medape": 14.77991350554841,
+        "coverage": 0.7467999999999999
+       },
+       "path": {
+        "medape": 54.350418498851724,
+        "coverage": 0.6289333333333331
+       },
+       "oracle": {
+        "medape": 14.77991350554841,
+        "coverage": 0.7467999999999999
+       }
+      },
+      "note": "realised on the 5 held-out records"
+     },
+     "5": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 0.992,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.008,
+      "realised_holdout": {
+       "screen": {
+        "medape": 55.9345617910809,
+        "coverage": 0.6307777777777777
+       },
+       "backtest": {
+        "medape": 15.992328564335622,
+        "coverage": 0.7556666666666666
+       },
+       "backtest_refit": {
+        "medape": 16.44588150002176,
+        "coverage": 0.7538888888888888
+       },
+       "life_table": {
+        "medape": 15.992328564335622,
+        "coverage": 0.7556666666666666
+       },
+       "path": {
+        "medape": 55.9345617910809,
+        "coverage": 0.6307777777777777
+       },
+       "oracle": {
+        "medape": 15.868702605895976,
+        "coverage": 0.7593333333333333
+       }
+      },
+      "note": "realised on the 3 held-out records"
+     },
+     "all": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 49.95011298985453,
+        "coverage": 0.625
+       },
+       "backtest": {
+        "medape": 12.98076923076923,
+        "coverage": 0.75
+       },
+       "backtest_refit": {
+        "medape": 12.98076923076923,
+        "coverage": 0.75
+       },
+       "life_table": {
+        "medape": 12.98076923076923,
+        "coverage": 0.75
+       },
+       "path": {
+        "medape": 49.95011298985453,
+        "coverage": 0.625
+       },
+       "oracle": {
+        "medape": 12.98076923076923,
+        "coverage": 0.75
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   },
+   "XJTU cells R3": {
+    "N_records": 8,
+    "N_points": 24,
+    "medape_path": 76.62993985624142,
+    "cov_path": 0.5,
+    "medape_lt": 17.15686274509804,
+    "cov_lt": 0.75,
+    "usable": false,
+    "screen_full_cohort": "not declined",
+    "by_n": {
+     "3": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 0.986,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.014,
+      "realised_holdout": {
+       "screen": {
+        "medape": 76.34376539692137,
+        "coverage": 0.5017333333333334
+       },
+       "backtest": {
+        "medape": 19.375757575757575,
+        "coverage": 0.7497999999999999
+       },
+       "backtest_refit": {
+        "medape": 20.35750968843463,
+        "coverage": 0.7423333333333334
+       },
+       "life_table": {
+        "medape": 19.375757575757575,
+        "coverage": 0.7497999999999999
+       },
+       "path": {
+        "medape": 76.34376539692137,
+        "coverage": 0.5017333333333334
+       },
+       "oracle": {
+        "medape": 19.375757575757575,
+        "coverage": 0.7497999999999999
+       }
+      },
+      "note": "realised on the 5 held-out records"
+     },
+     "5": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 84.79502734429614,
+        "coverage": 0.49722222222222223
+       },
+       "backtest": {
+        "medape": 20.08228618957272,
+        "coverage": 0.753
+       },
+       "backtest_refit": {
+        "medape": 20.08228618957272,
+        "coverage": 0.753
+       },
+       "life_table": {
+        "medape": 20.08228618957272,
+        "coverage": 0.753
+       },
+       "path": {
+        "medape": 84.79502734429614,
+        "coverage": 0.49722222222222223
+       },
+       "oracle": {
+        "medape": 20.08228618957272,
+        "coverage": 0.753
+       }
+      },
+      "note": "realised on the 3 held-out records"
+     },
+     "all": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 76.62993985624142,
+        "coverage": 0.5
+       },
+       "backtest": {
+        "medape": 17.15686274509804,
+        "coverage": 0.75
+       },
+       "backtest_refit": {
+        "medape": 17.15686274509804,
+        "coverage": 0.75
+       },
+       "life_table": {
+        "medape": 17.15686274509804,
+        "coverage": 0.75
+       },
+       "path": {
+        "medape": 76.62993985624142,
+        "coverage": 0.5
+       },
+       "oracle": {
+        "medape": 17.15686274509804,
+        "coverage": 0.75
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   },
+   "XJTU cells Sim_satellite": {
+    "N_records": 8,
+    "N_points": 24,
+    "medape_path": 148.79473458189082,
+    "cov_path": 0.25,
+    "medape_lt": 42.85714285714286,
+    "cov_lt": 0.75,
+    "usable": false,
+    "screen_full_cohort": "not declined",
+    "by_n": {
+     "3": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 0.983,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.017,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 148.85890017752348,
+        "coverage": 0.24913333333333335
+       },
+       "backtest": {
+        "medape": 45.80499922602313,
+        "coverage": 0.7420666666666667
+       },
+       "backtest_refit": {
+        "medape": 43.69309181699759,
+        "coverage": 0.7534000000000001
+       },
+       "life_table": {
+        "medape": 43.69309181699759,
+        "coverage": 0.7534000000000001
+       },
+       "path": {
+        "medape": 148.85890017752348,
+        "coverage": 0.24913333333333335
+       },
+       "oracle": {
+        "medape": 43.69309181699759,
+        "coverage": 0.7534000000000001
+       }
+      },
+      "note": "realised on the 5 held-out records"
+     },
+     "5": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 150.81023009279113,
+        "coverage": 0.24422222222222223
+       },
+       "backtest": {
+        "medape": 43.972969624234814,
+        "coverage": 0.7423333333333333
+       },
+       "backtest_refit": {
+        "medape": 43.972969624234814,
+        "coverage": 0.7423333333333333
+       },
+       "life_table": {
+        "medape": 43.972969624234814,
+        "coverage": 0.7423333333333333
+       },
+       "path": {
+        "medape": 150.81023009279113,
+        "coverage": 0.24422222222222223
+       },
+       "oracle": {
+        "medape": 43.972210148644926,
+        "coverage": 0.7398888888888888
+       }
+      },
+      "note": "realised on the 3 held-out records"
+     },
+     "all": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 148.79473458189082,
+        "coverage": 0.25
+       },
+       "backtest": {
+        "medape": 42.85714285714286,
+        "coverage": 0.75
+       },
+       "backtest_refit": {
+        "medape": 42.85714285714286,
+        "coverage": 0.75
+       },
+       "life_table": {
+        "medape": 42.85714285714286,
+        "coverage": 0.75
+       },
+       "path": {
+        "medape": 148.79473458189082,
+        "coverage": 0.25
+       },
+       "oracle": {
+        "medape": 42.85714285714286,
+        "coverage": 0.75
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   },
+   "N-CMAPSS DS03-012": {
+    "N_records": 15,
+    "N_points": 45,
+    "medape_path": 100.0,
+    "cov_path": 0.044444444444444446,
+    "medape_lt": 31.818181818181817,
+    "cov_lt": 0.7333333333333333,
+    "usable": false,
+    "screen_full_cohort": "not declined",
+    "by_n": {
+     "3": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 0.947,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.053,
+      "realised_holdout": {
+       "screen": {
+        "medape": 101.08998813322013,
+        "coverage": 0.04502777777777779
+       },
+       "backtest": {
+        "medape": 32.18869172898113,
+        "coverage": 0.7365
+       },
+       "backtest_refit": {
+        "medape": 36.119013867139984,
+        "coverage": 0.6964444444444444
+       },
+       "life_table": {
+        "medape": 32.18869172898113,
+        "coverage": 0.7365
+       },
+       "path": {
+        "medape": 101.08998813322013,
+        "coverage": 0.04502777777777779
+       },
+       "oracle": {
+        "medape": 32.18869172898113,
+        "coverage": 0.7365
+       }
+      },
+      "note": "realised on the 12 held-out records"
+     },
+     "5": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 101.84282067323375,
+        "coverage": 0.04466666666666667
+       },
+       "backtest": {
+        "medape": 32.271480353009316,
+        "coverage": 0.736
+       },
+       "backtest_refit": {
+        "medape": 32.271480353009316,
+        "coverage": 0.736
+       },
+       "life_table": {
+        "medape": 32.271480353009316,
+        "coverage": 0.736
+       },
+       "path": {
+        "medape": 101.84282067323375,
+        "coverage": 0.04466666666666667
+       },
+       "oracle": {
+        "medape": 32.271480353009316,
+        "coverage": 0.736
+       }
+      },
+      "note": "realised on the 10 held-out records"
+     },
+     "10": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 104.45590114569448,
+        "coverage": 0.044533333333333334
+       },
+       "backtest": {
+        "medape": 33.004040119420445,
+        "coverage": 0.737
+       },
+       "backtest_refit": {
+        "medape": 33.004040119420445,
+        "coverage": 0.737
+       },
+       "life_table": {
+        "medape": 33.004040119420445,
+        "coverage": 0.737
+       },
+       "path": {
+        "medape": 104.45590114569448,
+        "coverage": 0.044533333333333334
+       },
+       "oracle": {
+        "medape": 33.004040119420445,
+        "coverage": 0.737
+       }
+      },
+      "note": "realised on the 5 held-out records"
+     },
+     "all": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 100.0,
+        "coverage": 0.044444444444444446
+       },
+       "backtest": {
+        "medape": 31.818181818181817,
+        "coverage": 0.7333333333333333
+       },
+       "backtest_refit": {
+        "medape": 31.818181818181817,
+        "coverage": 0.7333333333333333
+       },
+       "life_table": {
+        "medape": 31.818181818181817,
+        "coverage": 0.7333333333333333
+       },
+       "path": {
+        "medape": 100.0,
+        "coverage": 0.044444444444444446
+       },
+       "oracle": {
+        "medape": 31.818181818181817,
+        "coverage": 0.7333333333333333
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   },
+   "N-CMAPSS DS04": {
+    "N_records": 10,
+    "N_points": 30,
+    "medape_path": 53.73343575319822,
+    "cov_path": 0.23333333333333334,
+    "medape_lt": 42.05665024630542,
+    "cov_lt": 0.7,
+    "usable": false,
+    "screen_full_cohort": "not declined",
+    "by_n": {
+     "3": {
+      "screen_declines": 0.0,
+      "screen_passes": 0.698,
+      "screen_undecided": 0.302,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 0.815,
+      "bt_refit_agree": 0.655,
+      "bt_choose_path": 0.185,
+      "bt_refit_choose_path": 0.345,
+      "realised_holdout": {
+       "screen": {
+        "medape": 49.464064983588955,
+        "coverage": 0.35800000000000004
+       },
+       "backtest": {
+        "medape": 44.76819699468845,
+        "coverage": 0.617
+       },
+       "backtest_refit": {
+        "medape": 47.016652195874194,
+        "coverage": 0.5352380952380952
+       },
+       "life_table": {
+        "medape": 42.075478626463855,
+        "coverage": 0.7008571428571427
+       },
+       "path": {
+        "medape": 53.11408710157552,
+        "coverage": 0.23390476190476192
+       },
+       "oracle": {
+        "medape": 42.075478626463855,
+        "coverage": 0.7008571428571427
+       }
+      },
+      "note": "realised on the 7 held-out records"
+     },
+     "5": {
+      "screen_declines": 0.0,
+      "screen_passes": 0.476,
+      "screen_undecided": 0.524,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 0.939,
+      "bt_refit_agree": 0.872,
+      "bt_choose_path": 0.061,
+      "bt_refit_choose_path": 0.128,
+      "realised_holdout": {
+       "screen": {
+        "medape": 47.107169767868534,
+        "coverage": 0.445
+       },
+       "backtest": {
+        "medape": 43.03610272176321,
+        "coverage": 0.6680666666666666
+       },
+       "backtest_refit": {
+        "medape": 45.08398504616681,
+        "coverage": 0.6294
+       },
+       "life_table": {
+        "medape": 41.53780031906662,
+        "coverage": 0.6971999999999999
+       },
+       "path": {
+        "medape": 55.14282769101863,
+        "coverage": 0.23273333333333335
+       },
+       "oracle": {
+        "medape": 41.02896750322993,
+        "coverage": 0.6748666666666667
+       }
+      },
+      "note": "realised on the 5 held-out records"
+     },
+     "all": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 53.73343575319822,
+        "coverage": 0.23333333333333334
+       },
+       "backtest": {
+        "medape": 42.05665024630542,
+        "coverage": 0.7
+       },
+       "backtest_refit": {
+        "medape": 42.05665024630542,
+        "coverage": 0.7
+       },
+       "life_table": {
+        "medape": 42.05665024630542,
+        "coverage": 0.7
+       },
+       "path": {
+        "medape": 53.73343575319822,
+        "coverage": 0.23333333333333334
+       },
+       "oracle": {
+        "medape": 42.05665024630542,
+        "coverage": 0.7
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   },
+   "N-CMAPSS DS05": {
+    "N_records": 10,
+    "N_points": 30,
+    "medape_path": 192.91193430803884,
+    "cov_path": 0.16666666666666666,
+    "medape_lt": 40.778533635676496,
+    "cov_lt": 0.6666666666666666,
+    "usable": false,
+    "screen_full_cohort": "not declined",
+    "by_n": {
+     "3": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 0.914,
+      "bt_refit_agree": 0.913,
+      "bt_choose_path": 0.086,
+      "bt_refit_choose_path": 0.087,
+      "realised_holdout": {
+       "screen": {
+        "medape": 184.3117482272493,
+        "coverage": 0.16633333333333333
+       },
+       "backtest": {
+        "medape": 58.44657483687007,
+        "coverage": 0.6168571428571428
+       },
+       "backtest_refit": {
+        "medape": 59.003684485590426,
+        "coverage": 0.6150476190476191
+       },
+       "life_table": {
+        "medape": 41.68648598328221,
+        "coverage": 0.666142857142857
+       },
+       "path": {
+        "medape": 184.3117482272493,
+        "coverage": 0.16633333333333333
+       },
+       "oracle": {
+        "medape": 41.68648598328221,
+        "coverage": 0.666142857142857
+       }
+      },
+      "note": "realised on the 7 held-out records"
+     },
+     "5": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 0.983,
+      "bt_refit_agree": 0.99,
+      "bt_choose_path": 0.017,
+      "bt_refit_choose_path": 0.01,
+      "realised_holdout": {
+       "screen": {
+        "medape": 178.49585221011046,
+        "coverage": 0.16713333333333333
+       },
+       "backtest": {
+        "medape": 44.36953884283219,
+        "coverage": 0.6657333333333334
+       },
+       "backtest_refit": {
+        "medape": 42.94075516044855,
+        "coverage": 0.6700666666666666
+       },
+       "life_table": {
+        "medape": 40.78069226240988,
+        "coverage": 0.6757333333333332
+       },
+       "path": {
+        "medape": 178.49585221011046,
+        "coverage": 0.16713333333333333
+       },
+       "oracle": {
+        "medape": 40.701651154765614,
+        "coverage": 0.6697333333333334
+       }
+      },
+      "note": "realised on the 5 held-out records"
+     },
+     "all": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 192.91193430803884,
+        "coverage": 0.16666666666666666
+       },
+       "backtest": {
+        "medape": 40.778533635676496,
+        "coverage": 0.6666666666666666
+       },
+       "backtest_refit": {
+        "medape": 40.778533635676496,
+        "coverage": 0.6666666666666666
+       },
+       "life_table": {
+        "medape": 40.778533635676496,
+        "coverage": 0.6666666666666666
+       },
+       "path": {
+        "medape": 192.91193430803884,
+        "coverage": 0.16666666666666666
+       },
+       "oracle": {
+        "medape": 40.778533635676496,
+        "coverage": 0.6666666666666666
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   },
+   "N-CMAPSS DS06": {
+    "N_records": 10,
+    "N_points": 30,
+    "medape_path": 79.10411294239444,
+    "cov_path": 0.06666666666666667,
+    "medape_lt": 35.489510489510494,
+    "cov_lt": 0.8,
+    "usable": false,
+    "screen_full_cohort": "not declined",
+    "by_n": {
+     "3": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 0.925,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.075,
+      "realised_holdout": {
+       "screen": {
+        "medape": 83.85773297685952,
+        "coverage": 0.06585714285714286
+       },
+       "backtest": {
+        "medape": 36.02632367224279,
+        "coverage": 0.7998571428571428
+       },
+       "backtest_refit": {
+        "medape": 41.5458761747869,
+        "coverage": 0.7413333333333333
+       },
+       "life_table": {
+        "medape": 36.02632367224279,
+        "coverage": 0.7998571428571428
+       },
+       "path": {
+        "medape": 83.85773297685952,
+        "coverage": 0.06585714285714286
+       },
+       "oracle": {
+        "medape": 36.02632367224279,
+        "coverage": 0.7998571428571428
+       }
+      },
+      "note": "realised on the 7 held-out records"
+     },
+     "5": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 88.75570567392913,
+        "coverage": 0.06646666666666667
+       },
+       "backtest": {
+        "medape": 35.89116798905103,
+        "coverage": 0.7918000000000001
+       },
+       "backtest_refit": {
+        "medape": 35.89116798905103,
+        "coverage": 0.7918000000000001
+       },
+       "life_table": {
+        "medape": 35.89116798905103,
+        "coverage": 0.7918000000000001
+       },
+       "path": {
+        "medape": 88.75570567392913,
+        "coverage": 0.06646666666666667
+       },
+       "oracle": {
+        "medape": 35.89116798905103,
+        "coverage": 0.7918000000000001
+       }
+      },
+      "note": "realised on the 5 held-out records"
+     },
+     "all": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 79.10411294239444,
+        "coverage": 0.06666666666666667
+       },
+       "backtest": {
+        "medape": 35.489510489510494,
+        "coverage": 0.8
+       },
+       "backtest_refit": {
+        "medape": 35.489510489510494,
+        "coverage": 0.8
+       },
+       "life_table": {
+        "medape": 35.489510489510494,
+        "coverage": 0.8
+       },
+       "path": {
+        "medape": 79.10411294239444,
+        "coverage": 0.06666666666666667
+       },
+       "oracle": {
+        "medape": 35.489510489510494,
+        "coverage": 0.8
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   },
+   "N-CMAPSS DS07": {
+    "N_records": 10,
+    "N_points": 30,
+    "medape_path": 89.57812399419174,
+    "cov_path": 0.1,
+    "medape_lt": 27.884615384615387,
+    "cov_lt": 0.8,
+    "usable": false,
+    "screen_full_cohort": "not declined",
+    "by_n": {
+     "3": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 0.977,
+      "bt_refit_agree": 0.977,
+      "bt_choose_path": 0.023,
+      "bt_refit_choose_path": 0.023,
+      "realised_holdout": {
+       "screen": {
+        "medape": 100.64032015809269,
+        "coverage": 0.09904761904761904
+       },
+       "backtest": {
+        "medape": 30.908840585170854,
+        "coverage": 0.7802380952380952
+       },
+       "backtest_refit": {
+        "medape": 30.908840585170854,
+        "coverage": 0.7802380952380952
+       },
+       "life_table": {
+        "medape": 27.987546075571053,
+        "coverage": 0.8015714285714285
+       },
+       "path": {
+        "medape": 100.64032015809269,
+        "coverage": 0.09904761904761904
+       },
+       "oracle": {
+        "medape": 27.987546075571053,
+        "coverage": 0.8015714285714285
+       }
+      },
+      "note": "realised on the 7 held-out records"
+     },
+     "5": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 107.18225727494189,
+        "coverage": 0.09773333333333332
+       },
+       "backtest": {
+        "medape": 28.562486517641585,
+        "coverage": 0.8002
+       },
+       "backtest_refit": {
+        "medape": 28.562486517641585,
+        "coverage": 0.8002
+       },
+       "life_table": {
+        "medape": 28.562486517641585,
+        "coverage": 0.8002
+       },
+       "path": {
+        "medape": 107.18225727494189,
+        "coverage": 0.09773333333333332
+       },
+       "oracle": {
+        "medape": 28.562486517641585,
+        "coverage": 0.8002
+       }
+      },
+      "note": "realised on the 5 held-out records"
+     },
+     "all": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 89.57812399419174,
+        "coverage": 0.1
+       },
+       "backtest": {
+        "medape": 27.884615384615387,
+        "coverage": 0.8
+       },
+       "backtest_refit": {
+        "medape": 27.884615384615387,
+        "coverage": 0.8
+       },
+       "life_table": {
+        "medape": 27.884615384615387,
+        "coverage": 0.8
+       },
+       "path": {
+        "medape": 89.57812399419174,
+        "coverage": 0.1
+       },
+       "oracle": {
+        "medape": 27.884615384615387,
+        "coverage": 0.8
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   },
+   "N-CMAPSS DS08a-009": {
+    "N_records": 15,
+    "N_points": 45,
+    "medape_path": 95.60241935388443,
+    "cov_path": 0.2,
+    "medape_lt": 40.476190476190474,
+    "cov_lt": 0.8666666666666667,
+    "usable": false,
+    "screen_full_cohort": "not declined",
+    "by_n": {
+     "3": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 0.947,
+      "bt_refit_agree": 0.845,
+      "bt_choose_path": 0.053,
+      "bt_refit_choose_path": 0.155,
+      "realised_holdout": {
+       "screen": {
+        "medape": 94.56740252033022,
+        "coverage": 0.20038888888888892
+       },
+       "backtest": {
+        "medape": 44.525385665820565,
+        "coverage": 0.8286944444444446
+       },
+       "backtest_refit": {
+        "medape": 50.35886634190947,
+        "coverage": 0.7568888888888889
+       },
+       "life_table": {
+        "medape": 41.366776248927955,
+        "coverage": 0.86625
+       },
+       "path": {
+        "medape": 94.56740252033022,
+        "coverage": 0.20038888888888892
+       },
+       "oracle": {
+        "medape": 41.366776248927955,
+        "coverage": 0.86625
+       }
+      },
+      "note": "realised on the 12 held-out records"
+     },
+     "5": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 0.99,
+      "bt_refit_agree": 0.947,
+      "bt_choose_path": 0.01,
+      "bt_refit_choose_path": 0.053,
+      "realised_holdout": {
+       "screen": {
+        "medape": 94.52782847266491,
+        "coverage": 0.20020000000000002
+       },
+       "backtest": {
+        "medape": 42.407317944715665,
+        "coverage": 0.8600666666666669
+       },
+       "backtest_refit": {
+        "medape": 45.342420985405845,
+        "coverage": 0.8285333333333336
+       },
+       "life_table": {
+        "medape": 41.74533881696245,
+        "coverage": 0.8676000000000004
+       },
+       "path": {
+        "medape": 94.52782847266491,
+        "coverage": 0.20020000000000002
+       },
+       "oracle": {
+        "medape": 41.74533881696245,
+        "coverage": 0.8676000000000004
+       }
+      },
+      "note": "realised on the 10 held-out records"
+     },
+     "10": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 0.999,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.001,
+      "realised_holdout": {
+       "screen": {
+        "medape": 98.89792770502521,
+        "coverage": 0.1942
+       },
+       "backtest": {
+        "medape": 42.92327160496822,
+        "coverage": 0.8656000000000001
+       },
+       "backtest_refit": {
+        "medape": 43.074684505765674,
+        "coverage": 0.8648
+       },
+       "life_table": {
+        "medape": 42.92327160496822,
+        "coverage": 0.8656000000000001
+       },
+       "path": {
+        "medape": 98.89792770502521,
+        "coverage": 0.1942
+       },
+       "oracle": {
+        "medape": 42.86751114686493,
+        "coverage": 0.8609333333333334
+       }
+      },
+      "note": "realised on the 5 held-out records"
+     },
+     "all": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 95.60241935388443,
+        "coverage": 0.2
+       },
+       "backtest": {
+        "medape": 40.476190476190474,
+        "coverage": 0.8666666666666667
+       },
+       "backtest_refit": {
+        "medape": 40.476190476190474,
+        "coverage": 0.8666666666666667
+       },
+       "life_table": {
+        "medape": 40.476190476190474,
+        "coverage": 0.8666666666666667
+       },
+       "path": {
+        "medape": 95.60241935388443,
+        "coverage": 0.2
+       },
+       "oracle": {
+        "medape": 40.476190476190474,
+        "coverage": 0.8666666666666667
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   },
+   "N-CMAPSS DS08c-008": {
+    "N_records": 10,
+    "N_points": 30,
+    "medape_path": 97.91689972163874,
+    "cov_path": 0.06666666666666667,
+    "medape_lt": 26.932367149758456,
+    "cov_lt": 0.7,
+    "usable": false,
+    "screen_full_cohort": "not declined",
+    "by_n": {
+     "3": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 100.20734482434305,
+        "coverage": 0.06571428571428571
+       },
+       "backtest": {
+        "medape": 24.421040194188617,
+        "coverage": 0.7034285714285712
+       },
+       "backtest_refit": {
+        "medape": 24.421040194188617,
+        "coverage": 0.7034285714285712
+       },
+       "life_table": {
+        "medape": 24.421040194188617,
+        "coverage": 0.7034285714285712
+       },
+       "path": {
+        "medape": 100.20734482434305,
+        "coverage": 0.06571428571428571
+       },
+       "oracle": {
+        "medape": 24.421040194188617,
+        "coverage": 0.7034285714285712
+       }
+      },
+      "note": "realised on the 7 held-out records"
+     },
+     "5": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 104.00165928962254,
+        "coverage": 0.06506666666666666
+       },
+       "backtest": {
+        "medape": 23.604755164434586,
+        "coverage": 0.7084
+       },
+       "backtest_refit": {
+        "medape": 23.604755164434586,
+        "coverage": 0.7084
+       },
+       "life_table": {
+        "medape": 23.604755164434586,
+        "coverage": 0.7084
+       },
+       "path": {
+        "medape": 104.00165928962254,
+        "coverage": 0.06506666666666666
+       },
+       "oracle": {
+        "medape": 23.604755164434586,
+        "coverage": 0.7084
+       }
+      },
+      "note": "realised on the 5 held-out records"
+     },
+     "all": {
+      "screen_declines": 0.0,
+      "screen_passes": 1.0,
+      "screen_undecided": 0.0,
+      "screen_check": 0.0,
+      "screen_agree": 0.0,
+      "bt_agree": 1.0,
+      "bt_refit_agree": 1.0,
+      "bt_choose_path": 0.0,
+      "bt_refit_choose_path": 0.0,
+      "realised_holdout": {
+       "screen": {
+        "medape": 97.91689972163874,
+        "coverage": 0.06666666666666667
+       },
+       "backtest": {
+        "medape": 26.932367149758456,
+        "coverage": 0.7
+       },
+       "backtest_refit": {
+        "medape": 26.932367149758456,
+        "coverage": 0.7
+       },
+       "life_table": {
+        "medape": 26.932367149758456,
+        "coverage": 0.7
+       },
+       "path": {
+        "medape": 97.91689972163874,
+        "coverage": 0.06666666666666667
+       },
+       "oracle": {
+        "medape": 26.932367149758456,
+        "coverage": 0.7
+       }
+      },
+      "note": "n=all: realised metrics are in-sample (whole cohort)"
+     }
+    }
+   }
+  },
+  "pooled": {
+   "3": {
+    "n_cohorts": 14,
+    "n_usable": 1,
+    "screen_agree": 0.13685714285714284,
+    "screen_declines": 0.12050000000000001,
+    "screen_passes": 0.7819285714285715,
+    "screen_undecided": 0.09328571428571429,
+    "screen_check": 0.004285714285714286,
+    "bt_agree": 0.8855714285714286,
+    "bt_refit_agree": 0.8684285714285715,
+    "life_table_agree": 0.9285714285714286,
+    "realised_holdout": {
+     "screen": {
+      "medape_mean_over_cohorts": 90.7464612631881,
+      "coverage_mean_over_cohorts": 0.2911556353996998
+     },
+     "backtest": {
+      "medape_mean_over_cohorts": 45.08525216066512,
+      "coverage_mean_over_cohorts": 0.6422188056912905
+     },
+     "backtest_refit": {
+      "medape_mean_over_cohorts": 45.386901095417144,
+      "coverage_mean_over_cohorts": 0.6155175397623838
+     },
+     "life_table": {
+      "medape_mean_over_cohorts": 40.368757105836956,
+      "coverage_mean_over_cohorts": 0.6875795167832389
+     },
+     "path": {
+      "medape_mean_over_cohorts": 95.16371684664064,
+      "coverage_mean_over_cohorts": 0.1985702760212066
+     },
+     "oracle": {
+      "medape_mean_over_cohorts": 38.23876265362962,
+      "coverage_mean_over_cohorts": 0.6777536289163552
+     }
+    }
+   },
+   "5": {
+    "n_cohorts": 14,
+    "n_usable": 1,
+    "screen_agree": 0.1115,
+    "screen_declines": 0.10578571428571427,
+    "screen_passes": 0.7540000000000001,
+    "screen_undecided": 0.1352857142857143,
+    "screen_check": 0.004928571428571429,
+    "bt_agree": 0.9253571428571429,
+    "bt_refit_agree": 0.9491428571428572,
+    "life_table_agree": 0.9285714285714286,
+    "realised_holdout": {
+     "screen": {
+      "medape_mean_over_cohorts": 93.98479523625731,
+      "coverage_mean_over_cohorts": 0.2972529151773703
+     },
+     "backtest": {
+      "medape_mean_over_cohorts": 44.76392437687507,
+      "coverage_mean_over_cohorts": 0.6615125763864869
+     },
+     "backtest_refit": {
+      "medape_mean_over_cohorts": 41.989998709697566,
+      "coverage_mean_over_cohorts": 0.6543383450555365
+     },
+     "life_table": {
+      "medape_mean_over_cohorts": 42.232038277720854,
+      "coverage_mean_over_cohorts": 0.6871028277412661
+     },
+     "path": {
+      "medape_mean_over_cohorts": 96.8158707949368,
+      "coverage_mean_over_cohorts": 0.19730836023675002
+     },
+     "oracle": {
+      "medape_mean_over_cohorts": 38.260922807602974,
+      "coverage_mean_over_cohorts": 0.6716780487336177
+     }
+    }
+   },
+   "10": {
+    "n_cohorts": 5,
+    "n_usable": 1,
+    "screen_agree": 0.4276,
+    "screen_declines": 0.4,
+    "screen_passes": 0.4276,
+    "screen_undecided": 0.1724,
+    "screen_check": 0.0,
+    "bt_agree": 0.9039999999999999,
+    "bt_refit_agree": 0.9092,
+    "life_table_agree": 0.8,
+    "realised_holdout": {
+     "screen": {
+      "medape_mean_over_cohorts": 124.94902493212639,
+      "coverage_mean_over_cohorts": 0.3115325123152709
+     },
+     "backtest": {
+      "medape_mean_over_cohorts": 104.69050301523816,
+      "coverage_mean_over_cohorts": 0.5668591789819376
+     },
+     "backtest_refit": {
+      "medape_mean_over_cohorts": 88.11954301077068,
+      "coverage_mean_over_cohorts": 0.5202681116584564
+     },
+     "life_table": {
+      "medape_mean_over_cohorts": 101.08952021842597,
+      "coverage_mean_over_cohorts": 0.5874044663382595
+     },
+     "path": {
+      "medape_mean_over_cohorts": 97.91135559078646,
+      "coverage_mean_over_cohorts": 0.0768567816091954
+     },
+     "oracle": {
+      "medape_mean_over_cohorts": 52.05074100820868,
+      "coverage_mean_over_cohorts": 0.5493916912972086
+     }
+    }
+   },
+   "all": {
+    "n_cohorts": 14,
+    "n_usable": 1,
+    "screen_agree": 0.14285714285714285,
+    "screen_declines": 0.14285714285714285,
+    "screen_passes": 0.7857142857142857,
+    "screen_undecided": 0.07142857142857142,
+    "screen_check": 0.0,
+    "bt_agree": 1.0,
+    "bt_refit_agree": 1.0,
+    "life_table_agree": 0.9285714285714286,
+    "realised_holdout": {
+     "screen": {
+      "medape_mean_over_cohorts": 88.32520936085874,
+      "coverage_mean_over_cohorts": 0.28363994218729377
+     },
+     "backtest": {
+      "medape_mean_over_cohorts": 37.06837440047064,
+      "coverage_mean_over_cohorts": 0.6783920377820859
+     },
+     "backtest_refit": {
+      "medape_mean_over_cohorts": 37.06837440047064,
+      "coverage_mean_over_cohorts": 0.6783920377820859
+     },
+     "life_table": {
+      "medape_mean_over_cohorts": 37.6127082476714,
+      "coverage_mean_over_cohorts": 0.6864177199650715
+     },
+     "path": {
+      "medape_mean_over_cohorts": 94.54376195095541,
+      "coverage_mean_over_cohorts": 0.19804262528981637
+     },
+     "oracle": {
+      "medape_mean_over_cohorts": 37.06837440047064,
+      "coverage_mean_over_cohorts": 0.6783920377820859
+     }
+    }
+   }
+  }
+ },
+ "part1_cost": {
+  "record": "Bearing1_1",
+  "n_acq": 123,
+  "predict_s_600": 0.5438142000057269,
+  "predict_s_1200": 0.6599031000223476,
+  "calibrate_one_ref_s_600": 0.7901034000096843,
+  "screen_all_records_s": 0.10030819999519736,
+  "n_records_screen": 15,
+  "backtest_fits_formula": "LOO on n records with m points each: n*m filter predictions, plus n*(n-1) latent calibrations where the threshold is set on the latent scale (bearings); cells/N-CMAPSS set D on the indicator, no calibration fit"
+ },
+ "part2a_lead": {
+  "PRONOSTIA": {
+   "unit": "h",
+   "n_units": 17,
+   "n_detected": 12,
+   "median_detected": 0.10407995324802374,
+   "q1_detected": 0.06729460671448315,
+   "q3_detected": 0.4458675786622892,
+   "median_all_units_undetected_as_zero": 0.06936821563605323,
+   "share_exceeding": {
+    "10 min": {
+     "of_detected": 0.3333333333333333,
+     "of_all_units": 0.23529411764705882
+    },
+    "1 h": {
+     "of_detected": 0.16666666666666666,
+     "of_all_units": 0.11764705882352941
+    },
+    "24 h": {
+     "of_detected": 0.0,
+     "of_all_units": 0.0
+    },
+    "1 week": {
+     "of_detected": 0.0,
+     "of_all_units": 0.0
+    }
+   }
+  },
+  "XJTU-SY": {
+   "unit": "h",
+   "n_units": 15,
+   "n_detected": 15,
+   "median_detected": 1.7181286549707602,
+   "q1_detected": 0.5306044316828599,
+   "q3_detected": 2.268141026582284,
+   "median_all_units_undetected_as_zero": 1.7181286549707602,
+   "share_exceeding": {
+    "10 min": {
+     "of_detected": 1.0,
+     "of_all_units": 1.0
+    },
+    "1 h": {
+     "of_detected": 0.6666666666666666,
+     "of_all_units": 0.6666666666666666
+    },
+    "24 h": {
+     "of_detected": 0.0,
+     "of_all_units": 0.0
+    },
+    "1 week": {
+     "of_detected": 0.0,
+     "of_all_units": 0.0
+    }
+   }
+  },
+  "C-MAPSS FD001": {
+   "unit": "cycles",
+   "n_units": 100,
+   "n_detected": 100,
+   "median_detected": 82.0,
+   "q1_detected": 68.75,
+   "q3_detected": 106.25,
+   "median_all_units_undetected_as_zero": 82.0,
+   "share_exceeding": {
+    "10 cycles": {
+     "of_detected": 1.0,
+     "of_all_units": 1.0
+    },
+    "25 cycles": {
+     "of_detected": 1.0,
+     "of_all_units": 1.0
+    },
+    "50 cycles": {
+     "of_detected": 0.97,
+     "of_all_units": 0.97
+    },
+    "100 cycles": {
+     "of_detected": 0.31,
+     "of_all_units": 0.31
+    }
+   }
+  },
+  "C-MAPSS FD003": {
+   "unit": "cycles",
+   "n_units": 100,
+   "n_detected": 100,
+   "median_detected": 99.5,
+   "q1_detected": 77.0,
+   "q3_detected": 133.0,
+   "median_all_units_undetected_as_zero": 99.5,
+   "share_exceeding": {
+    "10 cycles": {
+     "of_detected": 1.0,
+     "of_all_units": 1.0
+    },
+    "25 cycles": {
+     "of_detected": 1.0,
+     "of_all_units": 1.0
+    },
+    "50 cycles": {
+     "of_detected": 0.98,
+     "of_all_units": 0.98
+    },
+    "100 cycles": {
+     "of_detected": 0.49,
+     "of_all_units": 0.49
+    }
+   }
+  },
+  "C-MAPSS FD002+regime": {
+   "unit": "cycles",
+   "n_units": 260,
+   "n_detected": 253,
+   "median_detected": 65.0,
+   "q1_detected": 49.0,
+   "q3_detected": 84.0,
+   "median_all_units_undetected_as_zero": 64.0,
+   "share_exceeding": {
+    "10 cycles": {
+     "of_detected": 1.0,
+     "of_all_units": 0.9730769230769231
+    },
+    "25 cycles": {
+     "of_detected": 0.9407114624505929,
+     "of_all_units": 0.9153846153846154
+    },
+    "50 cycles": {
+     "of_detected": 0.7312252964426877,
+     "of_all_units": 0.7115384615384616
+    },
+    "100 cycles": {
+     "of_detected": 0.09881422924901186,
+     "of_all_units": 0.09615384615384616
+    }
+   }
+  },
+  "C-MAPSS FD004+regime": {
+   "unit": "cycles",
+   "n_units": 249,
+   "n_detected": 249,
+   "median_detected": 82.0,
+   "q1_detected": 60.0,
+   "q3_detected": 113.0,
+   "median_all_units_undetected_as_zero": 82.0,
+   "share_exceeding": {
+    "10 cycles": {
+     "of_detected": 1.0,
+     "of_all_units": 1.0
+    },
+    "25 cycles": {
+     "of_detected": 0.9759036144578314,
+     "of_all_units": 0.9759036144578314
+    },
+    "50 cycles": {
+     "of_detected": 0.8192771084337349,
+     "of_all_units": 0.8192771084337349
+    },
+    "100 cycles": {
+     "of_detected": 0.3373493975903614,
+     "of_all_units": 0.3373493975903614
+    }
+   }
+  },
+  "NASA cells": {
+   "unit": "cycles",
+   "n_units": 4,
+   "n_detected": 4,
+   "median_detected": 118.5,
+   "q1_detected": 117.75,
+   "q3_detected": 123.0,
+   "median_all_units_undetected_as_zero": 118.5,
+   "share_exceeding": {
+    "10 cycles": {
+     "of_detected": 1.0,
+     "of_all_units": 1.0
+    },
+    "25 cycles": {
+     "of_detected": 1.0,
+     "of_all_units": 1.0
+    },
+    "50 cycles": {
+     "of_detected": 1.0,
+     "of_all_units": 1.0
+    },
+    "100 cycles": {
+     "of_detected": 1.0,
+     "of_all_units": 1.0
+    }
+   }
+  },
+  "Backblaze drives": {
+   "unit": "h",
+   "n_units": 119,
+   "n_detected": 54,
+   "median_detected": 744.5000000000009,
+   "q1_detected": 373.5000000000005,
+   "q3_detected": 1134.4999999999993,
+   "median_all_units_undetected_as_zero": 0.0,
+   "share_exceeding": {
+    "10 min": {
+     "of_detected": 1.0,
+     "of_all_units": 0.453781512605042
+    },
+    "1 h": {
+     "of_detected": 1.0,
+     "of_all_units": 0.453781512605042
+    },
+    "24 h": {
+     "of_detected": 1.0,
+     "of_all_units": 0.453781512605042
+    },
+    "1 week": {
+     "of_detected": 1.0,
+     "of_all_units": 0.453781512605042
+    }
+   }
+  },
+  "XJTU Li-ion": {
+   "unit": "cycles",
+   "n_units": 55,
+   "n_detected": 50,
+   "median_detected": 76.5,
+   "q1_detected": 57.5,
+   "q3_detected": 124.75,
+   "median_all_units_undetected_as_zero": 72.0,
+   "share_exceeding": {
+    "10 cycles": {
+     "of_detected": 1.0,
+     "of_all_units": 0.9090909090909091
+    },
+    "25 cycles": {
+     "of_detected": 0.9,
+     "of_all_units": 0.8181818181818182
+    },
+    "50 cycles": {
+     "of_detected": 0.8,
+     "of_all_units": 0.7272727272727273
+    },
+    "100 cycles": {
+     "of_detected": 0.32,
+     "of_all_units": 0.2909090909090909
+    }
+   }
+  },
+  "N-CMAPSS": {
+   "unit": "cycles",
+   "n_units": 19,
+   "n_detected": 19,
+   "median_detected": 51.0,
+   "q1_detected": 38.5,
+   "q3_detected": 56.0,
+   "median_all_units_undetected_as_zero": 51.0,
+   "share_exceeding": {
+    "10 cycles": {
+     "of_detected": 1.0,
+     "of_all_units": 1.0
+    },
+    "25 cycles": {
+     "of_detected": 1.0,
+     "of_all_units": 1.0
+    },
+    "50 cycles": {
+     "of_detected": 0.5789473684210527,
+     "of_all_units": 0.5789473684210527
+    },
+    "100 cycles": {
+     "of_detected": 0.0,
+     "of_all_units": 0.0
+    }
+   }
+  }
+ },
+ "part2b_miss": {
+  "by_cohort": {
+   "PRONOSTIA": {
+    "verdict70": "declined",
+    "n_points": 77,
+    "path": {
+     "miss_true_below_lo": 0.0,
+     "early_true_above_hi": 1.0,
+     "coverage": 0.0,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.5584415584415584
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.5584415584415584,
+     "early_true_above_hi": 0.0,
+     "coverage": 0.44155844155844154
+    }
+   },
+   "XJTU-SY": {
+    "verdict70": "undecided",
+    "n_points": 89,
+    "path": {
+     "miss_true_below_lo": 0.38202247191011235,
+     "early_true_above_hi": 0.5842696629213483,
+     "coverage": 0.033707865168539325,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.15730337078651685
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.651685393258427,
+     "early_true_above_hi": 0.20224719101123595,
+     "coverage": 0.14606741573033707
+    }
+   },
+   "XJTU cells 2C": {
+    "verdict70": "passed",
+    "n_points": 24,
+    "path": {
+     "miss_true_below_lo": 0.041666666666666664,
+     "early_true_above_hi": 0.5833333333333334,
+     "coverage": 0.375,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.125
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.125,
+     "early_true_above_hi": 0.125,
+     "coverage": 0.75
+    }
+   },
+   "XJTU cells 3C": {
+    "verdict70": "declined",
+    "n_points": 45,
+    "path": {
+     "miss_true_below_lo": 0.06666666666666667,
+     "early_true_above_hi": 0.8222222222222222,
+     "coverage": 0.1111111111111111,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.5555555555555556
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.1111111111111111,
+     "early_true_above_hi": 0.13333333333333333,
+     "coverage": 0.7555555555555555
+    }
+   },
+   "XJTU cells R2.5": {
+    "verdict70": "passed",
+    "n_points": 24,
+    "path": {
+     "miss_true_below_lo": 0.3333333333333333,
+     "early_true_above_hi": 0.041666666666666664,
+     "coverage": 0.625,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.0
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.125,
+     "early_true_above_hi": 0.125,
+     "coverage": 0.75
+    }
+   },
+   "XJTU cells R3": {
+    "verdict70": "passed",
+    "n_points": 24,
+    "path": {
+     "miss_true_below_lo": 0.375,
+     "early_true_above_hi": 0.125,
+     "coverage": 0.5,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.0
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.125,
+     "early_true_above_hi": 0.125,
+     "coverage": 0.75
+    }
+   },
+   "XJTU cells RW": {
+    "verdict70": "undecided",
+    "n_points": 4,
+    "path": {
+     "miss_true_below_lo": 0.0,
+     "early_true_above_hi": 0.0,
+     "coverage": 1.0,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.0
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.0,
+     "early_true_above_hi": 0.5,
+     "coverage": 0.5
+    }
+   },
+   "XJTU cells Sim_satellite": {
+    "verdict70": "passed",
+    "n_points": 24,
+    "path": {
+     "miss_true_below_lo": 0.75,
+     "early_true_above_hi": 0.0,
+     "coverage": 0.25,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.0
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.125,
+     "early_true_above_hi": 0.125,
+     "coverage": 0.75
+    }
+   },
+   "N-CMAPSS DS03-012": {
+    "verdict70": "passed",
+    "n_points": 45,
+    "path": {
+     "miss_true_below_lo": 0.6444444444444445,
+     "early_true_above_hi": 0.3111111111111111,
+     "coverage": 0.044444444444444446,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.044444444444444446
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.13333333333333333,
+     "early_true_above_hi": 0.13333333333333333,
+     "coverage": 0.7333333333333333
+    }
+   },
+   "N-CMAPSS DS04": {
+    "verdict70": "passed",
+    "n_points": 30,
+    "path": {
+     "miss_true_below_lo": 0.4,
+     "early_true_above_hi": 0.36666666666666664,
+     "coverage": 0.23333333333333334,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.0
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.1,
+     "early_true_above_hi": 0.2,
+     "coverage": 0.7
+    }
+   },
+   "N-CMAPSS DS05": {
+    "verdict70": "passed",
+    "n_points": 30,
+    "path": {
+     "miss_true_below_lo": 0.6666666666666666,
+     "early_true_above_hi": 0.16666666666666666,
+     "coverage": 0.16666666666666666,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.0
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.16666666666666666,
+     "early_true_above_hi": 0.16666666666666666,
+     "coverage": 0.6666666666666666
+    }
+   },
+   "N-CMAPSS DS06": {
+    "verdict70": "passed",
+    "n_points": 30,
+    "path": {
+     "miss_true_below_lo": 0.6333333333333333,
+     "early_true_above_hi": 0.3,
+     "coverage": 0.06666666666666667,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.0
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.1,
+     "early_true_above_hi": 0.1,
+     "coverage": 0.8
+    }
+   },
+   "N-CMAPSS DS07": {
+    "verdict70": "passed",
+    "n_points": 30,
+    "path": {
+     "miss_true_below_lo": 0.7,
+     "early_true_above_hi": 0.2,
+     "coverage": 0.1,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.0
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.1,
+     "early_true_above_hi": 0.1,
+     "coverage": 0.8
+    }
+   },
+   "N-CMAPSS DS08a-009": {
+    "verdict70": "passed",
+    "n_points": 45,
+    "path": {
+     "miss_true_below_lo": 0.4888888888888889,
+     "early_true_above_hi": 0.3111111111111111,
+     "coverage": 0.2,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.022222222222222223
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.06666666666666667,
+     "early_true_above_hi": 0.06666666666666667,
+     "coverage": 0.8666666666666667
+    }
+   },
+   "N-CMAPSS DS08c-008": {
+    "verdict70": "passed",
+    "n_points": 30,
+    "path": {
+     "miss_true_below_lo": 0.7333333333333333,
+     "early_true_above_hi": 0.2,
+     "coverage": 0.06666666666666667,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.06666666666666667
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.1,
+     "early_true_above_hi": 0.2,
+     "coverage": 0.7
+    }
+   }
+  },
+  "by_verdict": {
+   "declined": {
+    "n_points": 122,
+    "path": {
+     "miss_true_below_lo": 0.02459016393442623,
+     "early_true_above_hi": 0.9344262295081968,
+     "coverage": 0.040983606557377046,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.5573770491803278
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.39344262295081966,
+     "early_true_above_hi": 0.04918032786885246,
+     "coverage": 0.5573770491803278
+    },
+    "cohort_mean": {
+     "path": {
+      "miss_true_below_lo": 0.03333333333333333,
+      "early_true_above_hi": 0.9111111111111111,
+      "coverage": 0.05555555555555555
+     },
+     "life_table": {
+      "miss_true_below_lo": 0.3347763347763347,
+      "early_true_above_hi": 0.06666666666666667,
+      "coverage": 0.5985569985569985
+     }
+    },
+    "n_cohorts": 2
+   },
+   "all": {
+    "n_points": 551,
+    "path": {
+     "miss_true_below_lo": 0.3956442831215971,
+     "early_true_above_hi": 0.4519056261343013,
+     "coverage": 0.15245009074410162,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.16333938294010888
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.2613430127041742,
+     "early_true_above_hi": 0.12704174228675136,
+     "coverage": 0.6116152450090744
+    },
+    "cohort_mean": {
+     "path": {
+      "miss_true_below_lo": 0.4143570536828964,
+      "early_true_above_hi": 0.3341364960466084,
+      "coverage": 0.25150645027049523
+     },
+     "life_table": {
+      "miss_true_below_lo": 0.17252698196518423,
+      "early_true_above_hi": 0.15348314606741578,
+      "coverage": 0.6739898719674001
+     }
+    },
+    "n_cohorts": 15
+   },
+   "undecided": {
+    "n_points": 93,
+    "path": {
+     "miss_true_below_lo": 0.3655913978494624,
+     "early_true_above_hi": 0.5591397849462365,
+     "coverage": 0.07526881720430108,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.15053763440860216
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.6236559139784946,
+     "early_true_above_hi": 0.21505376344086022,
+     "coverage": 0.16129032258064516
+    },
+    "cohort_mean": {
+     "path": {
+      "miss_true_below_lo": 0.19101123595505617,
+      "early_true_above_hi": 0.29213483146067415,
+      "coverage": 0.5168539325842697
+     },
+     "life_table": {
+      "miss_true_below_lo": 0.3258426966292135,
+      "early_true_above_hi": 0.351123595505618,
+      "coverage": 0.32303370786516855
+     }
+    },
+    "n_cohorts": 2
+   },
+   "passed": {
+    "n_points": 336,
+    "path": {
+     "miss_true_below_lo": 0.5386904761904762,
+     "early_true_above_hi": 0.24702380952380953,
+     "coverage": 0.21428571428571427,
+     "share_capped": 0.0,
+     "share_hi_zero": 0.023809523809523808
+    },
+    "life_table": {
+     "miss_true_below_lo": 0.1130952380952381,
+     "early_true_above_hi": 0.13095238095238096,
+     "coverage": 0.7559523809523809
+    },
+    "cohort_mean": {
+     "path": {
+      "miss_true_below_lo": 0.5242424242424243,
+      "early_true_above_hi": 0.23686868686868692,
+      "coverage": 0.23888888888888893
+     },
+     "life_table": {
+      "miss_true_below_lo": 0.11515151515151517,
+      "early_true_above_hi": 0.13333333333333333,
+      "coverage": 0.7515151515151515
+     }
+    },
+    "n_cohorts": 11
+   }
+  },
+  "note": "lo/hi are the 2.5 and 97.5 % predictive quantiles for both predictors (study_bearings.predict_one; study_p3_review._life_table). Includes the XJTU RW regime (3 cells, undecided), which Table 15a omits."
+ },
+ "settings": {
+  "N_SUB": 1000,
+  "N_BOOT": 1000,
+  "threshold": 70.0,
+  "ns": [
+   3,
+   5,
+   10
+  ],
+  "seed": 20261114,
+  "runtime_s": 486.4639883041382
+ }
+}

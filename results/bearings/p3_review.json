@@ -27,7 +27,7 @@
    "median_onset_pct": 40.707964601769916,
    "median_ci": [
     23.809523809523807,
-    73.77049180327869
+    93.48268839103869
    ],
    "frac_detected_in_band": 0.06666666666666667,
    "frac_detected_ge70": 0.3333333333333333
@@ -74,7 +74,7 @@
    ],
    "median_onset_pct": 84.98293515358361,
    "median_ci": [
-    78.29787234042553,
+    77.19298245614036,
     89.44444444444444
    ],
    "frac_detected_in_band": 0.8888888888888888,
@@ -123,7 +123,7 @@
    "median_onset_pct": 64.94845360824742,
    "median_ci": [
     63.69047619047619,
-    66.02870813397129
+    65.9090909090909
    ],
    "frac_detected_in_band": 0.27710843373493976,
    "frac_detected_ge70": 0.27710843373493976
@@ -3089,8 +3089,8 @@
    "n_detected": 15,
    "censored_median_pct": 40.707964601769916,
    "censored_median_ci": [
-    25.14071294559099,
-    73.77049180327869
+    23.809523809523807,
+    93.48268839103869
    ],
    "share_before_70": 0.6666666666666666,
    "share_before_70_ci": [
@@ -3103,7 +3103,7 @@
    "n_detected": 100,
    "censored_median_pct": 56.72779905741974,
    "censored_median_ci": [
-    55.12820512820513,
+    55.12123397880486,
     58.77750344927747
    ],
    "share_before_70": 0.96,
@@ -3159,8 +3159,8 @@
    "n_detected": 253,
    "censored_median_pct": 68.23174988059812,
    "censored_median_ci": [
-    67.50075067560806,
-    68.92655367231639
+    67.50170171604628,
+    68.92800823866378
    ],
    "share_before_70": 0.6038461538461538,
    "share_before_70_ci": [
@@ -6187,10 +6187,10 @@
     "undecided",
     "undecided",
     "undecided",
-    "not declined",
-    "not declined",
-    "not declined",
-    "not declined",
+    "undecided",
+    "undecided",
+    "undecided",
+    "undecided",
     "not declined"
    ],
    "C-MAPSS FD001": [
@@ -6316,7 +6316,7 @@
   },
   "stable_range": [
    69.0,
-   73.7
+   93.4
   ],
   "same_as_70": {
    "PRONOSTIA": [
@@ -6325,7 +6325,7 @@
    ],
    "XJTU-SY": [
     50.0,
-    73.7
+    93.4
    ],
    "C-MAPSS FD001": [
     58.8,
@@ -6493,8 +6493,8 @@
     "median_detected_pct": 40.707964601769916,
     "censored_median_pct": 40.707964601769916,
     "censored_median_ci": [
-     25.14071294559099,
-     73.77049180327869
+     23.809523809523807,
+     93.48268839103869
     ],
     "verdict": "undecided"
    },
@@ -6504,10 +6504,10 @@
     "median_detected_pct": 47.46835443037975,
     "censored_median_pct": null,
     "censored_median_ci": [
-     92.66802443991853,
+     47.46835443037975,
      null
     ],
-    "verdict": "declines"
+    "verdict": "undecided"
    },
    "peak to peak": {
     "n": 15,
@@ -6526,7 +6526,7 @@
     "median_detected_pct": 34.61538461538461,
     "censored_median_pct": 34.61538461538461,
     "censored_median_ci": [
-     25.89118198874296,
+     19.047619047619047,
      92.86840031520882
     ],
     "verdict": "undecided"

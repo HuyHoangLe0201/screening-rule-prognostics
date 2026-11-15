@@ -305,8 +305,11 @@ def fig_grid():
           r"      ylabel={$\mathrm{Var}[X(T)]$, relative}, log basis x=10]",
           rf"    \addplot[pVerm, line width=0.9pt, mark=*, mark size=1.1pt] coordinates {{{co(nN, vN)}}};",
           rf"    \addplot[pBlue, line width=0.9pt, mark=square*, mark size=1.1pt] coordinates {{{co(nC, vC)}}};",
-          r"    \node[tiny, text=pVerm, anchor=south west] at (axis cs:1.2,0.08) {naive: $\propto\Delta t$};",
-          r"    \node[tiny, text=pBlue, anchor=north west] at (axis cs:1.2,0.80) {\Cref{thm:consistent}: grid-free};",
+          #  labels kept clear of both lines: the blue one under the left end of its
+          #  line, where the naive line is still far above; the naive one under its
+          #  own right end
+          r"    \node[tiny, text=pVerm, anchor=north east] at (axis cs:70,0.13) {naive: $\propto\Delta t$};",
+          r"    \node[tiny, text=pBlue, anchor=north west, align=left] at (axis cs:1.15,0.78) {\Cref{thm:consistent}:\\grid-free};",
           r"  \end{axis}"]
     title(L, "ga", r"\textbf{(a)}~Grid dependence")
     L += [r"  \begin{axis}[p2axis, name=gb, at={(56mm,0mm)}, width=30mm, height=34mm,",
@@ -529,7 +532,7 @@ def fig_filter():
     L.append(rf"    \addplot[pVerm,line width=0.9pt] coordinates {{{co(k, u1, '{:.0f}')}}};")
     L += [r"    \node[tiny,anchor=south east,text=black!55] at (560,4020) {ceiling};",
           r"    \node[tiny,anchor=north east,text=pBlue!80!black] at (560,3700) {$\delta<1$, after resampling};",
-          r"    \node[tiny,anchor=south east,text=pVerm] at (560,120) {collapsed to 1};",
+          r"    \node[tiny,anchor=south east,text=pVerm,align=right] at (560,120) {collapsed\\to 1};",
           r"  \end{axis}"]
     title(L, "fc", r"\textbf{(c)}~Diversity")
     ents = [(f"{c},line width=0.8pt", rf"$\delta={d}$" if d != "1.0" else r"$\delta=1$, no jitter")
@@ -832,8 +835,8 @@ def fig_onset(data):
     _km_panel(L)
     L += [r"\end{tikzpicture}",
           r"\caption{Health indicators of the seventeen PRONOSTIA records against fraction of life"
-          r" (a), and the share of records with a detected onset by each fraction of life in every"
-          r" archive, with the decision band shaded and $^\ddagger$ marking the pre-registered test (b).}",
+          r" (a), and the share of records with a detected onset by each fraction of life in the"
+          r" bearing, turbofan, battery and drive archives, with the decision band shaded and $^\ddagger$ marking the pre-registered test (b).}",
           r"\label{fig:onset}", r"\end{figure}"]
     write("fig_onset.tex", L)
 
@@ -907,7 +910,7 @@ def _km_panel(L):
         L += [rf"    \draw[{col}, line width=0.35pt] (1.0,{y_end:.4f}) -- (1.06,{yl:.4f});",
               rf"    \node[tiny, anchor=west, text={col}] at (1.065,{yl:.4f}) {{{lab}}};"]
     L += [r"  \end{axis}"]
-    title(L, "nb", r"\textbf{(b)}~Onset distribution, every archive")
+    title(L, "nb", r"\textbf{(b)}~Onset distribution by archive")
 
 
 if __name__ == "__main__":
